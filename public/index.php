@@ -1,3 +1,7 @@
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,7 +52,7 @@
   />
 
   <!-- Website Title -->
-  <title>Devi Tools</title>
+  <title><?php t('title') ?></title>
 
   <!-- Styles -->
   <link

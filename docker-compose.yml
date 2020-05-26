@@ -4,6 +4,7 @@ services:
   devi.tools:
     image: webdevops/php-nginx-dev:7.4
     container_name: devi.tools
+    working_dir: /var/www/app
     volumes:
       - .:/var/www/app
     ports:
