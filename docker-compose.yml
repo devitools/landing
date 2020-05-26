@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  devi.tools:
+    image: webdevops/php-nginx-dev:7.4
+    container_name: devi.tools
+    volumes:
+      - .:/var/www/app
+    ports:
+    - 8080:80
+    environment:
+      - WEB_DOCUMENT_ROOT=/var/www/app/public
