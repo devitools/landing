@@ -8,10 +8,9 @@ return [
         'btn-solid-lg' => 'Começar agora',
     ],
     'description' => [
+        'above-heading' => 'DESCRIPTION',
         'h2-heading' => 'Marketing Automation Will Bring More Qualified Leads',
-        'card-title' => 'Lists Builde',
-        'p-card' => 'Itasas very easy to start creating email lists for your marketing actions. Just create your Tivo account',
-
+        'card-title' => 'Lists Builder',
+        'p-card' => 'It is very easy to start creating email lists for your marketing actions. Just create your Tivo account',
     ],
-
 ];
