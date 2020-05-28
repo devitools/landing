@@ -9,15 +9,14 @@
         <div class="col-lg-6 col-xl-5">
           <div class="text-container">
             <h1><?php t('header.call') ?></h1>
-            <p class="p-large">
-              Com DeviTools você pode se preocupar apenas com suas regras de negócio e deixar a estrutura do seu projeto
-              por nossa conta
+            <p <?php t('header.p-large')?>class="p-large">
+             
             </p>
             <a
-              class="btn-solid-lg page-scroll text-uppercase"
+               <?php t('header.btn-solid-lg')?>class="btn-solid-lg page-scroll text-uppercase"
               href="sign-up.html"
             >
-              Começar agora
+              
             </a>
           </div> <!-- end of text-container -->
         </div> <!-- end of col -->
