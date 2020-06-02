@@ -8,15 +8,16 @@
       <div class="row">
         <div class="col-lg-6 col-xl-5">
           <div class="text-container">
-            <h1><?php t('header.call') ?></h1>
-            <p <?php t('header.p-large')?>class="p-large">
-             
+            <h1><?php t('header.call')?></h1>
+            <p class="p-large">
+             <?php t('header.p-large')?>
             </p>
             <a
-               <?php t('header.btn-solid-lg')?>class="btn-solid-lg page-scroll text-uppercase"
+               class="btn-solid-lg page-scroll text-uppercase"
               href="sign-up.html"
             >
-              
+            <?php t('header.btn-solid-lg')?>
+
             </a>
           </div> <!-- end of text-container -->
         </div> <!-- end of col -->

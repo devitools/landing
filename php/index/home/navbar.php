@@ -41,31 +41,31 @@
             class="nav-link page-scroll text-uppercase"
             href="#header"
           >
-            Início <span class="sr-only">(current)</span></a>
+             <?php t('navbar.nav-link')?> <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a
-            class="nav-link page-scroll text-uppercase"
+            class="nav-link_2 page-scroll text-uppercase"
             href="#features"
           >
-            Recursos
+             <?php t('navbar.nav-link_2')?>
           </a>
         </li>
         <li class="nav-item">
           <a
-            class="nav-link page-scroll text-uppercase"
+            class="nav-link_3 page-scroll text-uppercase"
             href="#details"
           >
-            Detalhes
+            <?php t('navbar.nav-link_3')?>
           </a>
         </li>
 
         <li class="nav-item">
           <a
-            class="nav-link page-scroll text-uppercase"
+            class="nav-link_4 page-scroll text-uppercase"
             href="#pricing"
           >
-            Valores
+           <?php t('navbar.nav-link_4')?>
           </a>
         </li>
       </ul>
@@ -74,7 +74,8 @@
           class="btn-outline-sm"
           href="log-in.html"
         >
-          Entrar
+
+        <?php t('navbar.btn-outline-sm')?>
         </a>
       </span>
     </div>

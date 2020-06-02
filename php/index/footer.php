@@ -1,5 +1,5 @@
 <!-- Footer -->
-<
+<div>
 <svg
   class="footer-frame"
   data-name="Layer 2"
@@ -24,7 +24,7 @@
     <div class="row">
       <div class="col-md-4">
         <div class="footer-col first">
-          <h4>About Tivo</h4>
+          <h4 class="f-title"><?php t('details.p-heading')?>About Tivo</h4>
           <p class="p-small">We're passionate about designing and developing one of the best marketing apps in the
             market
           </p>
@@ -108,3 +108,4 @@
   </div> <!-- end of container -->
 </div> <!-- end of copyright -->
 <!-- end of copyright -->
+</div>

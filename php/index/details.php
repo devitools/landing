@@ -7,24 +7,23 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="text-container">
-                    <h2>Now Is The Time To Upgrade Your Marketing Solution</h2>
-                    <p>Target the right customers for your business with the help of Tivo's patented segmentation technology and
-                        deploy efficient marketing campaigns. Keep your customers happy and loyal.
+                    <h2 class="d-title"> <?php t('details.d-title')?></h2>
+                    <p class="d-text"> <?php t('details.d-text')?>
                     </p>
                     <ul class="list-unstyled li-space-lg">
                         <li class="media">
                             <i class="fas fa-square"></i>
-                            <div class="media-body">Understand customers and meet their requirements</div>
+                            <div class="media-body"><?php t('details.media-body')?></div>
                         </li>
                         <li class="media">
                             <i class="fas fa-square"></i>
-                            <div class="media-body">Targeted client base with Tivo's efficient technology</div>
+                            <div class="media-body_2"><?php t('details.media-body_2')?></div>
                         </li>
                     </ul>
                     <a
                         class="btn-solid-reg page-scroll"
                         href="sign-up.html"
-                    >SIGN UP
+                    > <?php t('details.btn-solid-reg')?>
                     </a>
                 </div> <!-- end of text-container -->
             </div> <!-- end of col -->
@@ -72,9 +71,7 @@
                 </div> <!-- end of image-container -->
                 <!-- end of video preview -->
 
-                <div class="p-heading">What better way to show off Tivo marketing automation saas app than presenting you some
-                    great situations of each module and tool available to users in a video
-                </div>
+                <div class="p-heading"> <?php t('details.p-heading')?></div>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of container -->
