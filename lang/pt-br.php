@@ -99,4 +99,42 @@ return [
 		'value_2'=> '29.99',
 		'value_3'=> '39.99',
 	],
+	'testimonial'=> [
+		'testimonial-text'=>'I started to use Tivo with the free trial about a year ago and neve
+		stopped since then. It does all the repeating marketing tasks and allows me to focus on core
+		development activities like new product research and design. I love it and recommend it to
+		everyone.',
+		'testimonial-author'=>'Jude Thorn - Online Marketer',
+		'testimonial-text_2'=>'Awesome features for the money. I never thought such a low ammount of
+		money would bring me so many leads per month. Before Tivo I used the services of an agency which
+		cost 10x more and delivered far less. Highly recommended to marketers focused on results.',
+		'testimonial-author_2'=>'Roy Smith - Developer',
+		'testimonial-text_3'=>'Tivo is the best marketing automation app for small and medium sized
+		business. It understands the mindset of young entrepreneurs and provides the necessary data fo
+		wise marketing decisions. Just give it a try and you will definitely not regret spending you
+		time.',
+		'testimonial-author_3'=>'Marsha Singer - Online Marketer',
+		'testimonial-text_4'=>'Tivo is one of the greatest marketing automation apps out there. I
+		especially love the Reporting Tools module because it gives me such a great amount of information
+		based on little amounts of input gathered in just few weeks of light weight usage. Recommended!',
+		'testimonial-author_4'=>'Ronda Louis - Online Marketer',
+	],
+	'footer'=>[
+		'f-title'=>'About Tivo',
+		'f-title_2'=>'Important Links',
+		'f-title_3'=>'Contact',
+		'f-title_4'=>'',
+		'media-body'=>'Our business partners',
+		'media-body_2'=>'22 Innovative, San Francisco, CA 94043, US',
+		'p-small'=>"We're passionate about designing and developing one of the best marketing apps in the market",
+		'p-small_2'=>'Read our',
+		'p-small_3'=>'Copyright © 2020',
+		'white-link' =>'startupguide.com',
+		'white-link' =>'startupguide.com',
+		'white-link_2' =>'Terms & Conditions',
+		'white-link_3' =>'Privacy Policy',
+		'white-link_4' =>'contact@tivo.com',
+		'white-link_5' =>'www.tivo.com',
+		'white-link_6' =>'Template by Inovatik',
+	],
 ];
