@@ -12,6 +12,7 @@ services:
     restart: always
     networks:
       - reverse-proxy
+    working_dir: /var/www/app
     volumes:
       - .:/var/www/app
     environment:
