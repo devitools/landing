@@ -5,22 +5,22 @@ return [
     'title' => 'Devitools',
     'header' => [
         'btn-solid-lg' => 'Começar agora',
-        'call' => 'Crie aplicações modernas com poucas linhas código',
+        'call' => 'Crie painéis de controle com poucas linhas código',
         'p-large' => 'Com Devitools você pode se preocupar apenas com suas regras de negócio e deixar a estrutura do ' .
             'seu projeto por nossa conta',
     ],
     'description' => [
         'above-heading' => 'DESCRIÇÃO',
-        'h2-heading' => 'Crie aplicações de gestão de forma rápida, eficiente e padronizada',
+        'h2-heading' => 'Crie painéis de controle de forma rápida, eficiente e padronizada',
         'card-title_1' => 'Desenvolvimento Rápido',
-        'p-card_1' => 'Utilizando o núcleo inteligente das aplicações criadas com o ' .
+        'p-card_1' => 'Utilizando o núcleo inteligente das aplicações criadas com a ' .
             '<a href="https://github.com/devitools">@devitools</a> é possível criar telas e serviços com poucas linhas ' .
             'de código',
         'card-title_2' => 'Padronização Total',
-        'p-card_2' => 'Com a estrutura desenvolvida no <a href="https://github.com/devitools">@devitools</a> é ' .
+        'p-card_2' => 'Com a estrutura desenvolvida na <a href="https://github.com/devitools">@devitools</a> é ' .
             'possível criar e reusar recursos e componentes com liberdade de forma organizada e padronizada',
         'card-title_3' => 'Eficiência ',
-        'p-card_3' => 'O núcleo inteligente do <a href="https://github.com/devitools">@devitools</a> é constantemente ' .
+        'p-card_3' => 'O núcleo inteligente da <a href="https://github.com/devitools">@devitools</a> é constantemente ' .
             'aprimorado para entregar a melhor experiência para o desenvolvedor e para o cliente',
     ],
     'navbar' => [
@@ -31,11 +31,16 @@ return [
         'nav-link_4' => 'Valores',
     ],
     'details' => [
-        'btn-solid-reg' => 'SIGN UP',
-        'd-text' => "Target the right customers for your business with the help of Tivo's patented segmentation technology and deploy efficient marketing campaigns. Keep your customers happy and loyal.",
-        'd-title' => 'Now Is The Time To Upgrade Your Marketing Solution',
-        'media-body_1' => 'Understand customers and meet their requirements',
-        'media-body_2' => "Targeted client base with Tivo's efficient technology",
+        'btn-solid-reg' => 'COMEÇAR AGORA',
+        'd-title' => 'Elimine o desconhecimento sobre como as coisas devem ser feitas de boa parte da sua stack',
+        'd-text' => 'A proposta da Devitools é entregar de forma simples uma base para usar tecnologia de ponta em ' .
+            'diversas etapas da produção de software. Por não ser um conjunto de ferramentas nossas tecnologias ' .
+            'podem ser adotadas de forma parcial ou progressiva. Também atuamos ajudando a alcançar os melhores ' .
+            'resultados de nossas ferramentas em todas as etapas do desenvolvimento.',
+        'media-body_1' => 'Nosso time entende os problemas mais comuns e vai ajudá-lo a resolvê-los',
+        'media-body_2' => 'Abstraímos frameworks e queremos tornar o seu uso mais simples para todos',
+        'media-body_3' => 'Eliminamos os custos de mudanças graças a novas versões de frameworks',
+        'media-body_4' => 'Reduzimos os custos do impacto de novas versões de linguagens',
         'p-heading' => 'What better way to show off Tivo marketing automation saas app than presenting you some great situations of each module and tool available to users in a video',
     ],
     'features' => [
@@ -77,32 +82,36 @@ return [
     ],
     'newsletter' => [
         'above-heading' => 'NEWSLETTER',
-        'form-control-submit-button' => 'SUBSCRIBE',
-        'label-control' => 'EMAIL',
-        'news-subtitle' => 'Stay Updated With The Latest News To Get More Qualified Leads',
-        'input_1' => "I've read and agree to Tivo's written",
-        'input_2' => 'and',
-        'input_3' => 'Privacy Policy',
-        'input_4' => 'Terms Conditions',
+        'news-subtitle' => 'Fique por dentro das novidades do Devitools no seu email',
+        'form-control-submit-button' => 'INSCREVA-SE',
+        'label-control' => 'Seu melhor email',
+        'input' => 'Li e estou de acordo com os <a href="terms-conditions.html">Termos de Uso</a> e a ' .
+            '<a href="privacy-policy.html">Política de Privacidade</a>',
     ],
     'pricing' => [
-        'above-heading' => 'PRICING',
-        'btn-solid-reg' => 'SIGN UP',
-        'card-title_1' => 'BASIC',
-        'card-title_2' => 'ADVANCED',
-        'card-title_3' => 'COMPLETE',
-        'currency' => '$',
-        'frequency_1' => 'always free',
-        'frequency_2' => 'monthly',
-        'h2-heading' => 'Pricing Options Table',
-        'media-body_1' => 'Email Marketing Module',
-        'media-body_2' => 'User Control Management',
-        'media-body_3' => 'List Building And Cleaning',
-        'media-body_4' => 'Collected Data Reports',
-        'media-body_5' => 'Planning And Evaluation',
+        'above-heading' => 'VALORES',
+        'h2-heading' => 'Opções de Planos de Suporte',
+        'btn-solid-docs' => 'DOCUMENTAÇÃO',
+        'btn-solid-register' => 'CADASTRAR',
+        'card-title_1' => 'BÁSICO',
+        'card-title_2' => 'AVANÇADO',
+        'card-title_3' => 'COMPLETO',
+        'frequency_1' => 'pra sempre gratuito',
+        'frequency_2' => 'mensal',
+        'media-body_1' => 'Starter kit SPA/PWA',
+        'media-body_2' => 'Frontend Vue/React',
+        'media-body_3' => 'Backend Laravel/Symfony',
+        'media-body_4' => 'Controle de permissões',
+        'media-body_5' => 'Criação de relatórios',
+        'media-body_6' => 'Suporte via e-mail',
+        'media-body_7' => 'Acesso à Treinamentos',
+        'media-body_8' => 'Suporte via chat',
+        'media-body_9' => 'Consultoria para criação',
+        'media-body_10' => 'Consultoria para publicação',
+        'media-body_11' => 'Recursos personalizados',
         'value_1' => 'Free',
-        'value_2' => '29.99',
-        'value_3' => '39.99',
+        'value_2' => '39,90',
+        'value_3' => '259,90',
     ],
     'testimonial' => [
         'testimonial-text' => 'I started to use Tivo with the free trial about a year ago and neve ' .
@@ -125,19 +134,22 @@ return [
         'testimonial-author_4' => 'Ronda Louis - Online Marketer',
     ],
     'footer' => [
-        'f-title_1' => 'About Tivo',
-        'f-title_2' => 'Important Links',
-        'f-title_3' => 'Contact',
-        'media-body_1' => 'Our business partners',
-        'media-body_2' => 'Read our',
-        'media-body_3' => '22 Innovative, San Francisco, CA 94043, US',
-        'p-small_1' => "We're passionate about designing and developing one of the best marketing apps in the market",
-        'p-small_2' => 'made with ❤ by @devitools',
-        'white-link_1' => 'startupguide.com',
-        'white-link_2' => 'Terms & Conditions;',
-        'white-link_3' => 'Privacy Policy',
-        'white-link_4' => 'contact@tivo.com',
-        'white-link_5' => 'www.tivo.com',
+        'f-title_1' => 'Sobre o Devitools',
+        'p-small_1' => 'Apaixonados por tecnologia queremos ajudar quem faz software a fazer softwares melhores e ' .
+            'mais rápido, utilizando o que há de melhor absorvendo o débito técnico das empresas',
+        'f-title_2' => 'Links importantes',
+        'f-title_3' => 'Contato',
+        'important_link_1' => 'Leia nossos <a class="white" href="terms-conditions.html">Termos de Uso</a> e ' .
+            '<a class="white" href="privacy-policy.html">Política de Privacidade</a>',
+        'important_link_3' => 'Siga nosso <a class="white" href="https://github.com/devitools">Github</a>',
+        'important_link_2' => 'Conheça o <a class="white" href="https://docs.tevun.com">Tevun</a>',
+        'important_link_4' => 'Acesse nosso <a class="white" href="https://demo.devi.tools">demo online</a>',
+
+        'white-link_4' => 'contato@devi.tools',
+        'white-link_5' => 'devi.tools',
+        'media-body_3' => 'AVENIDA JERÔNIMO MONTEIRO, 1000, SALA 1501, VITORIA, ES - BR',
+
+        'p-small_2' => 'made with ❤ by dracones',
         'white-link_6' => 'template by Inovatik',
     ],
 ];

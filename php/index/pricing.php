@@ -31,24 +31,48 @@
                 <div class="media-body"><?php t('pricing.media-body_2')?></div>
               </li>
               <li class="media">
-                <i class="fas fa-times"></i>
+                <i class="fas fa-check"></i>
                 <div class="media-body"><?php t('pricing.media-body_3')?></div>
               </li>
               <li class="media">
-                <i class="fas fa-times"></i>
+                <i class="fas fa-check"></i>
                 <div class="media-body"><?php t('pricing.media-body_4')?></div>
               </li>
               <li class="media">
-                <i class="fas fa-times"></i>
+                <i class="fas fa-check"></i>
                 <div class="media-body"><?php t('pricing.media-body_5')?></div>
+              </li>
+              <li class="media">
+                <i class="fas fa-times"></i>
+                <div class="media-body"><?php t('pricing.media-body_6')?></div>
+              </li>
+              <li class="media">
+                <i class="fas fa-times"></i>
+                <div class="media-body"><?php t('pricing.media-body_7')?></div>
+              </li>
+              <li class="media">
+                <i class="fas fa-times"></i>
+                <div class="media-body"><?php t('pricing.media-body_8')?></div>
+              </li>
+              <li class="media">
+                <i class="fas fa-times"></i>
+                <div class="media-body"><?php t('pricing.media-body_9')?></div>
+              </li>
+              <li class="media">
+                <i class="fas fa-times"></i>
+                <div class="media-body"><?php t('pricing.media-body_10')?></div>
+              </li>
+              <li class="media">
+                <i class="fas fa-times"></i>
+                <div class="media-body"><?php t('pricing.media-body_11')?></div>
               </li>
             </ul>
             <div class="button-wrapper">
               <a
-                class="btn-solid-reg page-scroll"
-                href="sign-up.html"
+                class="btn-solid-reg btn-solid-docs page-scroll"
+                href="https://docs.devi.tools"
               >
-                  <?php t('pricing.btn-solid-reg')?>
+                  <?php t('pricing.btn-solid-docs')?>
               </a>
             </div>
           </div>
@@ -78,20 +102,44 @@
                 <div class="media-body"><?php t('pricing.media-body_3')?></div>
               </li>
               <li class="media">
-                <i class="fas fa-times"></i>
+                <i class="fas fa-check"></i>
                 <div class="media-body"><?php t('pricing.media-body_4')?></div>
               </li>
               <li class="media">
-                <i class="fas fa-times"></i>
+                <i class="fas fa-check"></i>
                 <div class="media-body"><?php t('pricing.media-body_5')?></div>
+              </li>
+              <li class="media">
+                <i class="fas fa-check"></i>
+                <div class="media-body"><?php t('pricing.media-body_6')?></div>
+              </li>
+              <li class="media">
+                <i class="fas fa-check"></i>
+                <div class="media-body"><?php t('pricing.media-body_7')?></div>
+              </li>
+              <li class="media">
+                <i class="fas fa-times"></i>
+                <div class="media-body"><?php t('pricing.media-body_8')?></div>
+              </li>
+              <li class="media">
+                <i class="fas fa-times"></i>
+                <div class="media-body"><?php t('pricing.media-body_9')?></div>
+              </li>
+              <li class="media">
+                <i class="fas fa-times"></i>
+                <div class="media-body"><?php t('pricing.media-body_10')?></div>
+              </li>
+              <li class="media">
+                <i class="fas fa-times"></i>
+                <div class="media-body"><?php t('pricing.media-body_11')?></div>
               </li>
             </ul>
             <div class="button-wrapper">
               <a
-                class="btn-solid-reg page-scroll"
-                href="sign-up.html"
+                class="btn-solid-reg btn-solid-register page-scroll"
+                href="https://app.devi.tools"
               >
-                  <?php t('pricing.btn-solid-reg')?>
+                  <?php t('pricing.btn-solid-register')?>
               </a>
             </div>
           </div>
@@ -131,13 +179,37 @@
                 <i class="fas fa-check"></i>
                 <div class="media-body"><?php t('pricing.media-body_5')?></div>
               </li>
+              <li class="media">
+                <i class="fas fa-check"></i>
+                <div class="media-body"><?php t('pricing.media-body_6')?></div>
+              </li>
+              <li class="media">
+                <i class="fas fa-check"></i>
+                <div class="media-body"><?php t('pricing.media-body_7')?></div>
+              </li>
+              <li class="media">
+                <i class="fas fa-check"></i>
+                <div class="media-body"><?php t('pricing.media-body_8')?></div>
+              </li>
+              <li class="media">
+                <i class="fas fa-check"></i>
+                <div class="media-body"><?php t('pricing.media-body_9')?></div>
+              </li>
+              <li class="media">
+                <i class="fas fa-check"></i>
+                <div class="media-body"><?php t('pricing.media-body_10')?></div>
+              </li>
+              <li class="media">
+                <i class="fas fa-check"></i>
+                <div class="media-body"><?php t('pricing.media-body_11')?></div>
+              </li>
             </ul>
             <div class="button-wrapper">
               <a
-                class="btn-solid-reg page-scroll"
-                href="sign-up.html"
+                class="btn-solid-reg btn-solid-register page-scroll"
+                href="https://app.devi.tools"
               >
-                  <?php t('pricing.btn-solid-reg')?>
+                  <?php t('pricing.btn-solid-register')?>
               </a>
             </div>
           </div>

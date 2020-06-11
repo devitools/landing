@@ -91,7 +91,7 @@
                   <p class="p-list"><?php t('features.p-list') ?>
                     <a
                       class="blue page-scroll"
-                      href="sign-up.html"
+                      href="https://app.devi.tools"
                     >
                         <?php t('features.blue') ?>
                     </a>
@@ -281,7 +281,7 @@
         </ul>
         <a
           class="btn-solid-reg mfp-close"
-          href="sign-up.html"
+          href="https://app.devi.tools"
         ><?php t('features.btn-solid-reg_up') ?>
         </a>
         <a
@@ -351,7 +351,7 @@
         </ul>
         <a
           class="btn-solid-reg mfp-close"
-          href="sign-up.html"
+          href="https://app.devi.tools"
         ><?php t('features.btn-solid-reg') ?>
         </a>
         <a
@@ -422,7 +422,7 @@
         </ul>
         <a
           class="btn-solid-reg mfp-close"
-          href="sign-up.html"
+          href="https://app.devi.tools"
         ><?php t('features.btn-solid-reg') ?>
         </a>
         <a

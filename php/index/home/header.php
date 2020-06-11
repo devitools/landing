@@ -14,7 +14,7 @@
             </p>
             <a
                class="btn-solid-lg page-scroll text-uppercase"
-              href="sign-up.html"
+              href="https://app.devi.tools"
             >
             <?php t('header.btn-solid-lg')?>
 
@@ -26,7 +26,7 @@
             <div class="img-wrapper">
               <img
                 class="img-fluid"
-                src="images/header-software-app.png"
+                src="images/static-image.svg"
                 alt="alternative"
               >
             </div> <!-- end of img-wrapper -->

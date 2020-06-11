@@ -96,7 +96,7 @@ require __DIR__ . '/../vendor/autoload.php';
     include __DIR__ . '/../php/index/features.php';
     include __DIR__ . '/../php/index/details.php';
     include __DIR__ . '/../php/index/pricing.php';
-    include __DIR__ . '/../php/index/testimonials.php';
+//    include __DIR__ . '/../php/index/testimonials.php';
     include __DIR__ . '/../php/index/newsletter.php';
     include __DIR__ . '/../php/index/footer.php';
     ?>

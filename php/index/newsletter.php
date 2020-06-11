@@ -8,10 +8,13 @@
 
           <!-- Newsletter Form -->
           <form
-            id="newsletterForm"
-            data-toggle="validator"
+            action="https://www.getrevue.co/profile/devitools/add_subscriber"
             data-focus="false"
-            novalidate="true"
+            data-toggle="validator"
+            id="newsletterForm"
+            method="post"
+            name="revue-form"
+            target="_blank"
           >
             <div class="form-group">
               <input
@@ -19,6 +22,7 @@
                 class="form-control-input"
                 id="nemail"
                 required=""
+                name="member[email]"
               >
               <label
                 class="label-control"
@@ -35,10 +39,7 @@
                 value="Agreed-to-Terms"
                 required=""
               >
-                <?php t('newsletter.input_1') ?>
-              <a href="privacy-policy.html"><?php t('newsletter.input_2') ?></a>
-                <?php t('newsletter.input_3') ?>
-              <a href="terms-conditions.html"><?php t('newsletter.input_4') ?></a>
+                <?php t('newsletter.input') ?>
               <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">

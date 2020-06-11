@@ -12,7 +12,7 @@
                                 <img
                                     class="img-fluid"
                                     style="max-height: 55px"
-                                    src="images/customer-logo-1.png"
+                                    src="images/framework-1.png"
                                     alt="alternative"
                                 >
                             </div>
@@ -20,7 +20,7 @@
                                 <img
                                     class="img-fluid"
                                     style="max-height: 55px"
-                                    src="images/customer-logo-2.png"
+                                    src="images/framework-2.png"
                                     alt="alternative"
                                 >
                             </div>
@@ -28,7 +28,7 @@
                                 <img
                                     class="img-fluid"
                                     style="max-height: 55px"
-                                    src="images/customer-logo-3.png"
+                                    src="images/framework-3.png"
                                     alt="alternative"
                                 >
                             </div>
@@ -36,7 +36,7 @@
                                 <img
                                     class="img-fluid"
                                     style="max-height: 55px"
-                                    src="images/customer-logo-4.png"
+                                    src="images/framework-4.png"
                                     alt="alternative"
                                 >
                             </div>
@@ -44,7 +44,7 @@
                                 <img
                                     class="img-fluid"
                                     style="max-height: 55px"
-                                    src="images/customer-logo-5.png"
+                                    src="images/framework-5.png"
                                     alt="alternative"
                                 >
                             </div>
@@ -52,7 +52,15 @@
                                 <img
                                     class="img-fluid"
                                     style="max-height: 55px"
-                                    src="images/customer-logo-6.png"
+                                    src="images/framework-6.png"
+                                    alt="alternative"
+                                >
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    class="img-fluid"
+                                    style="max-height: 55px"
+                                    src="images/framework-7.png"
                                     alt="alternative"
                                 >
                             </div>

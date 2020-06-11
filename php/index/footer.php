@@ -13,31 +13,19 @@
           <ul class="list-unstyled li-space-lg p-small">
             <li class="media">
               <i class="fas fa-square"></i>
-              <div class="media-body media-body_1"><?php t('footer.media-body_1') ?>
-                <a
-                  class="white"
-                  href="#your-link"
-                >
-                    <?php t('footer.white-link_1') ?>
-                </a>
-              </div>
+              <div class="media-body important_link_1"><?php t('footer.important_link_1') ?></div>
             </li>
             <li class="media">
               <i class="fas fa-square"></i>
-              <div class="media-body media-body_2"><?php t('footer.media-body_2') ?>
-                <a
-                  class="white"
-                  href="terms-conditions.html"
-                ><?php t('footer.white-link_2') ?>
-                </a>
-                ,
-                <a
-                  class="white"
-                  href="privacy-policy.html"
-                >
-                    <?php t('footer.white-link_3') ?>
-                </a>
-              </div>
+              <div class="media-body important_link_2"><?php t('footer.important_link_2') ?></div>
+            </li>
+            <li class="media">
+              <i class="fas fa-square"></i>
+              <div class="media-body important_link_2"><?php t('footer.important_link_3') ?></div>
+            </li>
+            <li class="media">
+              <i class="fas fa-square"></i>
+              <div class="media-body important_link_2"><?php t('footer.important_link_4') ?></div>
             </li>
           </ul>
         </div>
@@ -55,14 +43,14 @@
               <div class="media-body">
                 <a
                   class="white"
-                  href="mailto:contact@tivo.com"
+                  href="mailto:contato@devi.tools"
                 >
                     <?php t('footer.white-link_4') ?>
                 </a>
                 <i class="fas fa-globe"></i>
                 <a
                   class="white"
-                  href="#your-link"
+                  href="https://devi.tools"
                 >
                     <?php t('footer.white-link_5') ?>
                 </a>
@@ -84,7 +72,7 @@
         <p class="p-small">
             <?php echo 'copyright © ', date('Y') ?> |
             <?php t('footer.p-small_2') ?> |
-          <a href="https://inovatik.com"><?php t('footer.white-link_6') ?></a>
+          <a href="https://inovatik.com"><small><?php t('footer.white-link_6') ?></small></a>
         </p>
       </div> <!-- end of col -->
     </div> <!-- enf of row -->
