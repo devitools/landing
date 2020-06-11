@@ -11,7 +11,7 @@
       href="/"
     >
       <img
-        src="images/logo.svg"
+        src="images/logo.png"
         alt="alternative"
       >
     </a>
