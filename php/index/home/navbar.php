@@ -38,14 +38,14 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a
-            class="nav-link page-scroll text-uppercase"
+            class="nav-link nav-link_1 page-scroll text-uppercase"
             href="#header"
           >
-             <?php t('navbar.nav-link')?> <span class="sr-only">(current)</span></a>
+             <?php t('navbar.nav-link_1')?> <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a
-            class="nav-link_2 page-scroll text-uppercase"
+            class="nav-link nav-link_2 page-scroll text-uppercase"
             href="#features"
           >
              <?php t('navbar.nav-link_2')?>
@@ -53,7 +53,7 @@
         </li>
         <li class="nav-item">
           <a
-            class="nav-link_3 page-scroll text-uppercase"
+            class="nav-link nav-link_3 page-scroll text-uppercase"
             href="#details"
           >
             <?php t('navbar.nav-link_3')?>
@@ -62,7 +62,7 @@
 
         <li class="nav-item">
           <a
-            class="nav-link_4 page-scroll text-uppercase"
+            class="nav-link nav-link_4 page-scroll text-uppercase"
             href="#pricing"
           >
            <?php t('navbar.nav-link_4')?>

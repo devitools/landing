@@ -20,8 +20,8 @@
             >
           </div>
           <div class="card-body">
-            <h4 class="card-title"><?php t('description.card-title')?></h4>
-            <p class="p-card"><?php t('description.p-card')?></p>
+            <h4 class="card-title card-title_1"><?php t('description.card-title_1')?></h4>
+            <p class="p-card p-card_1"><?php t('description.p-card_1')?></p>
           </div>
         </div>
         <!-- end of card -->
@@ -36,8 +36,8 @@
             >
           </div>
           <div class="card-body">
-            <h4 class="card-title_2"><?php t('description.card-title_2')?></h4>
-            <p class="p-card_2">
+            <h4 class="card-title card-title_2"><?php t('description.card-title_2')?></h4>
+            <p class="p-card p-card_2">
               <?php t('description.p-card_2')?>
             </p>
           </div>
@@ -54,8 +54,8 @@
             >
           </div>
           <div class="card-body">
-            <h4 class="card-title_3"><?php t('description.card-title_3')?></h4>
-            <p class="p-card_3">
+            <h4 class="card-title card-title_3"><?php t('description.card-title_3')?></h4>
+            <p class="p-card p-card_3">
               <?php t('description.p-card_3')?>
             </p>
           </div>

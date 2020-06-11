@@ -13,11 +13,11 @@
                     <ul class="list-unstyled li-space-lg">
                         <li class="media">
                             <i class="fas fa-square"></i>
-                            <div class="media-body"><?php t('details.media-body')?></div>
+                            <div class="media-body media-body_1"><?php t('details.media-body_1')?></div>
                         </li>
                         <li class="media">
                             <i class="fas fa-square"></i>
-                            <div class="media-body_2"><?php t('details.media-body_2')?></div>
+                            <div class="media-body media-body_2"><?php t('details.media-body_2')?></div>
                         </li>
                     </ul>
                     <a

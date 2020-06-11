@@ -11,6 +11,7 @@
                             <div class="swiper-slide">
                                 <img
                                     class="img-fluid"
+                                    style="max-height: 55px"
                                     src="images/customer-logo-1.png"
                                     alt="alternative"
                                 >
@@ -18,6 +19,7 @@
                             <div class="swiper-slide">
                                 <img
                                     class="img-fluid"
+                                    style="max-height: 55px"
                                     src="images/customer-logo-2.png"
                                     alt="alternative"
                                 >
@@ -25,6 +27,7 @@
                             <div class="swiper-slide">
                                 <img
                                     class="img-fluid"
+                                    style="max-height: 55px"
                                     src="images/customer-logo-3.png"
                                     alt="alternative"
                                 >
@@ -32,6 +35,7 @@
                             <div class="swiper-slide">
                                 <img
                                     class="img-fluid"
+                                    style="max-height: 55px"
                                     src="images/customer-logo-4.png"
                                     alt="alternative"
                                 >
@@ -39,6 +43,7 @@
                             <div class="swiper-slide">
                                 <img
                                     class="img-fluid"
+                                    style="max-height: 55px"
                                     src="images/customer-logo-5.png"
                                     alt="alternative"
                                 >
@@ -46,6 +51,7 @@
                             <div class="swiper-slide">
                                 <img
                                     class="img-fluid"
+                                    style="max-height: 55px"
                                     src="images/customer-logo-6.png"
                                     alt="alternative"
                                 >
