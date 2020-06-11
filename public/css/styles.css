@@ -669,6 +669,10 @@ input[type='checkbox'] {
   max-width: 87.5rem;
 }
 
+.navbar-brand.logo-image {
+  min-width: 160px;
+}
+
 .navbar-custom .navbar-brand.logo-text {
   font: 700 2rem/1.5rem "Open Sans", sans-serif;
   color: #fff;;

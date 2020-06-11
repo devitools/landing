@@ -21,7 +21,7 @@
    inkscape:zoom="3.337544"
    borderopacity="1"
    inkscape:current-layer="Layer_1"
-   inkscape:cx="104.24602"
+   inkscape:cx="55.557523"
    inkscape:cy="28.410024"
    inkscape:window-maximized="1"
    showgrid="false"
@@ -42,7 +42,7 @@
    inkscape:snap-text-baseline="false" />
 <g
    id="g3721"
-   transform="matrix(1.2073521,0,0,1.2073521,-0.15617255,-2.7847949)"
+   transform="matrix(0.9535983,0,0,0.9535983,15.529782,3.7779517)"
    style="fill:#f9f9f9;fill-opacity:1"><path
      style="fill:#f9f9f9;fill-opacity:1;stroke-width:0.76740324"
      d="m 3.0033157,29.022371 c -0.843281,-0.920352 -1.406269,-2.758113 -1.406269,-4.368239 0,-1.609144 0.42194,-3.102509 1.476492,-3.907082 h -0.07022 C 7.9951797,15.919617 14.9563,9.4830377 19.597047,5 v 10.690019 c -1.82821,1.723943 -4.28903,3.678466 -10.4764923,9.080874 l 0.07022,0.113818 c 3.3047023,2.414698 7.1015673,6.092182 10.4062693,9.310471 V 45 Z"
@@ -78,10 +78,11 @@
 
 <text
    id="text3057"
-   y="-1335.3522"
-   x="-2336.3347"
+   y="-1332.356"
+   x="-2329.7432"
    font-size="177.33"
-   style="font-size:177.33000183px;line-height:0%;font-family:Courier-Bold;fill:#f9f9f9;">&lt;/&gt;</text>
+   style="font-size:177.33000183px;line-height:0%;font-family:Courier-Bold;fill:#f9f9f9">&lt;/&gt;</text>
+
 
 
 
@@ -89,36 +90,38 @@
    id="metadata10"><rdf:RDF><cc:Work><dc:format>image/svg+xml</dc:format><dc:type
          rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><cc:license
          rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" /><dc:publisher><cc:Agent
-           rdf:about="http://openclipart.org/"><dc:title>Openclipart</dc:title></cc:Agent></dc:publisher><dc:title></dc:title></cc:Work><cc:License
+           rdf:about="http://openclipart.org/"><dc:title>Openclipart</dc:title></cc:Agent></dc:publisher><dc:title /></cc:Work><cc:License
        rdf:about="http://creativecommons.org/publicdomain/zero/1.0/"><cc:permits
          rdf:resource="http://creativecommons.org/ns#Reproduction" /><cc:permits
          rdf:resource="http://creativecommons.org/ns#Distribution" /><cc:permits
          rdf:resource="http://creativecommons.org/ns#DerivativeWorks" /></cc:License></rdf:RDF></metadata><text
    xml:space="preserve"
-   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:33.04434967px;line-height:1.25;font-family:'Handel Gothic';-inkscape-font-specification:'Handel Gothic, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:1.2391628;"
-   x="82.240616"
-   y="27.798815"
+   style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:26.09929276px;line-height:1.25;font-family:'Handel Gothic';-inkscape-font-specification:'Handel Gothic, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:0.97872323"
+   x="79.447777"
+   y="28.412621"
    id="text3725"
    transform="scale(1.0801233,0.92582022)"><tspan
      sodipodi:role="line"
-     x="82.240616"
-     y="27.798815"
-     style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:33.04434967px;font-family:'Handel Gothic';-inkscape-font-specification:'Handel Gothic, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#f9f9f9;fill-opacity:1;stroke-width:1.2391628;"
+     x="79.447777"
+     y="28.412621"
+     style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:26.09929276px;font-family:'Handel Gothic';-inkscape-font-specification:'Handel Gothic, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#f9f9f9;fill-opacity:1;stroke-width:0.97872323"
      id="tspan3735">devi</tspan></text>
+
 
 
 <text
    xml:space="preserve"
-   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:36.66004562px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Italic Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:1.37475169;"
-   x="78.898598"
-   y="57.47802"
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:28.95506477px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial, Italic Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:1.08581495"
+   x="76.38163"
+   y="52.049824"
    id="text3741"
    transform="scale(1.1128781,0.89857102)"><tspan
      sodipodi:role="line"
      id="tspan3739"
-     x="78.898598"
-     y="57.47802"
-     style="fill:#f9f9f9;fill-opacity:1;stroke-width:1.37475169;">tools</tspan></text>
+     x="76.38163"
+     y="52.049824"
+     style="fill:#f9f9f9;fill-opacity:1;stroke-width:1.08581495">tools</tspan></text>
+
 
 
 </svg>

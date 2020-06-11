@@ -8,7 +8,7 @@
     <!-- Image Logo -->
     <a
       class="navbar-brand logo-image"
-      href="index.html"
+      href="/"
     >
       <img
         src="images/logo.svg"
