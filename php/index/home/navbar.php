@@ -41,14 +41,14 @@
             class="nav-link nav-link_1 page-scroll text-uppercase"
             href="#header"
           >
-             <?php t('navbar.nav-link_1')?> <span class="sr-only">(current)</span></a>
+              <?php t('navbar.nav-link_1') ?> <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a
             class="nav-link nav-link_2 page-scroll text-uppercase"
             href="#features"
           >
-             <?php t('navbar.nav-link_2')?>
+              <?php t('navbar.nav-link_2') ?>
           </a>
         </li>
         <li class="nav-item">
@@ -56,7 +56,7 @@
             class="nav-link nav-link_3 page-scroll text-uppercase"
             href="#details"
           >
-            <?php t('navbar.nav-link_3')?>
+              <?php t('navbar.nav-link_3') ?>
           </a>
         </li>
 
@@ -65,17 +65,35 @@
             class="nav-link nav-link_4 page-scroll text-uppercase"
             href="#pricing"
           >
-           <?php t('navbar.nav-link_4')?>
+              <?php t('navbar.nav-link_4') ?>
           </a>
         </li>
       </ul>
       <span class="nav-item">
         <a
           class="btn-outline-sm"
-          href="log-in.html"
+          href="https://app.devi.tools"
         >
-
-        <?php t('navbar.btn-outline-sm')?>
+            <?php t('navbar.btn-outline-sm') ?>
+        </a>
+      </span>
+      <span class="nav-item">
+        <a
+          class="btn-outline-sm"
+          href="https://demo.devi.tools"
+        >
+            <?php t('navbar.demo') ?>
+        </a>
+      </span>
+      <span
+        class="nav-item"
+        style="margin-left: 15px"
+      >
+        <a
+          href="https://github.com/devitools"
+          class="white"
+        >
+          <i class="fab fa-github fa-2x"></i>
         </a>
       </span>
     </div>

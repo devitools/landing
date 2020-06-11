@@ -5,7 +5,7 @@
 >
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-7">
                 <div class="text-container">
                     <h2 class="d-title"> <?php t('details.d-title')?></h2>
                     <p class="d-text"> <?php t('details.d-text')?>
@@ -35,7 +35,7 @@
                     </a>
                 </div> <!-- end of text-container -->
             </div> <!-- end of col -->
-            <div class="col-lg-6">
+            <div class="col-lg-5">
                 <div class="image-container">
                     <img
                         class="img-fluid"

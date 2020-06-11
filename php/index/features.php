@@ -17,46 +17,50 @@
 
         <!-- Tabs Links -->
         <ul
-
           class="nav nav-tabs"
           id="argoTabs"
           role="tablist"
-
         >
           <li class="nav-item">
             <a
-              class="nav-link nav-link_1 active"
+              class="nav-link active"
               id="nav-tab-1"
               data-toggle="tab"
               href="#tab-1"
               role="tab"
               aria-controls="tab-1"
               aria-selected="true"
-            ><i class="fas fa-list"></i><?php t('features.nav-link_1') ?>
+            >
+              <i class="fas fa-list"></i>
+                <?php t('features.nav-link_1') ?>
             </a>
           </li>
           <li class="nav-item">
             <a
-              class="nav-link nav-link_2"
+              class="nav-link"
               id="nav-tab-2"
               data-toggle="tab"
               href="#tab-2"
               role="tab"
               aria-controls="tab-2"
               aria-selected="false"
-            ><i class="fas fa-envelope-open-text"></i> <?php t('features.nav-link_2') ?>
+            >
+              <i class="fas fa-envelope-open-text"></i>
+                <?php t('features.nav-link_2') ?>
             </a>
           </li>
           <li class="nav-item">
             <a
-              class="nav-link nav-link_3"
+              class="nav-link"
               id="nav-tab-3"
               data-toggle="tab"
               href="#tab-3"
               role="tab"
               aria-controls="tab-3"
               aria-selected="false"
-            ><i class="fas fa-chart-bar"></i> <?php t('features.nav-link_3') ?>
+            >
+              <i class="fas fa-chart-bar"></i>
+                <?php t('features.nav-link_3') ?>
             </a>
           </li>
         </ul>
@@ -87,35 +91,35 @@
               </div> <!-- end of col -->
               <div class="col-lg-6">
                 <div class="text-container">
-                  <h3 class="f-title_1"></h3>
-                  <p class="p-list"><?php t('features.p-list') ?>
-                    <a
-                      class="blue page-scroll"
-                      href="https://app.devi.tools"
-                    >
-                        <?php t('features.blue') ?>
-                    </a>
-                    <p class="p-item_1"> <?php t('features.p-item_1') ?></p>
-                  </p>
-                  <ul class="list-unstyled li-space-lg">
-                    <li class="media">
-                      <i class="fas fa-square"></i>
-                      <div class="media-body">  <?php t('features.media-body') ?>  </div>
-                    </li>
-                    <li class="media">
-                      <i class="fas fa-square"></i>
-                      <div class="media-body_2"> <?php t('features.media-body_2') ?></div>
-                    </li>
-                    <li class="media">
-                      <i class="fas fa-square"></i>
-                      <div class="media-body_3"> <?php t('features.media-body_3') ?></div>
-                    </li>
-                  </ul>
-                  <a
-                    class="btn-solid-reg popup-with-move-anim"
-                    href="#details-lightbox-1"
-                  > <?php t('features.btn-solid-reg') ?>
-                  </a>
+                  <h3>Em breve</h3>
+<!--                  <h3>List Building Is Easier Than Ever</h3>-->
+<!--                  <p>It's very easy to start using Tivo. You just need to fill out and submit the-->
+<!--                    <a-->
+<!--                      class="blue page-scroll"-->
+<!--                      href="sign-up.html"-->
+<!--                    >Sign Up Form-->
+<!--                    </a>-->
+<!--                    and you will receive access to the app and all of its features in no more than 24h.-->
+<!--                  </p>-->
+<!--                  <ul class="list-unstyled li-space-lg">-->
+<!--                    <li class="media">-->
+<!--                      <i class="fas fa-square"></i>-->
+<!--                      <div class="media-body">Create and embed on websites newsletter sign up forms</div>-->
+<!--                    </li>-->
+<!--                    <li class="media">-->
+<!--                      <i class="fas fa-square"></i>-->
+<!--                      <div class="media-body">Manage forms and landing pages for your services</div>-->
+<!--                    </li>-->
+<!--                    <li class="media">-->
+<!--                      <i class="fas fa-square"></i>-->
+<!--                      <div class="media-body">Add and remove subscribers using the control panel</div>-->
+<!--                    </li>-->
+<!--                  </ul>-->
+<!--                  <a-->
+<!--                    class="btn-solid-reg popup-with-move-anim"-->
+<!--                    href="#details-lightbox-1"-->
+<!--                  >LIGHTBOX-->
+<!--                  </a>-->
                 </div> <!-- end of text-container -->
               </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -141,27 +145,30 @@
               </div> <!-- end of col -->
               <div class="col-lg-6">
                 <div class="text-container">
-                  <h3 class="f-title"> <?php t('features.f-title') ?></h3>
-                  <p class="p-feature">  <?php t('features.p-feature_1') ?>
-                  </p>
-                  <ul class="list-unstyled li-space-lg">
-                    <li class="media">
-                      <i class="fas fa-square"></i>
-                      <div class="media-body_4"> <?php t('features.media-body_4') ?></div>
-                    </li>
-                    <li class="media">
-                      <i class="fas fa-square"></i>
-                      <div class="media-body_5"> <?php t('features.media-body_5') ?></div>
-                    </li>
-                    <li class="media">
-                      <i class="fas fa-square"></i>
-                      <div class="media-body_6"> <?php t('features.media-body_6') ?></div>
-                    </li>
-                  </ul>
-                  <a
-                    class="btn-solid-reg popup-with-move-anim"
-                    href="#details-lightbox-2"
-                  > <?php t('features.btn-solid-reg') ?></a>
+                  <h3>Em breve</h3>
+<!--                  <h3>Campaigns Monitoring Tools</h3>-->
+<!--                  <p>Campaigns monitoring is a feature we've developed since the beginning because it's at the core of-->
+<!--                    Tivo and basically to any marketing activity focused on results.-->
+<!--                  </p>-->
+<!--                  <ul class="list-unstyled li-space-lg">-->
+<!--                    <li class="media">-->
+<!--                      <i class="fas fa-square"></i>-->
+<!--                      <div class="media-body">Easily plan campaigns and schedule their starting date</div>-->
+<!--                    </li>-->
+<!--                    <li class="media">-->
+<!--                      <i class="fas fa-square"></i>-->
+<!--                      <div class="media-body">Start campaigns and follow their evolution closely</div>-->
+<!--                    </li>-->
+<!--                    <li class="media">-->
+<!--                      <i class="fas fa-square"></i>-->
+<!--                      <div class="media-body">Evaluate campaign results and optimize future actions</div>-->
+<!--                    </li>-->
+<!--                  </ul>-->
+<!--                  <a-->
+<!--                    class="btn-solid-reg popup-with-move-anim"-->
+<!--                    href="#details-lightbox-2"-->
+<!--                  >LIGHTBOX-->
+<!--                  </a>-->
                 </div> <!-- end of text-container -->
               </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -187,28 +194,30 @@
               </div> <!-- end of col -->
               <div class="col-lg-6">
                 <div class="text-container">
-                  <h3 class="f-title_2"><?php t('features.f-title_2') ?></h3>
-                  <p class="p-feature_2"> <?php t('feature.p-feature_2') ?>
-                  </p>
-                  <ul class="list-unstyled li-space-lg">
-                    <li class="media">
-                      <i class="fas fa-square"></i>
-                      <div class="media-body_7"><?php t('features.media-body_7') ?></div>
-                    </li>
-                    <li class="media">
-                      <i class="fas fa-square"></i>
-                      <div class="media-body_8"><?php t('features.media-body_8') ?></div>
-                    </li>
-                    <li class="media">
-                      <i class="fas fa-square"></i>
-                      <div class="media-body_9"><?php t('features.media-body_9') ?></div>
-                    </li>
-                  </ul>
-                  <a
-                    class="btn-solid-reg popup-with-move-anim"
-                    href="#details-lightbox-3"
-                  ><?php t('features.btn-solid-reg') ?>
-                  </a>
+                  <h3>Em breve</h3>
+<!--                  <h3>Analytics Control Panel</h3>-->
+<!--                  <p>Analytics control panel is important for every marketing team so it's beed implemented from the-->
+<!--                    begging and designed to produce reports based on very little input information.-->
+<!--                  </p>-->
+<!--                  <ul class="list-unstyled li-space-lg">-->
+<!--                    <li class="media">-->
+<!--                      <i class="fas fa-square"></i>-->
+<!--                      <div class="media-body">If you set it up correctly you will get acces to great intel</div>-->
+<!--                    </li>-->
+<!--                    <li class="media">-->
+<!--                      <i class="fas fa-square"></i>-->
+<!--                      <div class="media-body">Easy to integrate in your websites and landing pages</div>-->
+<!--                    </li>-->
+<!--                    <li class="media">-->
+<!--                      <i class="fas fa-square"></i>-->
+<!--                      <div class="media-body">The generated reports are important for your strategy</div>-->
+<!--                    </li>-->
+<!--                  </ul>-->
+<!--                  <a-->
+<!--                    class="btn-solid-reg popup-with-move-anim"-->
+<!--                    href="#details-lightbox-3"-->
+<!--                  >LIGHTBOX-->
+<!--                  </a>-->
                 </div> <!-- end of text-container -->
               </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -218,7 +227,7 @@
         </div> <!-- end of tab content -->
         <!-- end of tabs content -->
 
-      </div> <!-- end of col -->
+      </div>
     </div> <!-- end of row -->
   </div> <!-- end of container -->
 </div> <!-- end of tabs -->
@@ -248,46 +257,47 @@
         </div> <!-- end of image-container -->
       </div> <!-- end of col -->
       <div class="col-lg-4">
-        <h3 class="f-title_3"><?php t('features.f-title_3') ?></h3>
+        <h3>List Building</h3>
         <hr>
-        <h5 class="f-subtitle"><?php t('features.f-subtitle') ?></h5>
-        <p class="p-list">
+        <h5>Core service</h5>
+        <p>It's very easy to start using Tivo. You just need to fill out and submit the Sign Up Form and you will
+          receive access to the app.
         </p>
         <ul class="list-unstyled li-space-lg">
           <li class="media">
             <i class="fas fa-square"></i>
-            <div class="media-body_10"><?php t('features.media-body_10') ?></div>
+            <div class="media-body">List building framework</div>
           </li>
           <li class="media">
             <i class="fas fa-square"></i>
-            <div class="media-body_11"><?php t('features.btn-media-body_11') ?></div>
+            <div class="media-body">Easy database browsing</div>
           </li>
           <li class="media">
             <i class="fas fa-square"></i>
-            <div class="media-body_12"><?php t('features.media-body_12') ?></div>
+            <div class="media-body">User administration</div>
           </li>
           <li class="media">
             <i class="fas fa-square"></i>
-            <div class="media-body_13"><?php t('features.media-body_13') ?></div>
+            <div class="media-body">Automate user signup</div>
           </li>
           <li class="media">
             <i class="fas fa-square"></i>
-            <div class="media-body_14"><?php t('features.media-body_14') ?></div>
+            <div class="media-body">Quick formatting tools</div>
           </li>
           <li class="media">
             <i class="fas fa-square"></i>
-            <div class="media-body_15"><?php t('features.media-body_15') ?></div>
+            <div class="media-body">Fast email checking</div>
           </li>
         </ul>
         <a
           class="btn-solid-reg mfp-close"
-          href="https://app.devi.tools"
-        ><?php t('features.btn-solid-reg_up') ?>
+          href="sign-up.html"
+        >SIGN UP
         </a>
         <a
-          class="btn-outline-reg_back mfp-close as-button"
+          class="btn-outline-reg mfp-close as-button"
           href="#screenshots"
-        ><?php t('features.btn-solid-reg_back') ?>
+        >BACK
         </a>
       </div> <!-- end of col -->
     </div> <!-- end of row -->
@@ -318,46 +328,47 @@
         </div> <!-- end of image-container -->
       </div> <!-- end of col -->
       <div class="col-lg-4">
-        <h3 class="f-title_4"><?php t('features.f-title_4') ?></h3>
+        <h3>Campaign Monitoring</h3>
         <hr>
-        <h5 class="f-subtitle"><?php t('features.f-subtitle') ?></h5>
-        <p class="p-list"><?php t('features.p-list') ?>
+        <h5>Core service</h5>
+        <p>It's very easy to start using Tivo. You just need to fill out and submit the Sign Up Form and you will
+          receive access to the app.
         </p>
         <ul class="list-unstyled li-space-lg">
           <li class="media">
             <i class="fas fa-square"></i>
-            <div class="media-body_10"><?php t('features.media-body_10') ?></div>
+            <div class="media-body">List building framework</div>
           </li>
           <li class="media">
             <i class="fas fa-square"></i>
-            <div class="media-body_11"><?php t('features.btn-media-body_11') ?></div>
+            <div class="media-body">Easy database browsing</div>
           </li>
           <li class="media">
             <i class="fas fa-square"></i>
-            <div class="media-body_12"><?php t('features.media-body_12') ?></div>
+            <div class="media-body">User administration</div>
           </li>
           <li class="media">
             <i class="fas fa-square"></i>
-            <div class="media-body_13"><?php t('features.media-body_13') ?></div>
+            <div class="media-body">Automate user signup</div>
           </li>
           <li class="media">
             <i class="fas fa-square"></i>
-            <div class="media-body_14"><?php t('features.media-body_14') ?></div>
+            <div class="media-body">Quick formatting tools</div>
           </li>
           <li class="media">
             <i class="fas fa-square"></i>
-            <div class="media-body_15"><?php t('features.media-body_15') ?></div>
+            <div class="media-body">Fast email checking</div>
           </li>
         </ul>
         <a
           class="btn-solid-reg mfp-close"
-          href="https://app.devi.tools"
-        ><?php t('features.btn-solid-reg') ?>
+          href="sign-up.html"
+        >SIGN UP
         </a>
         <a
-          class="btn-outline-reg_back mfp-close as-button"
+          class="btn-outline-reg mfp-close as-button"
           href="#screenshots"
-        ><?php t('features.btn-solid-reg_back') ?>
+        >BACK
         </a>
       </div> <!-- end of col -->
     </div> <!-- end of row -->
@@ -388,47 +399,47 @@
         </div> <!-- end of image-container -->
       </div> <!-- end of col -->
       <div class="col-lg-4">
-        <h3 class="f-title_5"><?php t('features.f-title_5') ?></h3>
+        <h3>Analytics Tools</h3>
         <hr>
-        <h5><?php t('features.f-subtitle') ?></h5>
-        <p><?php t('features.p-list') ?>
-
+        <h5>Core service</h5>
+        <p>It's very easy to start using Tivo. You just need to fill out and submit the Sign Up Form and you will
+          receive access to the app.
         </p>
         <ul class="list-unstyled li-space-lg">
           <li class="media">
             <i class="fas fa-square"></i>
-            <div class="media-body_10"><?php t('features.media-body_10') ?></div>
+            <div class="media-body">List building framework</div>
           </li>
           <li class="media">
             <i class="fas fa-square"></i>
-            <div class="media-body_11"><?php t('features.btn-media-body_11') ?></div>
+            <div class="media-body">Easy database browsing</div>
           </li>
           <li class="media">
             <i class="fas fa-square"></i>
-            <div class="media-body_12"><?php t('features.media-body_12') ?></div>
+            <div class="media-body">User administration</div>
           </li>
           <li class="media">
             <i class="fas fa-square"></i>
-            <div class="media-body_13"><?php t('features.media-body_13') ?></div>
+            <div class="media-body">Automate user signup</div>
           </li>
           <li class="media">
             <i class="fas fa-square"></i>
-            <div class="media-body_14"><?php t('features.media-body_14') ?></div>
+            <div class="media-body">Quick formatting tools</div>
           </li>
           <li class="media">
             <i class="fas fa-square"></i>
-            <div class="media-body_15"><?php t('features.media-body_15') ?></div>
+            <div class="media-body">Fast email checking</div>
           </li>
         </ul>
         <a
           class="btn-solid-reg mfp-close"
-          href="https://app.devi.tools"
-        ><?php t('features.btn-solid-reg') ?>
+          href="sign-up.html"
+        >SIGN UP
         </a>
         <a
           class="btn-outline-reg mfp-close as-button"
           href="#screenshots"
-        ><?php t('features.btn-solid-reg_back') ?>
+        >BACK
         </a>
       </div> <!-- end of col -->
     </div> <!-- end of row -->

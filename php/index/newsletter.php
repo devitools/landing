@@ -66,33 +66,21 @@
       <div class="col-lg-12">
         <div class="icon-container">
           <span class="fa-stack">
-            <a href="#your-link">
+            <a href="https://facebook.com/getdevitools">
               <i class="fas fa-circle fa-stack-2x"></i>
               <i class="fab fa-facebook-f fa-stack-1x"></i>
             </a>
           </span>
           <span class="fa-stack">
-            <a href="#your-link">
+            <a href="https://twitter.com/devitools">
               <i class="fas fa-circle fa-stack-2x"></i>
               <i class="fab fa-twitter fa-stack-1x"></i>
             </a>
           </span>
           <span class="fa-stack">
-            <a href="#your-link">
+            <a href="https://github.com/devitools">
               <i class="fas fa-circle fa-stack-2x"></i>
-              <i class="fab fa-pinterest-p fa-stack-1x"></i>
-            </a>
-          </span>
-          <span class="fa-stack">
-            <a href="#your-link">
-              <i class="fas fa-circle fa-stack-2x"></i>
-              <i class="fab fa-instagram fa-stack-1x"></i>
-            </a>
-          </span>
-          <span class="fa-stack">
-            <a href="#your-link">
-              <i class="fas fa-circle fa-stack-2x"></i>
-              <i class="fab fa-linkedin-in fa-stack-1x"></i>
+              <i class="fab fa-github fa-stack-1x"></i>
             </a>
           </span>
         </div> <!-- end of col -->
