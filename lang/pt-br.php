@@ -35,7 +35,7 @@ return [
         'btn-solid-reg' => 'COMEÇAR AGORA',
         'd-title' => 'Elimine o desconhecimento sobre como as coisas devem ser feitas de boa parte da sua stack',
         'd-text' => 'A proposta da Devitools é entregar de forma simples uma base para usar tecnologia de ponta em ' .
-            'diversas etapas da produção de software. Por não ser um conjunto de ferramentas nossas tecnologias ' .
+            'diversas etapas da produção de software. Por não ser um conjunto de ferramentas, nossas tecnologias ' .
             'podem ser adotadas de forma parcial ou progressiva. Também atuamos ajudando a alcançar os melhores ' .
             'resultados de nossas ferramentas em todas as etapas do desenvolvimento.',
         'media-body_1' => 'Nosso time entende os problemas mais comuns e vai ajudá-lo a resolvê-los',
