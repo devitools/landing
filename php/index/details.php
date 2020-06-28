@@ -30,7 +30,7 @@
                     </ul>
                     <a
                         class="btn-solid-reg page-scroll"
-                        href="https://app.devi.tools"
+                        href="https://docs.devi.tools"
                     > <?php t('details.btn-solid-reg')?>
                     </a>
                 </div> <!-- end of text-container -->
