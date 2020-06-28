@@ -14,7 +14,7 @@
             </p>
             <a
                class="btn-solid-lg page-scroll text-uppercase"
-              href="https://app.devi.tools"
+              href="https://docs.devi.tools"
             >
             <?php t('header.btn-solid-lg')?>
 
