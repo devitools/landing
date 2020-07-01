@@ -2,7 +2,7 @@
 
 return [
     'currency' => 'R$',
-    'title' => 'Devitools',
+    'title' => 'Devitools — Crie painéis de controle com poucas linhas código',
     'header' => [
         'btn-solid-lg' => 'Começar agora',
         'call' => 'Crie painéis de controle com poucas linhas código',
@@ -126,12 +126,10 @@ return [
         'p-small_2' => 'made with ❤ by dracones',
         'white-link_6' => 'template by Inovatik',
     ],
-    'meta_description' => 'Crie painéis de controle com poucas linhas código',
-    'og-site_name' => 'Devitools',
-    'og-site' => 'https://devi.tools/',
+    'meta_description' => 'Com Devitools você pode se preocupar apenas com suas regras de negócio e deixar a estrutura do seu projeto por nossa conta',
     'og-title' => 'Devitools',
-    'og-description' => 'Crie painéis de controle com poucas linhas código',
-    'og-image' => 'https://devi.tools/public/images/logo-horizontal.png',
+    'og-description' => 'Com Devitools você pode se preocupar apenas com suas regras de negócio e deixar a estrutura do seu projeto por nossa conta',
+    'og-image' => 'https://devi.tools/public/images/og-image.jpg',
     'og-url' => 'https://devi.tools/',
     'og-type' => 'website',
 
