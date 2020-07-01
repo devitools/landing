@@ -12,47 +12,33 @@ require __DIR__ . '/../vendor/autoload.php';
   >
 
   <!-- SEO Meta Tags -->
-  <meta
-    name="description"
-    content=<?php t('meta_description')?>
-  >
+
+
+<!-- Primary Meta Tags -->
+<!-- Website Title -->
+  <title><?php t('title')?></title>
+<meta name="title" content=<?php t('title')?>>
+<meta name="description" content=<?php t('og-description')?>>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content=<?php t('og-type')?>>
+<meta property="og:url" content=<?php t('og-url')?>>
+<meta property="og:title" content=<?php t('title')?>>
+<meta property="og:description" content=<?php t('og-description')?>>
+<meta property="og:image" content="https://devi.tools/public/images/og-image.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content=<?php t('og-url')?>>
+<meta property="twitter:title" content=<?php t('title')?>>
+<meta property="twitter:description" content=<?php t('og-description')?>>
+<meta property="twitter:image" content=<?php t('og-image')?>>
+
+
   <meta
     name="author"
     content="Inovatik"
   >
-
-  <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-  <meta
-    property="og:site_name"
-    content=<?php t('og-site_name')?>
-  /> <!-- website name -->
-  <meta
-    property="og:site"
-    content=<?php t('og-site')?>
-  /> <!-- website link -->
-  <meta
-    property="og:title"
-    content=<?php t('og-title')?>
-  /> <!-- title shown in the actual shared post -->
-  <meta
-    property="og:description"
-    content=<?php t('og-description')?>
-  /> <!-- description shown in the actual shared post -->
-  <meta
-    property="og:image"
-    content=<?php t('og-image')?>
-  /> <!-- image link, make sure it's jpg -->
-  <meta
-    property="og:url"
-    content=<?php t('og-url')?>
-  /> <!-- where do you want your post to link to -->
-  <meta
-    property="og:type"
-    content=<?php t('og-type')?>
-  />
-
-  <!-- Website Title -->
-  <title><?php t('title')?></title>
 
   <!-- Styles -->
   <link
