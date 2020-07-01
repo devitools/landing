@@ -126,11 +126,9 @@ return [
         'p-small_2' => 'made with ❤ by dracones',
         'white-link_6' => 'template by Inovatik',
     ],
-    'meta_description' => 'Com Devitools você pode se preocupar apenas com suas regras de negócio e deixar a estrutura do seu projeto por nossa conta',
-    'og-title' => 'Devitools',
-    'og-description' => 'Com Devitools você pode se preocupar apenas com suas regras de negócio e deixar a estrutura do seu projeto por nossa conta',
-    'og-image' => 'https://devi.tools/public/images/og-image.jpg',
-    'og-url' => 'https://devi.tools/',
-    'og-type' => 'website',
+    'og-description' => "Com Devitools você pode se preocupar apenas com suas regras de negócio e deixar a estrutura do seu projeto por nossa conta",
+    'og-image' => "https://devi.tools/public/images/features-2.png",
+    'og-url' => "https://devi.tools/",
+    'og-type' => "website",
 
 ];
