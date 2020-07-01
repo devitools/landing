@@ -14,7 +14,7 @@ require __DIR__ . '/../vendor/autoload.php';
   <!-- SEO Meta Tags -->
   <meta
     name="description"
-    content="Tivo is a HTML landing page template built with Bootstrap to help you crate engaging presentations for SaaS apps and convert visitors into users."
+    content=<?php t('meta_description')?>
   >
   <meta
     name="author"
@@ -24,35 +24,35 @@ require __DIR__ . '/../vendor/autoload.php';
   <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
   <meta
     property="og:site_name"
-    content=""
+    content=<?php t('og-site_name')?>
   /> <!-- website name -->
   <meta
     property="og:site"
-    content=""
+    content=<?php t('og-site')?>
   /> <!-- website link -->
   <meta
     property="og:title"
-    content=""
+    content=<?php t('og-title')?>
   /> <!-- title shown in the actual shared post -->
   <meta
     property="og:description"
-    content=""
+    content=<?php t('og-description')?>
   /> <!-- description shown in the actual shared post -->
   <meta
     property="og:image"
-    content=""
+    content=<?php t('og-image')?>
   /> <!-- image link, make sure it's jpg -->
   <meta
     property="og:url"
-    content=""
+    content=<?php t('og-url')?>
   /> <!-- where do you want your post to link to -->
   <meta
     property="og:type"
-    content="article"
+    content=<?php t('og-type')?>
   />
 
   <!-- Website Title -->
-  <title><?php t('title') ?></title>
+  <title><?php t('title')?></title>
 
   <!-- Styles -->
   <link
@@ -92,14 +92,14 @@ require __DIR__ . '/../vendor/autoload.php';
 >
 
     <?php
-    include __DIR__ . '/../php/index/home.php';
-    include __DIR__ . '/../php/index/features.php';
-    include __DIR__ . '/../php/index/details.php';
-    include __DIR__ . '/../php/index/pricing.php';
+include __DIR__ . '/../php/index/home.php';
+include __DIR__ . '/../php/index/features.php';
+include __DIR__ . '/../php/index/details.php';
+include __DIR__ . '/../php/index/pricing.php';
 //    include __DIR__ . '/../php/index/testimonials.php';
-    include __DIR__ . '/../php/index/newsletter.php';
-    include __DIR__ . '/../php/index/footer.php';
-    ?>
+include __DIR__ . '/../php/index/newsletter.php';
+include __DIR__ . '/../php/index/footer.php';
+?>
 
 
   <!-- Scripts -->
