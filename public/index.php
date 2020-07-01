@@ -17,22 +17,22 @@ require __DIR__ . '/../vendor/autoload.php';
 <!-- Primary Meta Tags -->
 <!-- Website Title -->
   <title><?php t('title')?></title>
-<meta name="title" content=<?php t('title')?>>
-<meta name="description" content=<?php t('og-description')?>>
+<meta name="title" content="<?php t('title')?>">
+<meta name="description" content="<?php t('og-description')?>">
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content=<?php t('og-type')?>>
-<meta property="og:url" content=<?php t('og-url')?>>
-<meta property="og:title" content=<?php t('title')?>>
-<meta property="og:description" content=<?php t('og-description')?>>
-<meta property="og:image" content="https://devi.tools/public/images/og-image.jpg">
+<meta property="og:type" content="<?php t('og-type')?>">
+<meta property="og:url" content="<?php t('og-url')?>">
+<meta property="og:title" content="<?php t('title')?>">
+<meta property="og:description" content="<?php t('og-description')?>">
+<meta property="og:image" content="<?php t('og-image')?>">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content=<?php t('og-url')?>>
-<meta property="twitter:title" content=<?php t('title')?>>
-<meta property="twitter:description" content=<?php t('og-description')?>>
-<meta property="twitter:image" content=<?php t('og-image')?>>
+<meta property="twitter:url" content="<?php t('og-url')?>">
+<meta property="twitter:title" content="<?php t('title')?>">
+<meta property="twitter:description" content="<?php t('og-description')?>">
+<meta property="twitter:image" content="<?php t('og-image')?>">
 
 
   <meta
