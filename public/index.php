@@ -25,14 +25,14 @@ require __DIR__ . '/../vendor/autoload.php';
 <meta property="og:url" content="<?php t('og-url')?>">
 <meta property="og:title" content="<?php t('title')?>">
 <meta property="og:description" content="<?php t('og-description')?>">
-<meta property="og:image" content="https://devi.tools/public/images/og-image.png">
+<meta property="og:image" content="https://devi.tools/images/og-image.png">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="<?php t('og-url')?>">
 <meta property="twitter:title" content="<?php t('title')?>">
 <meta property="twitter:description" content="<?php t('og-description')?>">
-<meta property="twitter:image" content="https://devi.tools/public/images/og-image.png">
+<meta property="twitter:image" content="https://devi.tools/images/og-image.png">
 
 
   <meta
