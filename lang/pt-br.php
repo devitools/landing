@@ -84,8 +84,8 @@ return [
         'media-body_10' => 'Consultoria para publicação',
         'media-body_11' => 'Recursos personalizados',
         'value_1' => 'Free',
-        'value_2' => '39,90',
-        'value_3' => '259,90',
+        'value_2' => 'em breve',
+        'value_3' => 'em breve',
     ],
     'testimonial' => [
         'testimonial-text' => 'I started to use Tivo with the free trial about a year ago and neve ' .
