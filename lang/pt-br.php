@@ -2,7 +2,7 @@
 
 return [
     'currency' => 'R$',
-    'title' => 'Devitools — Crie painéis de controle com poucas linhas código',
+    'title' => 'Devitools — Crie painéis de controle com poucas linhas de código',
     'header' => [
         'btn-solid-lg' => 'Começar agora',
         'call' => 'Crie painéis de controle com poucas linhas código',
