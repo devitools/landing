@@ -5,7 +5,7 @@ return [
     'title' => 'Devitools — Crie painéis de controle com poucas linhas de código',
     'header' => [
         'btn-solid-lg' => 'Começar agora',
-        'call' => 'Crie painéis de controle com poucas linhas código',
+        'call' => 'Crie painéis de controle com poucas linhas de código',
         'p-large' => 'Com Devitools você pode se preocupar apenas com suas regras de negócio e deixar a estrutura do ' .
         'seu projeto por nossa conta',
     ],
