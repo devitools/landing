@@ -2,16 +2,16 @@
 
 return [
     'currency' => 'R$',
-    'title' => 'Devitools — Crie painéis de controle com poucas linhas de código',
+    'title' => 'Devitools — Crie aplicações web com poucas linhas de código',
     'header' => [
         'btn-solid-lg' => 'Começar agora',
-        'call' => 'Crie painéis de controle com poucas linhas de código',
+        'call' => 'Crie aplicações web com poucas linhas de código',
         'p-large' => 'Com Devitools você pode se preocupar apenas com suas regras de negócio e deixar a estrutura do ' .
         'seu projeto por nossa conta',
     ],
     'description' => [
         'above-heading' => 'DESCRIÇÃO',
-        'h2-heading' => 'Crie painéis de controle de forma rápida, eficiente e padronizada',
+        'h2-heading' => 'Crie aplicações web de forma rápida, eficiente e padronizada',
         'card-title_1' => 'Desenvolvimento Rápido',
         'p-card_1' => 'Utilizando o núcleo inteligente das aplicações criadas com a ' .
         '<a href="https://github.com/devitools">@devitools</a> é possível criar telas e serviços com poucas linhas ' .
@@ -116,8 +116,8 @@ return [
         'important_link_1' => 'Leia nossos <a class="white" href="terms-conditions.html">Termos de Uso</a> e ' .
         '<a class="white" href="privacy-policy.html">Política de Privacidade</a>',
         'important_link_3' => 'Siga nosso <a class="white" href="https://github.com/devitools">Github</a>',
-        'important_link_2' => 'Conheça o <a class="white" href="https://docs.tevun.com">Tevun</a>',
-        'important_link_4' => 'Acesse nosso <a class="white" href="https://demo.devi.tools">demo online</a>',
+        'important_link_2' => 'Conheça o <a class="white" href="https://tevun.devi.tools">Tevun</a>',
+        'important_link_4' => 'Acesse nosso <a class="white" href="https://demo.devi.tools">demo online</a> e veja o Devitools em execução',
 
         'white-link_4' => 'contato@devi.tools',
         'white-link_5' => 'devi.tools',

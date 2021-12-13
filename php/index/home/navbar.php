@@ -72,14 +72,6 @@
       <span class="nav-item">
         <a
           class="btn-outline-sm"
-          href="https://app.devi.tools"
-        >
-            <?php t('navbar.btn-outline-sm') ?>
-        </a>
-      </span>
-      <span class="nav-item">
-        <a
-          class="btn-outline-sm"
           href="https://demo.devi.tools"
         >
             <?php t('navbar.demo') ?>
