@@ -137,7 +137,7 @@
             <div class="button-wrapper">
               <a
                 class="btn-solid-reg btn-solid-register page-scroll"
-                href="https://app.devi.tools"
+                href="javascript: alert('Soon!')"
               >
                   <?php t('pricing.btn-solid-register')?>
               </a>
@@ -207,7 +207,7 @@
             <div class="button-wrapper">
               <a
                 class="btn-solid-reg btn-solid-register page-scroll"
-                href="https://app.devi.tools"
+                href="javascript: alert('Soon!')"
               >
                   <?php t('pricing.btn-solid-register')?>
               </a>
