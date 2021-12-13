@@ -66,7 +66,7 @@ return [
         'above-heading' => 'VALORES',
         'h2-heading' => 'Opções de Planos de Suporte',
         'btn-solid-docs' => 'DOCUMENTAÇÃO',
-        'btn-solid-register' => 'EM BREVE',
+        'btn-solid-register' => 'CADASTRAR',
         'card-title_1' => 'BÁSICO',
         'card-title_2' => 'AVANÇADO',
         'card-title_3' => 'COMPLETO',
