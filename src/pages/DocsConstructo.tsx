@@ -3,10 +3,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Wrench, Code, Settings, Zap } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const DocsConstructo = () => {
   return (
     <div className="min-h-screen" style={{ background: 'var(--gradient-background)' }}>
+      <Header />
       <DocsLayout>
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="space-y-4">
@@ -190,6 +193,7 @@ $container->contextual(ApiController::class)
           </Tabs>
         </div>
       </DocsLayout>
+      <Footer />
     </div>
   );
 };
