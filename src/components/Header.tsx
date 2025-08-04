@@ -32,9 +32,9 @@ const Header = () => {
             <a href="/serendipity" className="text-muted-foreground hover:text-primary transition-colors">
               Serendipity
             </a>
-            <a href="#docs" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link to="/docs" className="text-muted-foreground hover:text-primary transition-colors">
               Documentação
-            </a>
+            </Link>
           </nav>
 
           <div className="flex items-center space-x-4">
