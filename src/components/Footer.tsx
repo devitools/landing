@@ -1,4 +1,5 @@
 import { Github, Twitter, Mail, Heart } from "lucide-react";
+import deviLogo from "@/assets/devitools-logo.png";
 
 const Footer = () => {
   return (
@@ -7,10 +8,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">D</span>
-              </div>
-              <span className="text-xl font-bold text-foreground">Devitools</span>
+              <img 
+                src={deviLogo} 
+                alt="Devitools Logo" 
+                className="h-10 object-contain"
+              />
             </div>
             <p className="text-muted-foreground">
               Ferramentas modernas para simplificar o desenvolvimento PHP.
