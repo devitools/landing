@@ -8,6 +8,9 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Constructo from "./pages/Constructo";
 import Serendipity from "./pages/Serendipity";
+import Docs from "./pages/Docs";
+import DocsConstructo from "./pages/DocsConstructo";
+import DocsSerendipity from "./pages/DocsSerendipity";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +30,9 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/constructo" element={<Constructo />} />
             <Route path="/serendipity" element={<Serendipity />} />
+            <Route path="/docs" element={<Docs />} />
+            <Route path="/docs/constructo" element={<DocsConstructo />} />
+            <Route path="/docs/serendipity" element={<DocsSerendipity />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

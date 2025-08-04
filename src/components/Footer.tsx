@@ -1,18 +1,21 @@
 import { Github, Twitter, Mail, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 import deviLogo from "@/assets/devitools-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border bg-card/50 py-12 px-6">
+    <footer className="border-t border-border py-12 px-6" style={{ backgroundColor: 'hsl(var(--footer-bg))' }}>
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <img 
-                src={deviLogo} 
-                alt="Devitools Logo" 
-                className="h-10 object-contain"
-              />
+              <Link to="/" className="hover:opacity-80 transition-opacity">
+                <img 
+                  src={deviLogo} 
+                  alt="Devitools Logo" 
+                  className="h-10 object-contain"
+                />
+              </Link>
             </div>
             <p className="text-muted-foreground">
               Ferramentas modernas para simplificar o desenvolvimento PHP.
