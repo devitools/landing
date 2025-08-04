@@ -55,7 +55,7 @@ $router->group(['middleware' => 'auth'], function($router) {
 });`;
 
   return (
-    <div className="min-h-screen" style={{ background: 'var(--gradient-background)' }}>
+    <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
