@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Github, BookOpen, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import { Link } from "react-router-dom";
 import deviLogo from "@/assets/devitools-logo.png";
 
 const Header = () => {
@@ -11,15 +12,17 @@ const Header = () => {
   };
 
   return (
-    <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
+    <header className="border-b border-border backdrop-blur-sm sticky top-0 z-50" style={{ backgroundColor: 'hsl(var(--header-bg))' }}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <img 
-              src={deviLogo} 
-              alt="Devitools Logo" 
-              className="h-11 object-contain"
-            />
+            <Link to="/" className="hover:opacity-80 transition-opacity">
+              <img 
+                src={deviLogo} 
+                alt="Devitools Logo" 
+                className="h-11 object-contain"
+              />
+            </Link>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">

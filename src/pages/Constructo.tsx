@@ -49,7 +49,7 @@ $container->bind(CacheInterface::class, RedisCache::class);
 $service = $container->resolve(UserService::class);`;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen" style={{ background: 'var(--gradient-background)' }}>
       <Header />
       
       {/* Hero Section */}
