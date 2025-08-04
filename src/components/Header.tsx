@@ -18,7 +18,7 @@ const Header = () => {
             <img 
               src={deviLogo} 
               alt="Devitools Logo" 
-              className="h-12 object-contain"
+              className="h-11 object-contain"
             />
           </div>
           
