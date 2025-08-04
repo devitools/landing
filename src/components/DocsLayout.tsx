@@ -44,8 +44,8 @@ function DocsSidebar() {
     isActive ? "bg-primary/10 text-primary font-medium" : "hover:bg-muted/50";
 
   return (
-    <Sidebar className={state === "collapsed" ? "w-14" : "w-64"} collapsible="icon">
-      <SidebarContent>
+    <Sidebar className={state === "collapsed" ? "w-14" : "w-64"} collapsible="icon" side="left">
+      <SidebarContent className="bg-background border-r">
         <div className="p-4">
           <div className="flex items-center space-x-2 mb-6">
             <FileText className="h-6 w-6 text-primary" />
@@ -81,21 +81,21 @@ interface DocsLayoutProps {
 
 export function DocsLayout({ children }: DocsLayoutProps) {
   return (
-    <SidebarProvider>
-      <div className="flex w-full">
+    <div className="flex w-full min-h-full">
+      <SidebarProvider>
         <DocsSidebar />
-        <div className="flex-1 flex flex-col min-h-screen">
-          <header className="h-16 flex items-center border-b px-6 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="flex-1 flex flex-col">
+          <header className="h-16 flex items-center border-b px-6 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-10">
             <SidebarTrigger className="mr-4" />
             <h1 className="text-xl font-semibold">Documentação</h1>
           </header>
-          <main className="flex-1">
-            <div className="p-6">
+          <main className="flex-1 overflow-auto">
+            <div className="p-6 max-w-none">
               {children}
             </div>
           </main>
         </div>
-      </div>
-    </SidebarProvider>
+      </SidebarProvider>
+    </div>
   );
 }

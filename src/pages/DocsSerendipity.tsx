@@ -10,7 +10,7 @@ const DocsSerendipity = () => {
   return (
     <div className="min-h-screen flex flex-col" style={{ background: 'var(--gradient-background)' }}>
       <Header />
-      <div className="flex-1">
+      <div className="flex-1 flex flex-col">
         <DocsLayout>
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="space-y-4">
