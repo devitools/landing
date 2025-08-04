@@ -15,7 +15,7 @@ const Packages = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           <PackageCard
             name="Constructo"
             description="Ferramentas fundamentais para qualquer projeto PHP. Serialização, validação e testes simplificados."
@@ -42,6 +42,20 @@ const Packages = () => {
               "Workflow otimizado para tratamento de erros",
               "Organização inteligente de projetos",
               "Integração nativa com todas as features do Constructo"
+            ]}
+          />
+
+          <PackageCard
+            name="Effulgence"
+            description="Extensão do Constructo especificamente otimizada para o framework Laravel, oferecendo ferramentas avançadas."
+            gradient="bg-gradient-success"
+            icon={<Layers className="w-7 h-7 text-success-foreground" />}
+            features={[
+              "Simplificação de rotas e controllers Laravel",
+              "Integração nativa com Eloquent ORM",
+              "Workflow otimizado para middlewares",
+              "Organização inteligente de projetos Laravel",
+              "Integração completa com todas as features do Constructo"
             ]}
           />
         </div>
