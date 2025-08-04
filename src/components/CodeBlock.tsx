@@ -151,8 +151,15 @@ const CodeBlock = ({
             background: "transparent",
             fontSize: undefined,
           }}
+          wrapLines={true}
+          lineProps={{
+            style: { background: "transparent" }
+          }}
+          codeTagProps={{
+            style: { background: "transparent" }
+          }}
           className={cn(
-            "!bg-transparent overflow-x-auto p-6",
+            "!bg-transparent overflow-x-auto p-6 [&_span]:!bg-transparent",
             sizeClasses[size],
             !title && showCopy && "pr-16"
           )}
