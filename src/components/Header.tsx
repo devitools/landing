@@ -1,7 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { Github, BookOpen } from "lucide-react";
+import { Github, BookOpen, Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
 const Header = () => {
+  const { theme, setTheme } = useTheme();
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   return (
     <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4">
@@ -26,6 +33,9 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center space-x-4">
+            <Button variant="ghost" size="icon" onClick={toggleTheme}>
+              {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            </Button>
             <Button variant="ghost" size="sm">
               <Github className="w-4 h-4 mr-2" />
               GitHub
