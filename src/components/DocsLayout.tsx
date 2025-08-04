@@ -82,19 +82,19 @@ interface DocsLayoutProps {
 export function DocsLayout({ children }: DocsLayoutProps) {
   return (
     <SidebarProvider>
-      <div className="flex min-h-screen w-full">
+      <div className="flex w-full">
         <DocsSidebar />
-        <main className="flex-1">
-          <header className="h-16 flex items-center border-b px-6">
+        <div className="flex-1 flex flex-col min-h-screen">
+          <header className="h-16 flex items-center border-b px-6 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <SidebarTrigger className="mr-4" />
             <h1 className="text-xl font-semibold">Documentação</h1>
           </header>
-          <ScrollArea className="h-[calc(100vh-4rem)]">
+          <main className="flex-1">
             <div className="p-6">
               {children}
             </div>
-          </ScrollArea>
-        </main>
+          </main>
+        </div>
       </div>
     </SidebarProvider>
   );

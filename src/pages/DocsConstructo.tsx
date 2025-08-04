@@ -8,9 +8,10 @@ import Footer from "@/components/Footer";
 
 const DocsConstructo = () => {
   return (
-    <div className="min-h-screen" style={{ background: 'var(--gradient-background)' }}>
+    <div className="min-h-screen flex flex-col" style={{ background: 'var(--gradient-background)' }}>
       <Header />
-      <DocsLayout>
+      <div className="flex-1">
+        <DocsLayout>
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
@@ -192,7 +193,8 @@ $container->contextual(ApiController::class)
             </TabsContent>
           </Tabs>
         </div>
-      </DocsLayout>
+        </DocsLayout>
+      </div>
       <Footer />
     </div>
   );

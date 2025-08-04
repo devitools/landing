@@ -7,9 +7,10 @@ import Footer from "@/components/Footer";
 
 const Docs = () => {
   return (
-    <div className="min-h-screen" style={{ background: 'var(--gradient-background)' }}>
+    <div className="min-h-screen flex flex-col" style={{ background: 'var(--gradient-background)' }}>
       <Header />
-      <DocsLayout>
+      <div className="flex-1">
+        <DocsLayout>
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="space-y-4">
             <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -99,7 +100,8 @@ const Docs = () => {
             </div>
           </div>
         </div>
-      </DocsLayout>
+        </DocsLayout>
+      </div>
       <Footer />
     </div>
   );
