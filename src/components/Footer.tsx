@@ -1,8 +1,11 @@
 import { Github, Twitter, Mail, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTheme } from "next-themes";
 import deviLogo from "@/assets/devitools-logo.png";
 
 const Footer = () => {
+  const { theme } = useTheme();
+  
   return (
     <footer className="border-t border-border py-12 px-6" style={{ backgroundColor: 'hsl(var(--footer-bg))' }}>
       <div className="container mx-auto">
@@ -13,7 +16,7 @@ const Footer = () => {
                 <img 
                   src={deviLogo} 
                   alt="Devitools Logo" 
-                  className="h-10 object-contain"
+                  className={`h-10 object-contain ${theme !== "dark" ? "grayscale brightness-[0.6]" : ""}`}
                 />
               </Link>
             </div>
