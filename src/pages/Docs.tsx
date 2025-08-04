@@ -1,7 +1,7 @@
 import { DocsLayout } from "@/components/DocsLayout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BookOpen, Package, Wrench } from "lucide-react";
+import { BookOpen, Package, Wrench, Layers } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -43,7 +43,7 @@ const Docs = () => {
             </ul>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="flex items-center space-x-2">
@@ -51,17 +51,17 @@ const Docs = () => {
                   <CardTitle>Constructo</CardTitle>
                 </div>
                 <CardDescription>
-                  Container de injeção de dependência para PHP
+                  Ferramentas fundamentais para projetos PHP
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Sistema completo de serialização, validação e geração de dados fake para acelerar o desenvolvimento PHP.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">DI Container</Badge>
-                  <Badge variant="secondary">Auto-wiring</Badge>
-                  <Badge variant="secondary">Singleton</Badge>
+                  <Badge variant="secondary">Serialização</Badge>
+                  <Badge variant="secondary">Validação</Badge>
+                  <Badge variant="secondary">Testing</Badge>
                 </div>
               </CardContent>
             </Card>
@@ -73,17 +73,39 @@ const Docs = () => {
                   <CardTitle>Serendipity</CardTitle>
                 </div>
                 <CardDescription>
-                  Event dispatcher moderno para PHP
+                  Extensão otimizada para Hyperf
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ferramentas avançadas para desenvolvimento com Hyperf, incluindo workers, rotas e tratamento de erros.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">Event System</Badge>
+                  <Badge variant="secondary">Hyperf</Badge>
+                  <Badge variant="secondary">Workers</Badge>
                   <Badge variant="secondary">Async</Badge>
-                  <Badge variant="secondary">Listeners</Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center space-x-2">
+                  <Layers className="h-6 w-6 text-success" />
+                  <CardTitle>Effulgence</CardTitle>
+                </div>
+                <CardDescription>
+                  Extensão otimizada para Laravel
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Integração completa com Laravel, incluindo Eloquent, controllers simplificados e middlewares otimizados.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">Laravel</Badge>
+                  <Badge variant="secondary">Eloquent</Badge>
+                  <Badge variant="secondary">Controllers</Badge>
                 </div>
               </CardContent>
             </Card>
@@ -92,11 +114,12 @@ const Docs = () => {
           <div className="bg-muted/50 rounded-lg p-6">
             <h3 className="text-lg font-semibold mb-3">Instalação Rápida</h3>
             <p className="text-muted-foreground mb-4">
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+              Instale os pacotes Devitools via Composer para começar a usar em seus projetos PHP.
             </p>
             <div className="bg-background rounded border p-4 font-mono text-sm">
               composer require devitools/constructo<br />
-              composer require devitools/serendipity
+              composer require devitools/serendipity<br />
+              composer require devitools/effulgence
             </div>
           </div>
         </div>

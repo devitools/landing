@@ -28,15 +28,16 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-foreground mb-4">Pacotes</h3>
             <ul className="space-y-2">
-              <li><a href="#constructo" className="text-muted-foreground hover:text-primary transition-colors">Constructo</a></li>
-              <li><a href="#serendipity" className="text-muted-foreground hover:text-primary transition-colors">Serendipity</a></li>
+              <li><a href="/constructo" className="text-muted-foreground hover:text-primary transition-colors">Constructo</a></li>
+              <li><a href="/serendipity" className="text-muted-foreground hover:text-primary transition-colors">Serendipity</a></li>
+              <li><a href="/effulgence" className="text-muted-foreground hover:text-primary transition-colors">Effulgence</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="font-semibold text-foreground mb-4">Recursos</h3>
             <ul className="space-y-2">
-              <li><a href="#docs" className="text-muted-foreground hover:text-primary transition-colors">Documentação</a></li>
+              <li><Link to="/docs" className="text-muted-foreground hover:text-primary transition-colors">Documentação</Link></li>
               <li><a href="#examples" className="text-muted-foreground hover:text-primary transition-colors">Exemplos</a></li>
               <li><a href="#guides" className="text-muted-foreground hover:text-primary transition-colors">Guias</a></li>
             </ul>

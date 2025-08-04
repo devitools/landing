@@ -32,6 +32,9 @@ const Header = () => {
             <a href="/serendipity" className="text-muted-foreground hover:text-primary transition-colors">
               Serendipity
             </a>
+            <a href="/effulgence" className="text-muted-foreground hover:text-primary transition-colors">
+              Effulgence
+            </a>
             <Link to="/docs" className="text-muted-foreground hover:text-primary transition-colors">
               Documentação
             </Link>

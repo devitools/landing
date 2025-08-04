@@ -32,6 +32,11 @@ const navigationItems = [
     url: "/docs/serendipity",
     icon: Package,
   },
+  {
+    title: "Effulgence",
+    url: "/docs/effulgence",
+    icon: FileText,
+  },
 ];
 
 function DocsSidebar() {
