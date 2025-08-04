@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import CodeBlock from "@/components/CodeBlock";
 import { Code, Download, ExternalLink, CheckCircle, Layers, Database, Shield } from "lucide-react";
 
 const Effulgence = () => {
@@ -154,19 +155,14 @@ class UserController extends BaseController
             <p className="text-muted-foreground">Veja como criar controllers elegantes com Effulgence</p>
           </div>
           
-          <Card className="max-w-4xl mx-auto">
-            <CardHeader>
-              <CardTitle>DTOs e Controllers</CardTitle>
-              <CardDescription>
-                Exemplo de DTO com validação automática e controller simplificado
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <pre className="bg-muted rounded-lg p-6 text-sm overflow-x-auto">
-                <code>{codeExample}</code>
-              </pre>
-            </CardContent>
-          </Card>
+          <CodeBlock
+            title="DTOs e Controllers"
+            language="php"
+            gradient="success"
+            size="md"
+          >
+            {codeExample}
+          </CodeBlock>
         </div>
       </section>
 
