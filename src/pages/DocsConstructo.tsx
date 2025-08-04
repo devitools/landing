@@ -5,6 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Wrench, Code, Settings, Zap } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CodeBlock from "@/components/CodeBlock";
 
 const DocsConstructo = () => {
   return (
@@ -108,9 +109,9 @@ const DocsConstructo = () => {
                 </p>
                 
                 <h3>Via Composer</h3>
-                <div className="bg-background rounded border p-4 font-mono text-sm">
+                <CodeBlock language="bash" size="sm">
                   composer require devitools/constructo
-                </div>
+                </CodeBlock>
 
                 <h3>Requisitos</h3>
                 <ul>
@@ -136,14 +137,14 @@ const DocsConstructo = () => {
                 </p>
 
                 <h3>Exemplo Simples</h3>
-                <div className="bg-background rounded border p-4 font-mono text-sm">
-                  {`use Devitools\\Constructo\\Container;
+                <CodeBlock language="php" size="md">
+{`use Devitools\\Constructo\\Container;
 
 $container = new Container();
 $container->bind(UserService::class);
 
 $service = $container->resolve(UserService::class);`}
-                </div>
+                </CodeBlock>
 
                 <h3>Definindo Dependências</h3>
                 <p>
@@ -151,10 +152,10 @@ $service = $container->resolve(UserService::class);`}
                   deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
                 </p>
 
-                <div className="bg-background rounded border p-4 font-mono text-sm">
-                  {`$container->bind(DatabaseInterface::class, MySQLDatabase::class);
+                <CodeBlock language="php" size="md">
+{`$container->bind(DatabaseInterface::class, MySQLDatabase::class);
 $container->singleton(ConfigService::class);`}
-                </div>
+                </CodeBlock>
               </div>
             </TabsContent>
 
@@ -167,15 +168,15 @@ $container->singleton(ConfigService::class);`}
                 </p>
 
                 <h3>Factories Customizadas</h3>
-                <div className="bg-background rounded border p-4 font-mono text-sm">
-                  {`$container->bind(ComplexService::class, function($container) {
+                <CodeBlock language="php" size="md">
+{`$container->bind(ComplexService::class, function($container) {
     return new ComplexService(
         $container->resolve(DatabaseInterface::class),
         $container->resolve(ConfigService::class),
         ['option' => 'value']
     );
 });`}
-                </div>
+                </CodeBlock>
 
                 <h3>Contextos e Scopes</h3>
                 <p>
@@ -183,12 +184,12 @@ $container->singleton(ConfigService::class);`}
                   id quod maxime placeat facere possimus, omnis voluptas assumenda est.
                 </p>
 
-                <div className="bg-background rounded border p-4 font-mono text-sm">
-                  {`$container->scoped(RequestService::class);
+                <CodeBlock language="php" size="md">
+{`$container->scoped(RequestService::class);
 $container->contextual(ApiController::class)
     ->needs(LoggerInterface::class)
     ->give(ApiLogger::class);`}
-                </div>
+                </CodeBlock>
               </div>
             </TabsContent>
           </Tabs>

@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Layers, Download, Code, Database, Zap, Shield } from "lucide-react";
+import CodeBlock from "@/components/CodeBlock";
 
 const DocsEffulgence = () => {
   return (
@@ -152,23 +153,23 @@ const DocsEffulgence = () => {
 
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Instalação via Composer</h3>
-                    <div className="bg-muted rounded-lg p-4 font-mono text-sm">
+                    <CodeBlock language="bash" size="sm">
                       composer require devitools/effulgence
-                    </div>
+                    </CodeBlock>
                   </div>
 
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Publicar Configurações</h3>
-                    <div className="bg-muted rounded-lg p-4 font-mono text-sm">
-                      php artisan vendor:publish --provider="Devitools\Effulgence\EffulgenceServiceProvider"
-                    </div>
+                    <CodeBlock language="bash" size="sm">
+                      {"php artisan vendor:publish --provider=\"Devitools\\Effulgence\\EffulgenceServiceProvider\""}
+                    </CodeBlock>
                   </div>
 
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Verificar Instalação</h3>
-                    <div className="bg-muted rounded-lg p-4 font-mono text-sm">
+                    <CodeBlock language="bash" size="sm">
                       php artisan effulgence:status
-                    </div>
+                    </CodeBlock>
                   </div>
                 </div>
               </Card>
@@ -181,8 +182,8 @@ const DocsEffulgence = () => {
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Criando um DTO</h3>
-                    <div className="bg-muted rounded-lg p-4 font-mono text-sm overflow-x-auto">
-                      <pre>{`<?php
+                    <CodeBlock language="php" size="md" gradient="success">
+{`<?php
 
 use Devitools\\Constructo\\Data\\DataTransferObject;
 use Devitools\\Effulgence\\Traits\\EloquentSerializable;
@@ -203,14 +204,14 @@ class UserDto extends DataTransferObject
             'phone' => 'nullable|string|max:20'
         ];
     }
-}`}</pre>
-                    </div>
+}`}
+                    </CodeBlock>
                   </div>
 
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Controller com Validação Automática</h3>
-                    <div className="bg-muted rounded-lg p-4 font-mono text-sm overflow-x-auto">
-                      <pre>{`<?php
+                    <CodeBlock language="php" size="md" gradient="primary">
+{`<?php
 
 use Devitools\\Effulgence\\Controller\\BaseController;
 use App\\DTOs\\UserDto;
@@ -232,8 +233,8 @@ class UserController extends BaseController
         
         return $this->success($user);
     }
-}`}</pre>
-                    </div>
+}`}
+                    </CodeBlock>
                   </div>
                 </div>
               </Card>
@@ -246,8 +247,8 @@ class UserController extends BaseController
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Middlewares Personalizados</h3>
-                    <div className="bg-muted rounded-lg p-4 font-mono text-sm overflow-x-auto">
-                      <pre>{`<?php
+                    <CodeBlock language="php" size="md" gradient="accent">
+{`<?php
 
 use Devitools\\Effulgence\\Middleware\\ConstructoValidation;
 
@@ -264,14 +265,14 @@ class CustomValidationMiddleware extends ConstructoValidation
         // Lógica customizada após a validação
         return $dto;
     }
-}`}</pre>
-                    </div>
+}`}
+                    </CodeBlock>
                   </div>
 
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Serialização Avançada de Models</h3>
-                    <div className="bg-muted rounded-lg p-4 font-mono text-sm overflow-x-auto">
-                      <pre>{`<?php
+                    <CodeBlock language="php" size="md" gradient="success">
+{`<?php
 
 use Devitools\\Effulgence\\Traits\\AdvancedSerialization;
 use Illuminate\\Database\\Eloquent\\Model;
@@ -289,22 +290,22 @@ class User extends Model
     {
         return $this->serialize(UserDto::class);
     }
-}`}</pre>
-                    </div>
+}`}
+                    </CodeBlock>
                   </div>
 
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Comandos Artisan Personalizados</h3>
-                    <div className="bg-muted rounded-lg p-4 font-mono text-sm overflow-x-auto">
-                      <pre>{`# Gerar Controller com DTO
+                    <CodeBlock language="bash" size="md" gradient="warning">
+{`# Gerar Controller com DTO
 php artisan make:effulgence-controller UserController --dto=UserDto
 
 # Gerar DTO com validações
 php artisan make:effulgence-dto UserDto --model=User
 
 # Gerar conjunto completo (Controller + DTO + Model)
-php artisan make:effulgence-resource User`}</pre>
-                    </div>
+php artisan make:effulgence-resource User`}
+                    </CodeBlock>
                   </div>
                 </div>
               </Card>

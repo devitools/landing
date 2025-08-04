@@ -5,6 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Package, Radio, Layers, Globe } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CodeBlock from "@/components/CodeBlock";
 
 const DocsSerendipity = () => {
   return (
@@ -109,9 +110,9 @@ const DocsSerendipity = () => {
                 </p>
                 
                 <h3>Via Composer</h3>
-                <div className="bg-background rounded border p-4 font-mono text-sm">
+                <CodeBlock language="bash" size="sm">
                   composer require devitools/serendipity
-                </div>
+                </CodeBlock>
 
                 <h3>Configuração Inicial</h3>
                 <p>
@@ -119,11 +120,11 @@ const DocsSerendipity = () => {
                   eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis.
                 </p>
 
-                <div className="bg-background rounded border p-4 font-mono text-sm">
-                  {`use Devitools\\Serendipity\\EventDispatcher;
+                <CodeBlock language="php" size="md">
+{`use Devitools\\Serendipity\\EventDispatcher;
 
 $dispatcher = new EventDispatcher();`}
-                </div>
+                </CodeBlock>
 
                 <h3>Requisitos do Sistema</h3>
                 <ul>
@@ -143,15 +144,15 @@ $dispatcher = new EventDispatcher();`}
                 </p>
 
                 <h3>Criando Eventos</h3>
-                <div className="bg-background rounded border p-4 font-mono text-sm">
-                  {`class UserRegistered
+                <CodeBlock language="php" size="md">
+{`class UserRegistered
 {
     public function __construct(
         public readonly User $user,
         public readonly \\DateTime $timestamp
     ) {}
 }`}
-                </div>
+                </CodeBlock>
 
                 <h3>Disparando Eventos</h3>
                 <p>
@@ -159,15 +160,15 @@ $dispatcher = new EventDispatcher();`}
                   vestibulum at eros. Praesent commodo cursus magna.
                 </p>
 
-                <div className="bg-background rounded border p-4 font-mono text-sm">
-                  {`$event = new UserRegistered($user, new \\DateTime());
+                <CodeBlock language="php" size="md">
+{`$event = new UserRegistered($user, new \\DateTime());
 $dispatcher->dispatch($event);`}
-                </div>
+                </CodeBlock>
 
                 <h3>Eventos Assíncronos</h3>
-                <div className="bg-background rounded border p-4 font-mono text-sm">
-                  {`$dispatcher->dispatchAsync($event);`}
-                </div>
+                <CodeBlock language="php" size="md">
+                  {"$dispatcher->dispatchAsync($event);"}
+                </CodeBlock>
               </div>
             </TabsContent>
 
@@ -180,20 +181,20 @@ $dispatcher->dispatch($event);`}
                 </p>
 
                 <h3>Listener Simples</h3>
-                <div className="bg-background rounded border p-4 font-mono text-sm">
-                  {`$dispatcher->listen(UserRegistered::class, function($event) {
+                <CodeBlock language="php" size="md">
+{`$dispatcher->listen(UserRegistered::class, function($event) {
     // Enviar email de boas-vindas
     $emailService->sendWelcomeEmail($event->user);
 });`}
-                </div>
+                </CodeBlock>
 
                 <h3>Listener com Classe</h3>
                 <p>
                   Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.
                 </p>
 
-                <div className="bg-background rounded border p-4 font-mono text-sm">
-                  {`class SendWelcomeEmailListener
+                <CodeBlock language="php" size="md">
+{`class SendWelcomeEmailListener
 {
     public function handle(UserRegistered $event): void
     {
@@ -202,13 +203,13 @@ $dispatcher->dispatch($event);`}
 }
 
 $dispatcher->listen(UserRegistered::class, SendWelcomeEmailListener::class);`}
-                </div>
+                </CodeBlock>
 
                 <h3>Prioridades</h3>
-                <div className="bg-background rounded border p-4 font-mono text-sm">
-                  {`$dispatcher->listen(UserRegistered::class, $highPriorityListener, 100);
+                <CodeBlock language="php" size="md">
+{`$dispatcher->listen(UserRegistered::class, $highPriorityListener, 100);
 $dispatcher->listen(UserRegistered::class, $lowPriorityListener, 10);`}
-                </div>
+                </CodeBlock>
               </div>
             </TabsContent>
           </Tabs>

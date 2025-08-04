@@ -1,6 +1,5 @@
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Copy, Play } from "lucide-react";
+import CodeBlock from "@/components/CodeBlock";
 
 const CodeExample = () => {
   const constructoExample = `<?php
@@ -73,51 +72,27 @@ class EmailWorker
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
-          <Card className="overflow-hidden">
-            <div className="bg-gradient-primary p-4">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold text-primary-foreground">Constructo</h3>
-                <div className="flex space-x-2">
-                  <Button size="sm" variant="ghost" className="text-primary-foreground hover:bg-white/10">
-                    <Copy className="w-4 h-4" />
-                  </Button>
-                  <Button size="sm" variant="ghost" className="text-primary-foreground hover:bg-white/10">
-                    <Play className="w-4 h-4" />
-                  </Button>
-                </div>
-              </div>
-            </div>
-            <div className="p-6">
-              <pre className="text-sm overflow-x-auto">
-                <code className="language-php text-foreground whitespace-pre-wrap">
-                  {constructoExample}
-                </code>
-              </pre>
-            </div>
-          </Card>
+          <CodeBlock
+            title="Constructo"
+            language="php"
+            showCopy={true}
+            showRun={true}
+            gradient="primary"
+            size="md"
+          >
+            {constructoExample}
+          </CodeBlock>
           
-          <Card className="overflow-hidden">
-            <div className="bg-gradient-accent p-4">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold text-accent-foreground">Serendipity</h3>
-                <div className="flex space-x-2">
-                  <Button size="sm" variant="ghost" className="text-accent-foreground hover:bg-white/10">
-                    <Copy className="w-4 h-4" />
-                  </Button>
-                  <Button size="sm" variant="ghost" className="text-accent-foreground hover:bg-white/10">
-                    <Play className="w-4 h-4" />
-                  </Button>
-                </div>
-              </div>
-            </div>
-            <div className="p-6">
-              <pre className="text-sm overflow-x-auto">
-                <code className="language-php text-foreground whitespace-pre-wrap">
-                  {serendipityExample}
-                </code>
-              </pre>
-            </div>
-          </Card>
+          <CodeBlock
+            title="Serendipity"
+            language="php"
+            showCopy={true}
+            showRun={true}
+            gradient="accent"
+            size="md"
+          >
+            {serendipityExample}
+          </CodeBlock>
         </div>
         
         <div className="text-center mt-12">
