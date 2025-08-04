@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Github, BookOpen, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import deviLogo from "@/assets/devitools-logo.png";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -13,10 +14,12 @@ const Header = () => {
     <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">D</span>
-            </div>
+          <div className="flex items-center space-x-3">
+            <img 
+              src={deviLogo} 
+              alt="Devitools Logo" 
+              className="w-8 h-8 object-contain"
+            />
             <span className="text-xl font-bold text-foreground">Devitools</span>
           </div>
           
