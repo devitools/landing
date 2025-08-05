@@ -5,7 +5,7 @@ import deviLogo from "@/assets/devitools-logo.png";
 const Footer = () => {
   return (
     <footer
-      className="border-t border-border py-12 px-6 relative overflow-hidden"
+      className="border-t border-border py-12 relative overflow-hidden"
       style={{ backgroundColor: "hsl(var(--footer-bg))" }}
     >
       {/* Formas geométricas animadas */}

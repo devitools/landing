@@ -3,7 +3,7 @@ import { Blocks, Zap, Layers, Database, Shield, TestTube } from "lucide-react";
 
 const Packages = () => {
   return (
-    <section id="packages" className="py-20 px-6">
+    <section id="packages" className="py-20">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
