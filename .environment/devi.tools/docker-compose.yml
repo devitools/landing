@@ -7,7 +7,7 @@ networks:
 
 services:
   devi.tools:
-    image: webdevops/php-nginx:7.4
+    image: webdevops/nginx
     container_name: devi.tools
     restart: always
     networks:
