@@ -27,7 +27,7 @@ export default {
 		},
 		extend: {
 			fontSize: {
-				'2xs': ['0.5rem', { lineHeight: '0.6rem' }],
+				'2xs': ['0.6rem', { lineHeight: '1rem' }],
 				'5xl': ['3rem', { lineHeight: '1.1' }],
 				'6xl': ['3.75rem', { lineHeight: '1.1' }],
 				'7xl': ['4.5rem', { lineHeight: '1.1' }],

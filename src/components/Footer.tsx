@@ -95,7 +95,7 @@ const Footer = () => {
                   to="/effulgence"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Effulgence <Soon className="text-2xs" />
+                  Effulgence <Soon className="text-2xs p-0 px-[4px] text-red-600 bg-gray-200" />
                 </Link>
               </li>
             </ul>
