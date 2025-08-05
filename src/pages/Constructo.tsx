@@ -119,7 +119,7 @@ const Constructo = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <Button
             size="lg"
-            className="bg-gradient-constructo text-constructo-foreground shadow-glow"
+            className="bg-gradient-constructo text-constructo-foreground transition-all hover:shadow-glow"
             onClick={handleInstallClick}
           >
             <Download className="w-5 h-5 mr-2" />
@@ -159,7 +159,7 @@ const Constructo = () => {
               </Button>
               <Button
                 onClick={handleDocsClick}
-                className="bg-gradient-constructo text-constructo-foreground shadow-glow gap-2"
+                className="bg-gradient-constructo text-constructo-foreground transition-all hover:shadow-glow gap-2"
               >
                 <BookOpen className="w-4 h-4" />
                 Primeiros Passos
@@ -471,6 +471,17 @@ $user = UserFactory::create();`}
               </p>
             </div>
           </div>
+        </div>
+
+        <div className="flex items-center justify-center space-x-4 pt-10">
+          <Button
+            onClick={handleDocsClick}
+            size="lg"
+            className="bg-gradient-constructo text-constructo-foreground transition-all hover:shadow-glow gap-2"
+          >
+            <BookOpen className="w-4 h-4" />
+            Primeiros Passos
+          </Button>
         </div>
       </Hero>
 
