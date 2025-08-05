@@ -3,19 +3,7 @@ import Packages from "@/components/Packages";
 import CodeExamples from "@/components/CodeExamples.tsx";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  Car,
-  Code,
-  Diamond,
-  FerrisWheel,
-  Newspaper,
-  Presentation,
-  Radar,
-  Rocket,
-  Sparkles,
-  Zap,
-} from "lucide-react";
+import { ArrowRight, Code, Radar, Rocket, Sparkles, Zap } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Hero from "@/components/Hero.tsx";
 
@@ -37,12 +25,11 @@ const Index = () => {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent leading-tight">
-            Simplifique seu ambiente de desenvolvimento
+            Eleve seu nível de desenvolvimento
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Ferramentas modernas e elegantes para acelerar seu workflow. Foque no que importa: o
-            negócio do cliente!
+          <p className="text-xl md:text-2xl text-muted-foreground m-8 max-w-3xl mx-auto">
+            Utilize ferramentas modernas e elegantes para acelerar seu fluxo de trabalho e melhorar a experiência de desenvolvimento
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -62,6 +49,10 @@ const Index = () => {
               </a>
             </Button>
           </div>
+
+          <p className="text-xl md:text-2xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-8 max-w-3xl mx-auto">
+            Foque no que importa: o negócio do cliente
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             <div className="text-center">
