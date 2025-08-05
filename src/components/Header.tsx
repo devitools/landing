@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Github, BookOpen, Moon, Sun } from "lucide-react";
+import { Github, Moon, Play, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Link, useNavigate } from "react-router-dom";
 import deviLogo from "@/assets/devitools-logo.png";
@@ -49,7 +49,7 @@ const Header = () => {
               Effulgence
             </Link>
             <Link to="/docs" className="text-muted-foreground hover:text-primary transition-colors">
-              Todas as Ferramentas
+              Todas as Soluções
             </Link>
           </nav>
 
@@ -57,20 +57,21 @@ const Header = () => {
             <Button variant="ghost" size="icon" onClick={toggleTheme}>
               {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </Button>
-            <Button 
-              variant="ghost" 
+            <Button
+              className="hidden xs:flex"
+              variant="ghost"
               size="sm"
-              onClick={() => window.open('https://github.com/devitools', '_blank')}
+              onClick={() => window.open("https://github.com/devitools", "_blank")}
             >
-              <Github className="w-4 h-4 mr-2" />
-              GitHub
+              <Github className="w-4 h-4" />
+              <span className="hidden sm:flex ml-2">GitHub</span>
             </Button>
-            <Button 
-              size="sm" 
+            <Button
+              size="sm"
               className="bg-gradient-primary shadow-elegant"
-              onClick={() => navigate('/docs')}
+              onClick={() => navigate("/docs")}
             >
-              <BookOpen className="w-4 h-4 mr-2" />
+              <Play className="w-4 h-4 mr-2" />
               Começar
             </Button>
           </div>

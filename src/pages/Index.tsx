@@ -3,7 +3,7 @@ import Packages from "@/components/Packages";
 import CodeExamples from "@/components/CodeExamples.tsx";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, Radar, Rocket, Sparkles, Zap } from "lucide-react";
+import { Code, Play, Radar, Rocket, Sparkles } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Hero from "@/components/Hero.tsx";
 
@@ -39,9 +39,8 @@ const Index = () => {
               className="bg-gradient-primary shadow-glow text-lg px-8 py-6"
               onClick={() => navigate("/docs")}
             >
-              <Zap className="w-5 h-5 mr-2" />
+              <Play className="w-5 h-5 mr-2" />
               Começar Agora
-              <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-6">
               <Code className="w-5 h-5 mr-2" />
