@@ -16,7 +16,7 @@ const Footer = () => {
                 <img 
                   src={deviLogo} 
                   alt="Devitools Logo" 
-                  className={`h-10 object-contain ${theme !== "dark" ? "grayscale brightness-[0.6]" : ""}`}
+                  className={`h-10 object-contain ${theme !== "dark" ? "logo-filter-primary" : ""}`}
                 />
               </Link>
             </div>

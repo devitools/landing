@@ -6,6 +6,11 @@
 All colors MUST be HSL.
 */
 
+/* Custom filters for logo */
+.logo-filter-primary {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(98%) saturate(1000%) hue-rotate(250deg) brightness(95%) contrast(100%);
+}
+
 @layer base {
   :root {
     --background: 220 14% 96%;

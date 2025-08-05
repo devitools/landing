@@ -23,7 +23,7 @@ const Header = () => {
               <img
                 src={deviLogo}
                 alt="Devitools Logo"
-                className={`h-11 object-contain ${theme !== "dark" ? "grayscale brightness-[0.4]" : ""}`}
+                className={`h-11 object-contain ${theme !== "dark" ? "logo-filter-primary" : ""}`}
               />
             </Link>
           </div>
