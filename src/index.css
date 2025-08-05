@@ -33,6 +33,19 @@ All colors MUST be HSL.
     --success: 142 76% 36%;
     --success-foreground: 0 0% 98%;
 
+    /* Package-specific colors */
+    --constructo: 220 85% 58%;
+    --constructo-foreground: 0 0% 98%;
+    --constructo-glow: 220 90% 70%;
+
+    --serendipity: 280 75% 60%;
+    --serendipity-foreground: 0 0% 98%;
+    --serendipity-glow: 280 85% 72%;
+
+    --effulgence: 155 75% 45%;
+    --effulgence-foreground: 0 0% 98%;
+    --effulgence-glow: 155 85% 58%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
@@ -45,8 +58,18 @@ All colors MUST be HSL.
     --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(142 85% 50%));
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
     
+    /* Package-specific gradients */
+    --gradient-constructo: linear-gradient(135deg, hsl(var(--constructo)), hsl(var(--constructo-glow)));
+    --gradient-serendipity: linear-gradient(135deg, hsl(var(--serendipity)), hsl(var(--serendipity-glow)));
+    --gradient-effulgence: linear-gradient(135deg, hsl(var(--effulgence)), hsl(var(--effulgence-glow)));
+    
     --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.15);
     --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.2);
+    
+    /* Package-specific shadows */
+    --shadow-constructo: 0 10px 30px -10px hsl(var(--constructo) / 0.15);
+    --shadow-serendipity: 0 10px 30px -10px hsl(var(--serendipity) / 0.15);
+    --shadow-effulgence: 0 10px 30px -10px hsl(var(--effulgence) / 0.15);
     
     --radius: 0.75rem;
 
@@ -88,6 +111,19 @@ All colors MUST be HSL.
 
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
+
+    /* Package-specific colors for dark mode */
+    --constructo: 220 70% 65%;
+    --constructo-foreground: 222.2 47.4% 11.2%;
+    --constructo-glow: 220 85% 75%;
+
+    --serendipity: 280 65% 70%;
+    --serendipity-foreground: 222.2 47.4% 11.2%;
+    --serendipity-glow: 280 80% 80%;
+
+    --effulgence: 155 65% 55%;
+    --effulgence-foreground: 222.2 47.4% 11.2%;
+    --effulgence-glow: 155 75% 68%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;

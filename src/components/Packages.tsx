@@ -19,7 +19,7 @@ const Packages = () => {
           <PackageCard
             name="Constructo"
             description="Ferramentas fundamentais para qualquer projeto PHP. Serialização, validação e testes simplificados."
-            gradient="bg-gradient-primary"
+            gradient="bg-gradient-constructo"
             icon={<Package className="w-7 h-7 text-primary-foreground" />}
             isMain={true}
             features={[
@@ -34,7 +34,7 @@ const Packages = () => {
           <PackageCard
             name="Serendipity"
             description="Extensão do Constructo especificamente otimizada para o framework Hyperf, oferecendo ferramentas avançadas."
-            gradient="bg-gradient-accent"
+            gradient="bg-gradient-serendipity"
             icon={<Zap className="w-7 h-7 text-accent-foreground" />}
             features={[
               "Simplificação de rotas e controllers",
@@ -48,7 +48,7 @@ const Packages = () => {
           <PackageCard
             name="Effulgence"
             description="Extensão do Constructo especificamente otimizada para o framework Laravel, oferecendo ferramentas avançadas."
-            gradient="bg-gradient-success"
+            gradient="bg-gradient-effulgence"
             icon={<Layers className="w-7 h-7 text-success-foreground" />}
             features={[
               "Simplificação de rotas e controllers Laravel",

@@ -55,8 +55,8 @@ $service = $container->resolve(UserService::class);`;
 
       {/* Hero Section */}
       <Hero>
-        <div className="w-20 h-20 bg-gradient-primary rounded-3xl mx-auto mb-8 flex items-center justify-center shadow-elegant">
-          <Settings className="w-10 h-10 text-primary-foreground" />
+        <div className="w-20 h-20 bg-gradient-constructo rounded-3xl mx-auto mb-8 flex items-center justify-center shadow-constructo">
+          <Settings className="w-10 h-10 text-constructo-foreground" />
         </div>
 
         <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
@@ -69,7 +69,7 @@ $service = $container->resolve(UserService::class);`;
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Button size="lg" className="bg-gradient-primary shadow-elegant">
+          <Button size="lg" className="bg-gradient-constructo shadow-constructo">
             <Download className="w-5 h-5 mr-2" />
             Instalar via Composer
           </Button>
@@ -124,7 +124,7 @@ $service = $container->resolve(UserService::class);`;
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="p-6 hover:shadow-elegant transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-primary rounded-xl mb-4 flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-constructo rounded-xl mb-4 flex items-center justify-center">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>

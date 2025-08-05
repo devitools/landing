@@ -49,6 +49,21 @@ export default {
 					DEFAULT: 'hsl(var(--success))',
 					foreground: 'hsl(var(--success-foreground))'
 				},
+				constructo: {
+					DEFAULT: 'hsl(var(--constructo))',
+					foreground: 'hsl(var(--constructo-foreground))',
+					glow: 'hsl(var(--constructo-glow))'
+				},
+				serendipity: {
+					DEFAULT: 'hsl(var(--serendipity))',
+					foreground: 'hsl(var(--serendipity-foreground))',
+					glow: 'hsl(var(--serendipity-glow))'
+				},
+				effulgence: {
+					DEFAULT: 'hsl(var(--effulgence))',
+					foreground: 'hsl(var(--effulgence-foreground))',
+					glow: 'hsl(var(--effulgence-glow))'
+				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))'
@@ -72,11 +87,17 @@ export default {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-accent': 'var(--gradient-accent)',
 				'gradient-success': 'var(--gradient-success)',
-				'gradient-hero': 'var(--gradient-hero)'
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-constructo': 'var(--gradient-constructo)',
+				'gradient-serendipity': 'var(--gradient-serendipity)',
+				'gradient-effulgence': 'var(--gradient-effulgence)'
 			},
 			boxShadow: {
 				'elegant': 'var(--shadow-elegant)',
-				'glow': 'var(--shadow-glow)'
+				'glow': 'var(--shadow-glow)',
+				'constructo': 'var(--shadow-constructo)',
+				'serendipity': 'var(--shadow-serendipity)',
+				'effulgence': 'var(--shadow-effulgence)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

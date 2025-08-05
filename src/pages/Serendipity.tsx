@@ -61,8 +61,8 @@ $router->group(['middleware' => 'auth'], function($router) {
 
       {/* Hero Section */}
       <Hero>
-        <div className="w-20 h-20 bg-gradient-accent rounded-3xl mx-auto mb-8 flex items-center justify-center shadow-elegant">
-          <Sparkles className="w-10 h-10 text-accent-foreground" />
+        <div className="w-20 h-20 bg-gradient-serendipity rounded-3xl mx-auto mb-8 flex items-center justify-center shadow-serendipity">
+          <Sparkles className="w-10 h-10 text-serendipity-foreground" />
         </div>
 
         <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
@@ -75,7 +75,7 @@ $router->group(['middleware' => 'auth'], function($router) {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Button size="lg" className="bg-gradient-accent shadow-elegant">
+          <Button size="lg" className="bg-gradient-serendipity shadow-serendipity">
             <Download className="w-5 h-5 mr-2" />
             Instalar via Composer
           </Button>
@@ -130,7 +130,7 @@ $router->group(['middleware' => 'auth'], function($router) {
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="p-6 hover:shadow-elegant transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-accent rounded-xl mb-4 flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-serendipity rounded-xl mb-4 flex items-center justify-center">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>

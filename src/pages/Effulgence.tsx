@@ -80,7 +80,7 @@ class UserController extends BaseController
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Button size="lg" className="bg-gradient-success shadow-elegant">
+          <Button size="lg" className="bg-gradient-effulgence shadow-effulgence">
             <Download className="w-5 h-5 mr-2" />
             Instalar via Composer
           </Button>
@@ -135,7 +135,7 @@ class UserController extends BaseController
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="p-6 hover:shadow-elegant transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-success rounded-xl mb-4 flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-effulgence rounded-xl mb-4 flex items-center justify-center">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
