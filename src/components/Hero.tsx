@@ -23,7 +23,11 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="bg-gradient-primary shadow-glow text-lg px-8 py-6">
+            <Button 
+              size="lg" 
+              className="bg-gradient-primary shadow-glow text-lg px-8 py-6"
+              onClick={() => window.location.href = '/docs'}
+            >
               <Zap className="w-5 h-5 mr-2" />
               Começar Agora
               <ArrowRight className="w-5 h-5 ml-2" />

@@ -56,11 +56,19 @@ const Header = () => {
             <Button variant="ghost" size="icon" onClick={toggleTheme}>
               {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </Button>
-            <Button variant="ghost" size="sm">
+            <Button 
+              variant="ghost" 
+              size="sm"
+              onClick={() => window.open('https://github.com/devitools', '_blank')}
+            >
               <Github className="w-4 h-4 mr-2" />
               GitHub
             </Button>
-            <Button size="sm" className="bg-gradient-primary shadow-elegant">
+            <Button 
+              size="sm" 
+              className="bg-gradient-primary shadow-elegant"
+              onClick={() => window.location.href = '/docs'}
+            >
               <BookOpen className="w-4 h-4 mr-2" />
               Começar
             </Button>
