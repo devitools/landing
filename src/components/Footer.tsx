@@ -114,7 +114,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/#examples"
+                  to="/docs/examples"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Exemplos
@@ -153,7 +153,7 @@ const Footer = () => {
           {/* Link para o repositório */}
           <div className="text-center py-2">
             <a
-              href="https://github.com/devitools/landing"
+              href="https://github.com/devitools/landing/fork"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center text-muted-foreground hover:text-primary transition-colors group"
