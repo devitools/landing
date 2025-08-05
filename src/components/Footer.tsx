@@ -113,12 +113,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#examples"
+                <Link
+                  to="/#examples"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Exemplos
-                </a>
+                </Link>
               </li>
               <li>
                 <Link

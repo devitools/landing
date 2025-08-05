@@ -2,7 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Radar, Home, ArrowLeft, Search } from "lucide-react";
+import { Home, Radar, Reply, Search } from "lucide-react";
+import Hero from "@/components/Hero.tsx";
 
 const NotFound = () => {
   const location = useLocation();
@@ -15,8 +16,8 @@ const NotFound = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <main className="container mx-auto px-6 py-16">
-        <div className="max-w-4xl mx-auto">
+      <Hero>
+        <div className="max-w-4xl mx-auto text-left">
           <div className="text-center mb-12">
             <Radar className="w-16 h-16 mx-auto mb-6 text-primary" />
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
@@ -55,7 +56,7 @@ const NotFound = () => {
                   <div className="bg-card p-6 rounded-lg border border-border text-center">
                     <h3 className="text-lg font-semibold mb-3 text-foreground">Voltar ao Início</h3>
                     <p className="text-muted-foreground mb-4">
-                      Retorne à página inicial e explore nossos produtos e serviços.
+                      Retorne à página inicial para me localizar.
                     </p>
                     <Link
                       to="/"
@@ -67,7 +68,7 @@ const NotFound = () => {
                   </div>
 
                   <div className="bg-card p-6 rounded-lg border border-border text-center">
-                    <ArrowLeft className="w-8 h-8 mx-auto mb-4 text-primary" />
+                    <h3 className="text-lg font-semibold mb-3 text-foreground">Voltar</h3>
                     <p className="text-muted-foreground mb-4">
                       Retorne à página anterior de onde você veio.
                     </p>
@@ -75,7 +76,7 @@ const NotFound = () => {
                       onClick={() => window.history.back()}
                       className="inline-flex items-center px-4 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90 transition-colors"
                     >
-                      <ArrowLeft className="w-4 h-4 mr-2" />
+                      <Reply className="w-4 h-4 mr-2" />
                       Página Anterior
                     </button>
                   </div>
@@ -93,7 +94,7 @@ const NotFound = () => {
             </section>
           </div>
         </div>
-      </main>
+      </Hero>
 
       <Footer />
     </div>

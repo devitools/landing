@@ -1,14 +1,15 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { FileText, Scale, AlertTriangle, Users, Code, Calendar } from "lucide-react";
+import Hero from "@/components/Hero.tsx";
 
 const Terms = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
 
-      <main className="container mx-auto px-6 py-16">
-        <div className="max-w-4xl mx-auto">
+      <Hero>
+        <div className="max-w-4xl mx-auto text-left">
           <div className="text-center mb-12">
             <FileText className="w-16 h-16 mx-auto mb-6 text-primary" />
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
@@ -138,7 +139,7 @@ const Terms = () => {
             </section>
           </div>
         </div>
-      </main>
+      </Hero>
 
       <Footer />
     </div>
