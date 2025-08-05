@@ -10,18 +10,18 @@ const Constructo = () => {
     {
       icon: <Settings className="w-6 h-6" />,
       title: "Configuração Flexível",
-      description: "Sistema de configuração poderoso e flexível para suas aplicações PHP"
+      description: "Sistema de configuração poderoso e flexível para suas aplicações PHP",
     },
     {
       icon: <Database className="w-6 h-6" />,
       title: "Gestão de Dependências",
-      description: "Gerenciamento inteligente de dependências e injeção automática"
+      description: "Gerenciamento inteligente de dependências e injeção automática",
     },
     {
       icon: <Zap className="w-6 h-6" />,
       title: "Performance Otimizada",
-      description: "Construído para máxima performance e eficiência"
-    }
+      description: "Construído para máxima performance e eficiência",
+    },
   ];
 
   const codeExample = `<?php
@@ -49,25 +49,26 @@ $container->bind(CacheInterface::class, RedisCache::class);
 $service = $container->resolve(UserService::class);`;
 
   return (
-    <div className="min-h-screen" style={{ background: 'var(--gradient-background)' }}>
+    <div className="min-h-screen" style={{ background: "var(--gradient-background)" }}>
       <Header />
-      
+
       {/* Hero Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-hero opacity-5"></div>
         <div className="container mx-auto text-center">
           <div className="w-20 h-20 bg-gradient-primary rounded-3xl mx-auto mb-8 flex items-center justify-center shadow-elegant">
             <Settings className="w-10 h-10 text-primary-foreground" />
           </div>
-          
+
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
             Constructo
           </h1>
-          
+
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Framework PHP moderno para construção de aplicações robustas e escaláveis.
-            Sistema avançado de configuração e injeção de dependências.
+            Framework PHP moderno para construção de aplicações robustas e escaláveis. Sistema
+            avançado de configuração e injeção de dependências.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button size="lg" className="bg-gradient-primary shadow-elegant">
               <Download className="w-5 h-5 mr-2" />
@@ -78,7 +79,7 @@ $service = $container->resolve(UserService::class);`;
               Ver no GitHub
             </Button>
           </div>
-          
+
           <div className="flex flex-wrap justify-center gap-2">
             <Badge variant="secondary">PHP 8.0+</Badge>
             <Badge variant="secondary">Composer</Badge>
@@ -95,7 +96,7 @@ $service = $container->resolve(UserService::class);`;
             <h2 className="text-3xl font-bold mb-4">Instalação Rápida</h2>
             <p className="text-muted-foreground">Comece a usar o Constructo em segundos</p>
           </div>
-          
+
           <Card className="max-w-2xl mx-auto">
             <CardHeader>
               <CardTitle className="flex items-center">
@@ -121,7 +122,7 @@ $service = $container->resolve(UserService::class);`;
               Tudo que você precisa para construir aplicações PHP modernas
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="p-6 hover:shadow-elegant transition-all duration-300">
@@ -143,7 +144,7 @@ $service = $container->resolve(UserService::class);`;
             <h2 className="text-3xl font-bold mb-4">Exemplo de Uso</h2>
             <p className="text-muted-foreground">Veja como é simples usar o Constructo</p>
           </div>
-          
+
           <Card className="max-w-4xl mx-auto">
             <CardHeader>
               <CardTitle>Configuração e Container</CardTitle>
@@ -166,7 +167,7 @@ $service = $container->resolve(UserService::class);`;
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Por que Constructo?</h2>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="flex items-start space-x-4">
               <CheckCircle className="w-6 h-6 text-success mt-1 flex-shrink-0" />
@@ -175,15 +176,17 @@ $service = $container->resolve(UserService::class);`;
                 <p className="text-muted-foreground">Totalmente compatível com PSR-11 e PSR-4</p>
               </div>
             </div>
-            
+
             <div className="flex items-start space-x-4">
               <CheckCircle className="w-6 h-6 text-success mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold mb-2">Type Safety</h3>
-                <p className="text-muted-foreground">Aproveite ao máximo o PHP 8.0+ com tipagem forte</p>
+                <p className="text-muted-foreground">
+                  Aproveite ao máximo o PHP 8.0+ com tipagem forte
+                </p>
               </div>
             </div>
-            
+
             <div className="flex items-start space-x-4">
               <CheckCircle className="w-6 h-6 text-success mt-1 flex-shrink-0" />
               <div>
@@ -191,7 +194,7 @@ $service = $container->resolve(UserService::class);`;
                 <p className="text-muted-foreground">Otimizado para alta performance em produção</p>
               </div>
             </div>
-            
+
             <div className="flex items-start space-x-4">
               <CheckCircle className="w-6 h-6 text-success mt-1 flex-shrink-0" />
               <div>
