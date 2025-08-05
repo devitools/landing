@@ -133,11 +133,16 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'pulse-bg-red': {
+          '0%, 100%': { backgroundColor: 'rgb(239 68 68 / 0.2)' },
+          '50%': { backgroundColor: 'rgb(239 68 68 / 1)' },
+        },
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'pulse-bg-red': 'pulse-bg-red 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
 			}
 		}
 	},

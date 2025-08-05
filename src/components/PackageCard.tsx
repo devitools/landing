@@ -1,7 +1,9 @@
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Soon } from "@/components/Soon.tsx";
 
 interface PackageCardProps {
   name: string;
@@ -12,6 +14,7 @@ interface PackageCardProps {
   isMain?: boolean;
   docsLink?: string;
   githubLink?: string;
+  showSoonBadge?: boolean;
 }
 
 const PackageCard = ({
@@ -23,6 +26,7 @@ const PackageCard = ({
   isMain = false,
   docsLink,
   githubLink,
+  showSoonBadge = false,
 }: PackageCardProps) => {
   const navigate = useNavigate();
 
@@ -45,7 +49,10 @@ const PackageCard = ({
           {icon}
         </div>
 
-        <h3 className="text-2xl font-bold mb-4 text-foreground">{name}</h3>
+        <div className="flex items-center gap-3 mb-4">
+          <h3 className="text-2xl font-bold text-foreground">{name}</h3>
+          {showSoonBadge && <Soon />}
+        </div>
         <p className="text-muted-foreground mb-6 text-lg">{description}</p>
 
         <div className="space-y-3 mb-8">
