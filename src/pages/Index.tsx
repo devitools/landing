@@ -29,7 +29,8 @@ const Index = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground m-8 max-w-3xl mx-auto">
-            Utilize ferramentas modernas e elegantes para acelerar seu fluxo de trabalho e melhorar a experiência de desenvolvimento
+            Utilize ferramentas modernas e elegantes para acelerar seu fluxo de trabalho e melhorar
+            a experiência de desenvolvimento
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -56,7 +57,7 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-primary rounded-xl mx-auto mb-4 flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-accent rounded-xl mx-auto mb-4 flex items-center justify-center">
                 <Code className="w-6 h-6 text-primary-foreground" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Simples</h3>
@@ -66,7 +67,7 @@ const Index = () => {
             </div>
 
             <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-success rounded-xl mx-auto mb-4 flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-accent rounded-xl mx-auto mb-4 flex items-center justify-center">
                 <Radar className="w-6 h-6 text-success-foreground" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Moderno</h3>
