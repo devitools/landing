@@ -5,10 +5,14 @@ import { cn } from "@/lib/utils"
 
 const Tabs = TabsPrimitive.Root
 
+interface TabsListProps extends React.ComponentPropsWithoutRef<typeof TabsPrimitive.List> {
+  single?: boolean
+}
+
 const TabsList = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.List>,
-  React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
->(({ className, ...props }, ref) => {
+  TabsListProps
+>(({ className, single = false, ...props }, ref) => {
   const childCount = React.Children.count(props.children)
   const isSingleTab = childCount === 1
 
@@ -16,11 +20,9 @@ const TabsList = React.forwardRef<
     <TabsPrimitive.List
       ref={ref}
       className={cn(
-        "flex h-8 sm:h-10 items-center rounded-md p-0.5 sm:p-1 text-muted-foreground bg-muted",
+        "inline-flex items-center justify-start",
+        "sm:h-10 p-0.5 sm:p-1 rounded-md text-muted-foreground bg-muted",
         "overflow-x-auto scrollbar-hide",
-        "gap-0.5 sm:gap-1",
-        isSingleTab ? "w-fit" : "w-full justify-center",
-        "scroll-smooth",
         className
       )}
       {...props}
@@ -29,10 +31,14 @@ const TabsList = React.forwardRef<
 })
 TabsList.displayName = TabsPrimitive.List.displayName
 
+interface TabsTriggerProps extends React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger> {
+  single?: boolean
+}
+
 const TabsTrigger = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>
->(({ className, ...props }, ref) => (
+  TabsTriggerProps
+>(({ className, single = false, ...props }, ref) => (
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
