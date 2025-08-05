@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { ArrowRight, ExternalLink } from "lucide-react";
 
 interface PackageCardProps {
@@ -8,7 +9,10 @@ interface PackageCardProps {
   features: string[];
   gradient: string;
   icon: React.ReactNode;
+  docsLink: string;
+  githubLink: string;
   isMain?: boolean;
+  showSoonBadge?: boolean;
 }
 
 const PackageCard = ({
@@ -17,7 +21,10 @@ const PackageCard = ({
   features,
   gradient,
   icon,
+  docsLink,
+  githubLink,
   isMain = false,
+  showSoonBadge = false,
 }: PackageCardProps) => {
   return (
     <Card
@@ -38,7 +45,14 @@ const PackageCard = ({
           {icon}
         </div>
 
-        <h3 className="text-2xl font-bold mb-4 text-foreground">{name}</h3>
+        <div className="flex items-center gap-3 mb-4">
+          <h3 className="text-2xl font-bold text-foreground">{name}</h3>
+          {showSoonBadge && (
+            <Badge variant="secondary" className="text-xs">
+              Soon
+            </Badge>
+          )}
+        </div>
         <p className="text-muted-foreground mb-6 text-lg">{description}</p>
 
         <div className="space-y-3 mb-8">

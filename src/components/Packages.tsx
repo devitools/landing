@@ -53,6 +53,7 @@ const Packages = () => {
             icon={<Layers className="w-7 h-7 text-effulgence-foreground" />}
             docsLink="/docs/effulgence"
             githubLink="https://github.com/devitools/effulgence"
+            showSoonBadge={true}
             features={[
               "Simplificação de consumo de rotas e requisições HTTP",
               "Facades próprios e recursos para maximizar a produtividade",
