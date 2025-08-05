@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			fontSize: {
+				'6xl': ['3.75rem', { lineHeight: '1.5' }],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
