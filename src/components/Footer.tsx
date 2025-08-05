@@ -95,7 +95,7 @@ const Footer = () => {
                   to="/effulgence"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Effulgence <Soon className="text-2xs p-0 px-[4px] text-background bg-red-300" />
+                  Effulgence <Soon className="text-2xs p-0 px-[4px] text-white dark:text-background dark:bg-red-300" />
                 </Link>
               </li>
             </ul>
@@ -121,12 +121,12 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="#guides"
+                <Link
+                  to="/docs/guides"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Guias
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -163,10 +163,16 @@ const Footer = () => {
             </a>
           </div>
           <div className="flex space-x-6 md:mt-0 py-2">
-            <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link
+              to="/privacy"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
               Privacidade
             </Link>
-            <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link
+              to="/terms"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
               Termos
             </Link>
           </div>

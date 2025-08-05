@@ -8,7 +8,7 @@ interface SoonProps {
 export function Soon({ className }: SoonProps = {}) {
   return (
     <Badge className={cn(
-      "text-xs text-white border-transparent animate-pulse bg-red-500 text-red-500-foreground hover:bg-red-500/80",
+      "text-xs text-white border-transparent animate-pulse bg-red-500 hover:bg-red-500/80",
       className
     )}>
       Em Breve
