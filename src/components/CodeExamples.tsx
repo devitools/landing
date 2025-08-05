@@ -125,6 +125,7 @@ const CodeExamples = () => {
             shadowClass="shadow-effulgence"
             colorClass="text-effulgence"
             tabs={effulgenceTabs}
+            soon={true}
           />
         </div>
 

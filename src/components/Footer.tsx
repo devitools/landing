@@ -1,6 +1,7 @@
 import { Code, Mail, Heart, GitPullRequestCreateArrow } from "lucide-react";
 import { Link } from "react-router-dom";
 import deviLogo from "@/assets/devitools-logo.png";
+import { Soon } from "@/components/Soon.tsx";
 
 const Footer = () => {
   return (
@@ -94,7 +95,7 @@ const Footer = () => {
                   to="/effulgence"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Effulgence
+                  Effulgence <Soon />
                 </Link>
               </li>
             </ul>

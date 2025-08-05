@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CodeBlock from "@/components/CodeBlock";
 import { ArrowRight } from "lucide-react";
+import { Soon } from "@/components/Soon.tsx";
 
 interface TabContent {
   value: string;
@@ -20,6 +21,7 @@ interface PackageExampleProps {
   colorClass: string;
   tabs: TabContent[];
   reversed?: boolean;
+  soon?: boolean;
 }
 
 const CodeExamplePackage = ({
@@ -32,7 +34,8 @@ const CodeExamplePackage = ({
   shadowClass,
   colorClass,
   tabs,
-  reversed = false
+  reversed = false,
+  soon = false
 }: PackageExampleProps) => {
   const descriptionContent = (
     <div className="space-y-6 lg:col-span-1">
@@ -41,7 +44,10 @@ const CodeExamplePackage = ({
           {icon}
         </div>
         <div>
-          <h3 className={`text-2xl font-bold ${colorClass}`}>{name}</h3>
+          <div className="flex items-center gap-2">
+            <h3 className={`text-2xl font-bold ${colorClass}`}>{name}</h3>
+            {soon && <Soon />}
+          </div>
           <p className="text-muted-foreground">{subtitle}</p>
         </div>
       </div>
