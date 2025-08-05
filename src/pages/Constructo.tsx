@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Code, Download, ExternalLink, CheckCircle, Zap, Settings, Database } from "lucide-react";
+import Hero from "@/components/Hero.tsx";
 
 const Constructo = () => {
   const features = [
@@ -53,41 +54,38 @@ $service = $container->resolve(UserService::class);`;
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 px-6 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-hero opacity-5"></div>
-        <div className="container mx-auto text-center">
-          <div className="w-20 h-20 bg-gradient-primary rounded-3xl mx-auto mb-8 flex items-center justify-center shadow-elegant">
-            <Settings className="w-10 h-10 text-primary-foreground" />
-          </div>
-
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
-            Constructo
-          </h1>
-
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Framework PHP moderno para construção de aplicações robustas e escaláveis. Sistema
-            avançado de configuração e injeção de dependências.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="bg-gradient-primary shadow-elegant">
-              <Download className="w-5 h-5 mr-2" />
-              Instalar via Composer
-            </Button>
-            <Button variant="outline" size="lg">
-              <ExternalLink className="w-5 h-5 mr-2" />
-              Ver no GitHub
-            </Button>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-2">
-            <Badge variant="secondary">PHP 8.0+</Badge>
-            <Badge variant="secondary">Composer</Badge>
-            <Badge variant="secondary">PSR-11</Badge>
-            <Badge variant="secondary">PSR-4</Badge>
-          </div>
+      <Hero>
+        <div className="w-20 h-20 bg-gradient-primary rounded-3xl mx-auto mb-8 flex items-center justify-center shadow-elegant">
+          <Settings className="w-10 h-10 text-primary-foreground" />
         </div>
-      </section>
+
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
+          Constructo
+        </h1>
+
+        <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          Framework PHP moderno para construção de aplicações robustas e escaláveis. Sistema
+          avançado de configuração e injeção de dependências.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <Button size="lg" className="bg-gradient-primary shadow-elegant">
+            <Download className="w-5 h-5 mr-2" />
+            Instalar via Composer
+          </Button>
+          <Button variant="outline" size="lg">
+            <ExternalLink className="w-5 h-5 mr-2" />
+            Ver no GitHub
+          </Button>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-2">
+          <Badge variant="secondary">PHP 8+</Badge>
+          <Badge variant="secondary">Composer</Badge>
+          <Badge variant="secondary">PSR-11</Badge>
+          <Badge variant="secondary">PSR-4</Badge>
+        </div>
+      </Hero>
 
       {/* Installation */}
       <section className="py-16 px-6 bg-card/30">
