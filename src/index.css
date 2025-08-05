@@ -38,9 +38,9 @@ All colors MUST be HSL.
     --constructo-foreground: 0 0% 98%;
     --constructo-glow: 220 90% 70%;
 
-    --serendipity: 280 75% 60%;
+    --serendipity: 350 75% 60%;
     --serendipity-foreground: 0 0% 98%;
-    --serendipity-glow: 280 85% 72%;
+    --serendipity-glow: 350 85% 72%;
 
     --effulgence: 155 75% 45%;
     --effulgence-foreground: 0 0% 98%;
@@ -117,9 +117,9 @@ All colors MUST be HSL.
     --constructo-foreground: 222.2 47.4% 11.2%;
     --constructo-glow: 220 85% 75%;
 
-    --serendipity: 280 65% 70%;
+    --serendipity: 350 70% 65%;
     --serendipity-foreground: 222.2 47.4% 11.2%;
-    --serendipity-glow: 280 80% 80%;
+    --serendipity-glow: 350 80% 78%;
 
     --effulgence: 155 65% 55%;
     --effulgence-foreground: 222.2 47.4% 11.2%;
