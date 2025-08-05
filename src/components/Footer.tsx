@@ -1,4 +1,4 @@
-import { Github, Twitter, Mail, Heart } from "lucide-react";
+import { Code, Mail, Heart, GitPullRequestCreateArrow } from "lucide-react";
 import { Link } from "react-router-dom";
 import deviLogo from "@/assets/devitools-logo.png";
 
@@ -92,13 +92,7 @@ const Footer = () => {
                 href="#"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
-                <Github className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Twitter className="w-5 h-5" />
+                <Code className="w-5 h-5" />
               </a>
               <a
                 href="#"
@@ -110,12 +104,26 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground">
+        <div className="border-t border-border pt-6 flex flex-col lg:flex-row justify-between items-center">
+          <p className="text-muted-foreground text-xs py-2">
             © {new Date().getFullYear()} Devitools. Desenvolvido com{" "}
             <Heart className="w-4 h-4 inline mx-1 text-accent" /> pela comunidade.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+
+
+          {/* Link para o repositório */}
+          <div className="text-center py-2">
+            <a
+              href="https://github.com/devitools/landing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-muted-foreground hover:text-primary transition-colors group"
+            >
+              <GitPullRequestCreateArrow className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+              <span className="text-xs">para sempre gratuito</span>
+            </a>
+          </div>
+          <div className="flex space-x-6 md:mt-0 py-2">
             <a
               href="#"
               className="text-muted-foreground hover:text-primary transition-colors"
