@@ -77,7 +77,7 @@ const CodeExamplePackage = ({
   const codeContent = (
     <div className="lg:col-span-2">
       <Tabs defaultValue={tabs[0]?.value} className="w-full">
-        <TabsList single={tabs.length === 1} className={`grid w-full grid-cols-${tabs.length} mb-4`}>
+        <TabsList single={tabs.length === 1}>
           {tabs.map((tab) => (
             <TabsTrigger single={tabs.length === 1} key={tab.value} value={tab.value}>
               {tab.label}

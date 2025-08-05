@@ -9,14 +9,14 @@ const CodeExamples = () => {
       label: "codec.php",
       code: `<?php
 
-// Em breve... 🚀`
+// Em breve codec.php ... 🚀`
     },
     {
       value: "faker",
       label: "faker.php",
       code: `<?php
 
-// Em breve... 🚀`
+// Em breve faker.php ... 🚀`
     }
   ];
 
@@ -26,7 +26,7 @@ const CodeExamples = () => {
       label: "Action.php",
       code: `<?php
 
-// Em breve... 🚀
+// Em breve Action.php ... 🚀
 }`
     },
     {
@@ -34,7 +34,7 @@ const CodeExamples = () => {
       label: "Input.php",
       code: `<?php
 
-// Em breve... 🚀
+// Em breve Input.php ... 🚀
 }`
     },
     {
@@ -42,7 +42,7 @@ const CodeExamples = () => {
       label: "Entity.php",
       code: `<?php
 
-// Em breve... 🚀
+// Em breve Entity.php ... 🚀
 }`
     },
     {
@@ -50,7 +50,7 @@ const CodeExamples = () => {
       label: "Repository.php",
       code: `<?php
 
-// Em breve... 🚀
+// Em breve Repository.php ... 🚀
 }`
     }
   ];
@@ -61,7 +61,7 @@ const CodeExamples = () => {
       label: "Controller.php",
       code: `<?php
 
-// Em breve... 🚀
+// Em breve Controller.php ... 🚀
 }`
     }
   ];
