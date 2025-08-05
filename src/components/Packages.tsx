@@ -22,6 +22,8 @@ const Packages = () => {
             gradient="bg-gradient-constructo"
             icon={<Package className="w-7 h-7 text-primary-foreground" />}
             isMain={true}
+            docsLink="/docs/constructo"
+            githubLink="https://github.com/devitools/constructo"
             features={[
               "Serialização / Desserialização automática de classes",
               "Abstração de regras de validação e mapeamentos de entrada",
@@ -32,9 +34,11 @@ const Packages = () => {
 
           <PackageCard
             name="Serendipity"
-            description="O pacote ideal para quem quer lidar com o framework Hyperf, simplificando ao máximo o uso do framework."
+            description="O pacote ideal para quem quer lidar com o framework Hyperf, simplificando ao máximo a ferramenta baseada no Swoole."
             gradient="bg-gradient-serendipity"
             icon={<Zap className="w-7 h-7 text-accent-foreground" />}
+            docsLink="/docs/serendipity"
+            githubLink="https://github.com/devitools/serendipity"
             features={[
               "Simplificação de consumo de rotas e requisições HTTP",
               "Extensões para rotinas de testes automatizados",
@@ -48,6 +52,8 @@ const Packages = () => {
             description="Extensão do Constructo especificamente otimizada para o framework Laravel, oferecendo ferramentas avançadas."
             gradient="bg-gradient-effulgence"
             icon={<Layers className="w-7 h-7 text-success-foreground" />}
+            docsLink="/docs/effulgence"
+            githubLink="https://github.com/devitools/effulgence"
             features={[
               "Simplificação de consumo de rotas e requisições HTTP",
               "Facades próprios e recursos para maximizar a produtividade",
