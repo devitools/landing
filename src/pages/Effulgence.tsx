@@ -156,7 +156,7 @@ class UserController extends BaseController
             </p>
           </div>
 
-          <CodeBlock title="DTOs e Controllers" language="php" gradient="success" size="md">
+          <CodeBlock language="php" size="md">
             {codeExample}
           </CodeBlock>
         </div>

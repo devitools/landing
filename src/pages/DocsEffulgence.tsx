@@ -182,7 +182,7 @@ const DocsEffulgence = () => {
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Criando um DTO</h3>
-                    <CodeBlock language="php" size="md" gradient="success">
+                    <CodeBlock language="php" size="md">
 {`<?php
 
 use Devitools\\Constructo\\Data\\DataTransferObject;
@@ -210,7 +210,7 @@ class UserDto extends DataTransferObject
 
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Controller com Validação Automática</h3>
-                    <CodeBlock language="php" size="md" gradient="primary">
+                    <CodeBlock language="php" size="md">
 {`<?php
 
 use Devitools\\Effulgence\\Controller\\BaseController;
@@ -247,7 +247,7 @@ class UserController extends BaseController
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Middlewares Personalizados</h3>
-                    <CodeBlock language="php" size="md" gradient="accent">
+                    <CodeBlock language="php" size="md">
 {`<?php
 
 use Devitools\\Effulgence\\Middleware\\ConstructoValidation;
@@ -271,7 +271,7 @@ class CustomValidationMiddleware extends ConstructoValidation
 
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Serialização Avançada de Models</h3>
-                    <CodeBlock language="php" size="md" gradient="success">
+                    <CodeBlock language="php" size="md">
 {`<?php
 
 use Devitools\\Effulgence\\Traits\\AdvancedSerialization;
@@ -296,7 +296,7 @@ class User extends Model
 
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Comandos Artisan Personalizados</h3>
-                    <CodeBlock language="bash" size="md" gradient="warning">
+                    <CodeBlock language="bash" size="md">
 {`# Gerar Controller com DTO
 php artisan make:effulgence-controller UserController --dto=UserDto
 
