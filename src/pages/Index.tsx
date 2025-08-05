@@ -3,7 +3,19 @@ import Packages from "@/components/Packages";
 import CodeExamples from "@/components/CodeExamples.tsx";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Code, Sparkles, Zap } from "lucide-react";
+import {
+  ArrowRight,
+  Car,
+  Code,
+  Diamond,
+  FerrisWheel,
+  Newspaper,
+  Presentation,
+  Radar,
+  Rocket,
+  Sparkles,
+  Zap,
+} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Hero from "@/components/Hero.tsx";
 
@@ -63,21 +75,21 @@ const Index = () => {
             </div>
 
             <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-success rounded-xl mx-auto mb-4 flex items-center justify-center">
+                <Radar className="w-6 h-6 text-success-foreground" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Moderno</h3>
+              <p className="text-muted-foreground">Usando as melhores práticas e padrões atuais</p>
+            </div>
+
+            <div className="text-center">
               <div className="w-12 h-12 bg-gradient-accent rounded-xl mx-auto mb-4 flex items-center justify-center">
-                <Zap className="w-6 h-6 text-accent-foreground" />
+                <Rocket className="w-6 h-6 text-accent-foreground" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Performático</h3>
               <p className="text-muted-foreground">
                 Otimizado para alta performance e baixo overhead
               </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-success rounded-xl mx-auto mb-4 flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-success-foreground" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Moderno</h3>
-              <p className="text-muted-foreground">Usando as melhores práticas e padrões atuais</p>
             </div>
           </div>
         </div>

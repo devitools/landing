@@ -39,15 +39,15 @@ All colors MUST be HSL.
     /* Package-specific colors */
     --constructo: 220 85% 58%;
     --constructo-foreground: 0 0% 98%;
-    --constructo-glow: 220 90% 70%;
+    --constructo-glow: 200 90% 70%;
 
-    --serendipity: 350 75% 60%;
+    --serendipity: 20 85% 65%;
     --serendipity-foreground: 0 0% 98%;
-    --serendipity-glow: 350 85% 72%;
+    --serendipity-glow: 45 80% 60%;
 
-    --effulgence: 155 75% 45%;
+    --effulgence: 200 60% 60%;
     --effulgence-foreground: 0 0% 98%;
-    --effulgence-glow: 155 85% 58%;
+    --effulgence-glow: 180 80% 60%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -124,15 +124,15 @@ All colors MUST be HSL.
     /* Package-specific colors for dark mode */
     --constructo: 220 70% 65%;
     --constructo-foreground: 222.2 47.4% 11.2%;
-    --constructo-glow: 220 85% 75%;
+    --constructo-glow: 200 85% 75%;
 
-    --serendipity: 350 70% 65%;
+    --serendipity: 35 75% 65%;
     --serendipity-foreground: 222.2 47.4% 11.2%;
-    --serendipity-glow: 350 80% 78%;
+    --serendipity-glow: 45 90% 60%;
 
-    --effulgence: 155 65% 55%;
+    --effulgence: 190 60% 60%;
     --effulgence-foreground: 222.2 47.4% 11.2%;
-    --effulgence-glow: 155 75% 68%;
+    --effulgence-glow: 170 70% 60%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;

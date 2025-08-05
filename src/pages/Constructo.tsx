@@ -65,7 +65,7 @@ $service = $container->resolve(UserService::class);`;
       {/* Hero Section */}
       <Hero>
         <div className="w-20 h-20 bg-gradient-constructo rounded-3xl mx-auto mb-8 flex items-center justify-center shadow-constructo">
-          <Settings className="w-10 h-10 text-constructo-foreground" />
+          <Blocks className="w-10 h-10 text-constructo-foreground" />
         </div>
 
         <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
@@ -78,7 +78,7 @@ $service = $container->resolve(UserService::class);`;
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Button size="lg" className="bg-gradient-constructo shadow-constructo">
+          <Button size="lg" className="bg-gradient-constructo text-constructo-foreground shadow-glow">
             <Download className="w-5 h-5 mr-2" />
             Instalar via Composer
           </Button>

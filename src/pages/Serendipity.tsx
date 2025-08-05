@@ -75,7 +75,7 @@ $router->group(['middleware' => 'auth'], function($router) {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Button size="lg" className="bg-gradient-serendipity shadow-serendipity">
+          <Button size="lg" className="bg-gradient-serendipity text-serendipity-foreground shadow-glow">
             <Download className="w-5 h-5 mr-2" />
             Instalar via Composer
           </Button>

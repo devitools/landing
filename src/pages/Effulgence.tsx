@@ -66,8 +66,8 @@ class UserController extends BaseController
 
       {/* Hero Section */}
       <Hero>
-        <div className="w-20 h-20 bg-gradient-success rounded-3xl mx-auto mb-8 flex items-center justify-center shadow-elegant">
-          <Layers className="w-10 h-10 text-success-foreground" />
+        <div className="w-20 h-20 bg-gradient-effulgence rounded-3xl mx-auto mb-8 flex items-center justify-center shadow-elegant">
+          <Layers className="w-10 h-10 text-effulgence-foreground" />
         </div>
 
         <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
@@ -80,7 +80,7 @@ class UserController extends BaseController
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Button size="lg" className="bg-gradient-effulgence shadow-effulgence">
+          <Button size="lg" className="bg-gradient-effulgence text-effulgence-foreground shadow-glow">
             <Download className="w-5 h-5 mr-2" />
             Instalar via Composer
           </Button>
