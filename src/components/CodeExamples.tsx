@@ -1,23 +1,26 @@
 import { Button } from "@/components/ui/button";
 import CodeExamplePackage from "@/components/CodeExamplePackage.tsx";
-import { Blocks, Zap, Layers } from "lucide-react";
+import { Blocks, Zap, Layers, Play, Code } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const CodeExamples = () => {
+  const navigate = useNavigate();
+
   const constructoTabs = [
     {
       value: "codec",
       label: "codec.php",
       code: `<?php
 
-// Em breve codec.php ... 🚀`
+// Em breve codec.php ... 🚀`,
     },
     {
       value: "faker",
       label: "faker.php",
       code: `<?php
 
-// Em breve faker.php ... 🚀`
-    }
+// Em breve faker.php ... 🚀`,
+    },
   ];
 
   const serendipityTabs = [
@@ -27,7 +30,7 @@ const CodeExamples = () => {
       code: `<?php
 
 // Em breve Action.php ... 🚀
-}`
+}`,
     },
     {
       value: "input",
@@ -35,7 +38,7 @@ const CodeExamples = () => {
       code: `<?php
 
 // Em breve Input.php ... 🚀
-}`
+}`,
     },
     {
       value: "entity",
@@ -43,7 +46,7 @@ const CodeExamples = () => {
       code: `<?php
 
 // Em breve Entity.php ... 🚀
-}`
+}`,
     },
     {
       value: "repository",
@@ -51,8 +54,8 @@ const CodeExamples = () => {
       code: `<?php
 
 // Em breve Repository.php ... 🚀
-}`
-    }
+}`,
+    },
   ];
 
   const effulgenceTabs = [
@@ -62,8 +65,8 @@ const CodeExamples = () => {
       code: `<?php
 
 // Em breve Controller.php ... 🚀
-}`
-    }
+}`,
+    },
   ];
 
   return (
@@ -83,11 +86,7 @@ const CodeExamples = () => {
             name="Constructo"
             subtitle="Serialização Inteligente"
             description="Transforme dados em objetos tipados com validação automática. Classes que se serializam e se validam de forma elegante e eficiente."
-            features={[
-              "Serialização automática",
-              "Validação integrada",
-              "Type safety nativo"
-            ]}
+            features={["Serialização automática", "Validação integrada", "Type safety nativo"]}
             icon={<Blocks className="w-6 h-6 text-constructo-foreground" />}
             gradientClass="bg-gradient-constructo"
             shadowClass="shadow-constructo"
@@ -102,7 +101,7 @@ const CodeExamples = () => {
             features={[
               "Roteamento com annotations",
               "Workers em background",
-              "Tratamento automático de erros"
+              "Tratamento automático de erros",
             ]}
             icon={<Zap className="w-6 h-6 text-serendipity-foreground" />}
             gradientClass="bg-gradient-serendipity"
@@ -119,7 +118,7 @@ const CodeExamples = () => {
             features={[
               "Componentes reutilizáveis",
               "Sistema de layout flexível",
-              "Themes customizáveis"
+              "Themes customizáveis",
             ]}
             icon={<Layers className="w-6 h-6 text-effulgence-foreground" />}
             gradientClass="bg-gradient-effulgence"
@@ -129,8 +128,21 @@ const CodeExamples = () => {
           />
         </div>
 
-        <div className="text-center mt-16">
-          <Button size="lg" className="bg-gradient-hero shadow-glow">
+        <div className="flex flex-col sm:flex-row-reverse gap-4 justify-center mt-16">
+          <Button
+            size="lg"
+            className="bg-gradient-primary shadow-glow"
+            onClick={() => navigate("/docs")}
+          >
+            <Play className="w-5 h-5 mr-2" />
+            Começar Agora
+          </Button>
+          <Button
+            size="lg"
+            className="bg-gradient-hero shadow-glow"
+            onClick={() => navigate("/docs/examples")}
+          >
+            <Code className="w-5 h-5 mr-2" />
             Explorar Mais Exemplos
           </Button>
         </div>

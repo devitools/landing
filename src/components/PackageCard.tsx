@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 
 interface PackageCardProps {
   name: string;
@@ -10,8 +9,6 @@ interface PackageCardProps {
   gradient: string;
   icon: React.ReactNode;
   isMain?: boolean;
-  docsLink?: string;
-  githubLink?: string;
 }
 
 const PackageCard = ({
@@ -21,11 +18,7 @@ const PackageCard = ({
   gradient,
   icon,
   isMain = false,
-  docsLink,
-  githubLink,
 }: PackageCardProps) => {
-  const navigate = useNavigate();
-
   return (
     <Card
       className={`p-8 relative overflow-hidden border-2 transition-all duration-300 hover:shadow-elegant hover:scale-105 ${
@@ -58,18 +51,11 @@ const PackageCard = ({
         </div>
 
         <div className="flex flex-col sm:flex-row gap-3">
-          <Button
-            className={`${gradient} shadow-elegant flex-1`}
-            onClick={() => (docsLink ? navigate(docsLink) : null)}
-          >
+          <Button className={`${gradient} shadow-elegant flex-1`}>
             Documentação
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
-          <Button
-            variant="outline"
-            className="flex-1"
-            onClick={() => (githubLink ? window.open(githubLink, "_blank") : null)}
-          >
+          <Button variant="outline" className="flex-1">
             <ExternalLink className="w-4 h-4 mr-2" />
             GitHub
           </Button>

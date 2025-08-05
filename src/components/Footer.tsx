@@ -56,8 +56,8 @@ const Footer = () => {
       </div>
 
       <div className="container mx-auto relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          <div>
+        <div className="flex flex-wrap justify-between gap-8 mb-8">
+          <div className="px-2 min-w-[130px]">
             <div className="flex items-center space-x-2 mb-4">
               <Link to="/" className="hover:opacity-80 transition-opacity">
                 <img
@@ -70,7 +70,7 @@ const Footer = () => {
             <p className="text-muted-foreground">Ferramentas modernas para o dev moderno</p>
           </div>
 
-          <div>
+          <div className="px-2 min-w-[130px]">
             <h3 className="font-semibold text-foreground mb-4">Pacotes</h3>
             <ul className="space-y-2">
               <li>
@@ -100,7 +100,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="px-2 min-w-[130px]">
             <h3 className="font-semibold text-foreground mb-4">Recursos</h3>
             <ul className="space-y-2">
               <li>
@@ -130,7 +130,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="px-2 min-w-[130px]">
             <h3 className="font-semibold text-foreground mb-4">Comunidade</h3>
             <div className="flex space-x-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
