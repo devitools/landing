@@ -21,6 +21,10 @@ Este projeto utiliza um sistema de arquivos de tarefa localizados em `.ai/tasks/
 ```
 
 #### 2. Estado Final - Tarefa Concluída
+
+- O arquivo deve ser renomeado com prefixo `[done]`
+- Tarefas não são versionadas, não se preocupe em fazer commit delas porque estão sendo ignoradas
+
 ```markdown
 # ✅ CONCLUÍDA - Tarefa: [Título Descritivo]
 
@@ -306,4 +310,55 @@ const Privacy = () => {
 };
 ```
 
+### 📝 Convenções de Commits
+
+#### **Mensagens de Commit: SEMPRE EM INGLÊS**
+- **Todas as mensagens de commit** devem ser escritas em inglês
+- **Seguir padrão Conventional Commits** quando possível
+- **Verbos no imperativo** (add, fix, update, remove)
+
+#### Exemplos de Commits Corretos:
+```bash
+# ✅ CORRETO - Inglês
+git commit -m "feat: add user authentication component"
+git commit -m "fix: resolve mobile navigation issue"
+git commit -m "update: improve footer component styling"
+git commit -m "docs: update README with new installation steps"
+
+# ❌ INCORRETO - Português
+git commit -m "feat: adicionar componente de autenticação"
+git commit -m "fix: corrigir problema de navegação mobile"
+```
+
+#### Tipos de Commit Recomendados:
+- `feat:` - Nova funcionalidade
+- `fix:` - Correção de bug
+- `update:` - Atualização de funcionalidade existente
+- `docs:` - Documentação
+- `style:` - Mudanças de estilo/formatação
+- `refactor:` - Refatoração de código
+- `test:` - Adição ou correção de testes
+- `chore:` - Tarefas de manutenção
+
+### Exemplo de Fluxo de Commit Correto:
+```bash
+git add .
+git commit -m "feat: implement user profile component with responsive design"
+```
+
 **Este sistema garante transparência, rastreabilidade e qualidade em todas as implementações do projeto.**
+
+## Comandos Aprovados
+
+O GitHub Copilot pode sugerir os seguintes comandos:
+
+```bash
+git status --porcelain
+git add .
+git commit -m "[message in English]"
+git stash
+npm run build
+npm run test
+mkdir -p [diretório]
+cat [file]
+```
