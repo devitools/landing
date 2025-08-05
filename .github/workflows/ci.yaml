@@ -5,18 +5,19 @@ on: push
 jobs:
   deploy:
     if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build React app
         run: npm run build
@@ -26,34 +27,36 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "ci@devi.tools"
 
-      - name: Configure SSH Key
-        run: |
-          eval $(ssh-agent -s)
-          mkdir -p ~/.ssh
-          chmod 700 ~/.ssh
-          echo -e "${{ secrets.DEPLOY_SERVER_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-add ~/.ssh/id_rsa
-          echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_SERVER_PRIVATE_KEY }}
 
-      # example DEPLOY_HOST_PRD: devi.tools
       - name: Configure SSH known hosts
         run: |
-          echo -e "${{ secrets.DEPLOY_HOST_PRD }}" > ~/.ssh/known_hosts
-          echo "chmod on ~/.ssh/known_hosts"
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          ssh-keyscan -H ${{ secrets.DEPLOY_HOST_PRD }} >> ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
 
-      # example DEPLOY_REMOTE_PRD: ssh://heimdall@devi.tools:/projects/devi.tools/repo
       - name: Deploy to production
         run: |
+          # Clean existing git
           rm -rf .git
+          
+          # Copy configuration files
           cp .environment/devi.tools/.env .env
           cp .environment/devi.tools/docker-compose.yml docker-compose.yml
+          
+          # Prepare build for deployment
           rm -rf public
           mv dist public
+          
+          # Initialize new git repository
           git init
           git add .
           git commit --quiet -m "[deploy] $(date)"
+          
+          # Deploy via git push
           git remote add production ${{ secrets.DEPLOY_REMOTE_PRD }}
           git push production master --force
-          
