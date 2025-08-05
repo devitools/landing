@@ -42,6 +42,16 @@ Este projeto utiliza um sistema de arquivos de tarefa localizados em `.ai/tasks/
 - ✅ [Validações realizadas]
 ```
 
+### Renomeação do Arquivo
+Quando uma tarefa for concluída, o arquivo deve ser renomeado para incluir o prefixo `[done]`:
+
+**Antes**: `.ai/tasks/nome-da-tarefa.md`
+**Depois**: `.ai/tasks/[done]nome-da-tarefa.md`
+
+Exemplo:
+- `.ai/tasks/revisar-pagina-constructo.md` → `.ai/tasks/[done]revisar-pagina-constructo.md`
+- `.ai/tasks/implementar-componente-x.md` → `.ai/tasks/[done]implementar-componente-x.md`
+
 ### Critérios para Marcação Como Concluída
 
 Uma tarefa deve ser marcada como ✅ CONCLUÍDA apenas quando:
@@ -61,6 +71,11 @@ Uma tarefa deve ser marcada como ✅ CONCLUÍDA apenas quando:
 1. **Verificar o estado do Git** para garantir working tree limpo
 2. **Solicitar commit/stage** se houver mudanças pendentes
 3. **Confirmar que é seguro** prosseguir com a implementação
+
+**EXCEÇÃO: Arquivos de Task**
+- Arquivos em `.ai/tasks/` **NÃO** requerem validação do working tree
+- Tasks podem ser modificadas/marcadas como concluídas independentemente do estado do Git
+- Tasks não são versionadas e estão ignoradas no Git
 
 ### Comando de Verificação Obrigatório:
 
