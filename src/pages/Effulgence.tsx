@@ -92,7 +92,7 @@ const Effulgence = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Button size="lg" className="bg-gradient-effulgence text-effulgence-foreground shadow-glow">
+          <Button size="lg" className="bg-gradient-effulgence text-effulgence-foreground transition-all hover:shadow-glow">
             <Download className="w-5 h-5 mr-2" />
             Instalar via Composer
           </Button>
@@ -131,7 +131,7 @@ const Effulgence = () => {
               </Button>
               <Button
                 onClick={handleDocsClick}
-                className="bg-gradient-effulgence text-effulgence-foreground shadow-glow gap-2"
+                className="bg-gradient-effulgence text-effulgence-foreground transition-all hover:shadow-glow gap-2"
               >
                 <BookOpen className="w-4 h-4" />
                 Primeiros Passos
