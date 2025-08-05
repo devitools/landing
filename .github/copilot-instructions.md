@@ -50,6 +50,57 @@ Uma tarefa deve ser marcada como ✅ CONCLUÍDA apenas quando:
 
 ## Fluxo de Confirmação de Conclusão
 
+### ⚠️ IMPORTANTE: Verificação do Working Tree
+
+**Antes de implementar qualquer tarefa, o GitHub Copilot DEVE:**
+
+1. **Verificar o estado do Git** para garantir working tree limpo
+2. **Solicitar commit/stage** se houver mudanças pendentes
+3. **Confirmar que é seguro** prosseguir com a implementação
+
+### Comando de Verificação Obrigatório:
+
+```bash
+git status --porcelain
+```
+
+**Interpretação dos resultados:**
+- **Vazio**: Working tree limpo ✅ - Pode prosseguir
+- **Com saída**: Há mudanças pendentes ⚠️ - PARAR e solicitar ação
+
+### Exemplo de Verificação de Segurança:
+
+```
+## 🔍 Verificação de Working Tree
+
+Verificando se é seguro implementar a tarefa...
+
+**ATENÇÃO**: Detectadas mudanças não commitadas:
+- M src/components/Component.tsx
+- ?? src/new-file.tsx
+
+**AÇÃO NECESSÁRIA**:
+Antes de prosseguir com a implementação, você precisa:
+
+1. **Commitir as mudanças**:
+   ```bash
+   git add .
+   git commit -m "sua mensagem de commit"
+   ```
+
+2. **OU fazer stage das mudanças**:
+   ```bash
+   git add .
+   ```
+
+3. **OU usar stash para salvar temporariamente**:
+   ```bash
+   git stash push -m "mudanças temporárias"
+   ```
+
+Posso prosseguir com a implementação após você resolver essas pendências?
+```
+
 ### ⚠️ IMPORTANTE: Confirmação Obrigatória
 
 **Antes de marcar qualquer tarefa como concluída, o GitHub Copilot DEVE:**
@@ -132,11 +183,46 @@ head -5 .ai/tasks/[nome-da-tarefa].md
 
 ## Regras Importantes
 
-1. **NUNCA** marque uma tarefa como concluída sem implementá-la completamente
-2. **SEMPRE** solicite confirmação antes de marcar como concluída
-3. **MANTENHA** o conteúdo original da tarefa ao marcar como concluída
-4. **ADICIONE** apenas o cabeçalho de status e resumo de resultados
-5. **VALIDE** tecnicamente antes de solicitar confirmação
+1. **NUNCA** implemente uma tarefa sem verificar `git status --porcelain` primeiro
+2. **PARE** imediatamente se houver mudanças não commitadas e solicite ação do usuário
+3. **NUNCA** marque uma tarefa como concluída sem implementá-la completamente
+4. **SEMPRE** solicite confirmação antes de marcar como concluída
+5. **MANTENHA** o conteúdo original da tarefa ao marcar como concluída
+6. **ADICIONE** apenas o cabeçalho de status e resumo de resultados
+7. **VALIDE** tecnicamente antes de solicitar confirmação
+8. **COMMITIR** mudanças é responsabilidade do usuário, não do Copilot
+
+## Fluxo Completo de Segurança
+
+### 1. Verificação Inicial
+```bash
+git status --porcelain
+```
+
+### 2. Decisão Baseada no Resultado
+- **Se vazio**: ✅ Prosseguir com implementação
+- **Se não vazio**: ⚠️ PARAR e solicitar ação do usuário
+
+### 3. Mensagem de Segurança (quando necessário)
+```
+🛑 **IMPLEMENTAÇÃO BLOQUEADA**
+
+Working tree não está limpo. Detectadas mudanças pendentes.
+
+Por favor, resolva as pendências antes de implementar novas funcionalidades.
+```
+
+## Benefícios da Verificação
+
+### Evita Conflitos:
+- **Mistura de mudanças**: Evita misturar implementações diferentes
+- **Perda de trabalho**: Protege mudanças não salvas
+- **Confusão de commits**: Mantém histórico limpo e organizado
+
+### Facilita Debugging:
+- **Isolamento**: Cada implementação fica isolada
+- **Reversão**: Facilita reverter mudanças específicas
+- **Revisão**: Commits focados e reviewáveis
 
 ---
 
