@@ -1,0 +1,61 @@
+name: deploy
+
+on: push
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: git checkout master
+      - run: git config --global user.email "ci@devi.tools"
+      - run: git config --global user.name "CI"
+
+      # configure special files
+      - run: cp .environment/devi.tools/.env .env
+      - run: cp .environment/devi.tools/docker-compose.yml docker-compose.yml
+
+      - name: Checkout code
+        uses: actions/checkout@v3 # Check out your repository's code
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+        node-version: '18' # Specify the Node.js version
+
+      - name: Install dependencies
+        run: npm install # Or yarn install if you use Yarn
+
+      - name: Build React app
+        run: npm run build # Or yarn build
+
+      # go to artifacts project, create a new git repository and add all files
+      - name: Configure repo
+        run: |
+          rm -rf .git
+          git init
+          git add .
+          git commit --quiet -m "[deploy] $(date)"
+
+      # configure ssh
+      - name: Configure SSH
+        run: |
+          eval $(ssh-agent -s)
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          echo -e "${{ secrets.DEPLOY_SERVER_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-add ~/.ssh/id_rsa
+          echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+
+      # setup and execute deploy
+      - name: Run push to sever
+        run: |
+          echo -e "${{ secrets.MASTER_DEPLOY_HOST }}" > ~/.ssh/known_hosts
+          echo "chmod on ~/.ssh/known_hosts"
+          chmod 644 ~/.ssh/known_hosts
+          echo "Deploy 'master' (${{ secrets.MASTER_DEPLOY_REMOTE }})"
+          git remote add production ${{ secrets.MASTER_DEPLOY_REMOTE }}
+          git push production master --force
+          
