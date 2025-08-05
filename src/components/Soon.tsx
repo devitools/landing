@@ -1,8 +1,16 @@
 import { Badge } from "@/components/ui/badge.tsx";
+import { cn } from "@/lib/utils";
 
-export function Soon() {
+interface SoonProps {
+  className?: string;
+}
+
+export function Soon({ className }: SoonProps = {}) {
   return (
-    <Badge className="text-xs text-white border-transparent animate-pulse bg-red-500 tebg-red-500-foreground hover:bg-red-500/80">
+    <Badge className={cn(
+      "text-xs text-white border-transparent animate-pulse bg-red-500 text-red-500-foreground hover:bg-red-500/80",
+      className
+    )}>
       Em Breve
     </Badge>
   );
