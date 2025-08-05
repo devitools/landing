@@ -67,8 +67,8 @@ All colors MUST be HSL.
     --gradient-effulgence: linear-gradient(135deg, hsl(var(--effulgence)), hsl(var(--effulgence-glow)));
     
     --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.15);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.2);
-    
+    --shadow-glow: 0 8px 32px -8px hsl(var(--primary-glow) / 0.4);
+
     /* Package-specific shadows */
     --shadow-constructo: 0 10px 30px -10px hsl(var(--constructo) / 0.15);
     --shadow-serendipity: 0 10px 30px -10px hsl(var(--serendipity) / 0.15);
@@ -108,6 +108,9 @@ All colors MUST be HSL.
 
     /* Logo filter for dark theme (no filter) */
     --logo-filter: none;
+
+    /* Shadow mais sóbria para o tema escuro */
+    --shadow-glow: 0 8px 32px -8px hsl(210 40% 98% / 0.1);
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;

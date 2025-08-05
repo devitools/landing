@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Packages from "@/components/Packages";
-import CodeExample from "@/components/CodeExample";
+import CodeExamples from "@/components/CodeExamples.tsx";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Sparkles, Zap } from "lucide-react";
@@ -83,7 +83,7 @@ const Index = () => {
         </div>
       </Hero>
       <Packages />
-      <CodeExample />
+      <CodeExamples />
       <Footer />
     </div>
   );

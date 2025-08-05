@@ -20,8 +20,7 @@ const Packages = () => {
             name="Constructo"
             description="Ferramentas fundamentais para qualquer projeto PHP como serialização, validação e testes simplificados."
             gradient="bg-gradient-constructo"
-            icon={<Package className="w-7 h-7 text-primary-foreground" />}
-            isMain={true}
+            icon={<Package className="w-7 h-7 text-white" />}
             docsLink="/docs/constructo"
             githubLink="https://github.com/devitools/constructo"
             features={[
@@ -36,7 +35,7 @@ const Packages = () => {
             name="Serendipity"
             description="O pacote ideal para quem quer lidar com o framework Hyperf, simplificando ao máximo a ferramenta baseada no Swoole."
             gradient="bg-gradient-serendipity"
-            icon={<Zap className="w-7 h-7 text-accent-foreground" />}
+            icon={<Zap className="w-7 h-7 text-white" />}
             docsLink="/docs/serendipity"
             githubLink="https://github.com/devitools/serendipity"
             features={[
@@ -51,7 +50,7 @@ const Packages = () => {
             name="Effulgence"
             description="Extensão do Constructo especificamente otimizada para o framework Laravel, oferecendo ferramentas avançadas."
             gradient="bg-gradient-effulgence"
-            icon={<Layers className="w-7 h-7 text-success-foreground" />}
+            icon={<Layers className="w-7 h-7 text-white" />}
             docsLink="/docs/effulgence"
             githubLink="https://github.com/devitools/effulgence"
             features={[

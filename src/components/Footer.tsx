@@ -112,7 +112,7 @@ const Footer = () => {
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground">
-            © 2024 Devitools. Desenvolvido com{" "}
+            © {new Date().getFullYear()} Devitools. Desenvolvido com{" "}
             <Heart className="w-4 h-4 inline mx-1 text-accent" /> pela comunidade.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
