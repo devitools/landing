@@ -9,51 +9,41 @@ const Footer = () => {
       className="border-t border-border py-12 relative overflow-hidden"
       style={{ backgroundColor: "hsl(var(--footer-bg))" }}
     >
-      {/* Formas geométricas animadas */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Círculos flutuantes */}
-        <div className="absolute top-10 left-10 w-16 h-16 bg-gradient-to-br from-primary/10 to-accent/5 rounded-full animate-pulse"></div>
+        <div className="absolute top-52 left-10 w-16 h-16 bg-gradient-to-br from-primary/10 to-accent/5 rounded-full animate-pulse"></div>
         <div
-          className="absolute top-20 right-20 w-8 h-8 bg-gradient-to-br from-accent/15 to-primary/5 rounded-full animate-bounce"
+          className="absolute top-60 right-20 w-8 h-8 bg-gradient-to-br from-accent/15 to-primary/5 rounded-full animate-bounce"
           style={{ animationDelay: "1s" }}
-        ></div>
+        />
         <div
           className="absolute bottom-20 left-1/4 w-12 h-12 bg-gradient-to-br from-success/10 to-primary/5 rounded-full animate-pulse"
           style={{ animationDelay: "2s" }}
-        ></div>
-
-        {/* Triângulos */}
+        />
         <div
           className="absolute top-1/3 right-1/3 w-0 h-0 border-l-[15px] border-r-[15px] border-b-[25px] border-l-transparent border-r-transparent border-b-primary/10 animate-bounce"
           style={{ animationDelay: "0.5s" }}
-        ></div>
+        />
         <div
           className="absolute bottom-1/3 right-10 w-0 h-0 border-l-[10px] border-r-[10px] border-b-[15px] border-l-transparent border-r-transparent border-b-accent/15 animate-pulse"
           style={{ animationDelay: "1.5s" }}
-        ></div>
-
-        {/* Hexágonos */}
+        />
         <div
           className="absolute top-1/2 left-1/6 w-6 h-6 bg-constructo/10 transform rotate-45 animate-spin"
           style={{ animationDuration: "8s" }}
-        ></div>
+        />
         <div
           className="absolute bottom-10 right-1/4 w-4 h-4 bg-serendipity/10 transform rotate-45 animate-spin"
           style={{ animationDuration: "6s", animationDelay: "1s" }}
-        ></div>
-
-        {/* Linhas decorativas */}
-        <div className="absolute top-16 left-1/2 w-20 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent animate-pulse"></div>
+        />
+        <div className="absolute top-16 left-1/2 w-20 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent animate-pulse" />
         <div
           className="absolute bottom-16 right-1/2 w-16 h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent animate-pulse"
           style={{ animationDelay: "2s" }}
-        ></div>
-
-        {/* Losango */}
+        />
         <div
           className="absolute top-24 right-1/2 w-3 h-3 bg-effulgence/15 transform rotate-45 animate-bounce"
           style={{ animationDelay: "3s" }}
-        ></div>
+        />
       </div>
 
       <div className="container mx-auto relative z-10">
@@ -95,7 +85,8 @@ const Footer = () => {
                   to="/effulgence"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Effulgence <Soon className="text-2xs p-0 px-[4px] text-white dark:text-background dark:bg-red-300" />
+                  Effulgence{" "}
+                  <Soon className="text-2xs p-0 px-[4px] text-white dark:text-background dark:bg-red-300" />
                 </Link>
               </li>
             </ul>

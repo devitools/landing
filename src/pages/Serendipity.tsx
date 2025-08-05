@@ -201,8 +201,6 @@ const Serendipity = () => {
           <Badge variant="secondary">PHP 8+</Badge>
           <Badge variant="secondary">Swoole</Badge>
           <Badge variant="secondary">Hyperf</Badge>
-          <Badge variant="secondary">WebSocket</Badge>
-          <Badge variant="secondary">Async</Badge>
           <Badge className="bg-gradient-primary text-primary-foreground">High Performance</Badge>
         </div>
       </Hero>
