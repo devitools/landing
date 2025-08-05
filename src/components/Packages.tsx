@@ -63,9 +63,20 @@ const Packages = () => {
           />
         </div>
 
+        <div className="text-center my-16">
+          <h3 className="text-4xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">
+            Muito mais que ferramentas
+          </h3>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Os pacotes Devitools foram criados para serem mais do que apenas bibliotecas. Eles são
+            extensões do seu potencial como desenvolvedor, oferecendo soluções práticas e eficientes
+            para os desafios do dia a dia.
+          </p>
+        </div>
+
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center p-6 rounded-2xl bg-card border border-border">
-            <Database className="w-8 h-8 text-primary mx-auto mb-4" />
+            <Database className="w-8 h-8 text-gray mx-auto mb-4" />
             <h3 className="text-lg font-semibold mb-2">Serialização Inteligente</h3>
             <p className="text-muted-foreground">
               Converta objetos para arrays/JSON e vice-versa automaticamente
@@ -73,7 +84,7 @@ const Packages = () => {
           </div>
 
           <div className="text-center p-6 rounded-2xl bg-card border border-border">
-            <Shield className="w-8 h-8 text-accent mx-auto mb-4" />
+            <Shield className="w-8 h-8 text-gray mx-auto mb-4" />
             <h3 className="text-lg font-semibold mb-2">Validação Robusta</h3>
             <p className="text-muted-foreground">
               Sistema de validação flexível baseado na estrutura das suas classes
@@ -81,10 +92,10 @@ const Packages = () => {
           </div>
 
           <div className="text-center p-6 rounded-2xl bg-card border border-border">
-            <TestTube className="w-8 h-8 text-success mx-auto mb-4" />
+            <TestTube className="w-8 h-8 text-gray mx-auto mb-4" />
             <h3 className="text-lg font-semibold mb-2">Testes Simplificados</h3>
             <p className="text-muted-foreground">
-              Gere dados de teste realistas com base nas suas classes
+              Gere dados de teste de forma prática com base nas suas classes
             </p>
           </div>
         </div>

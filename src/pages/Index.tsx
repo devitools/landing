@@ -4,9 +4,12 @@ import CodeExample from "@/components/CodeExample";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Sparkles, Zap } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import Hero from "@/components/Hero.tsx";
 
 const Index = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen" style={{ background: "var(--gradient-background)" }}>
       <Header />
@@ -34,7 +37,7 @@ const Index = () => {
             <Button
               size="lg"
               className="bg-gradient-primary shadow-glow text-lg px-8 py-6"
-              onClick={() => (window.location.href = "/docs")}
+              onClick={() => navigate("/docs")}
             >
               <Zap className="w-5 h-5 mr-2" />
               Começar Agora
@@ -42,7 +45,9 @@ const Index = () => {
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-6">
               <Code className="w-5 h-5 mr-2" />
-              Ver Exemplos
+              <a href="#examples" className="flex items-center">
+                Ver Exemplos
+              </a>
             </Button>
           </div>
 

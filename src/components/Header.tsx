@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Github, BookOpen, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import deviLogo from "@/assets/devitools-logo.png";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
+  const navigate = useNavigate();
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
@@ -23,30 +24,30 @@ const Header = () => {
               <img
                 src={deviLogo}
                 alt="Devitools Logo"
-                className={`h-11 object-contain ${theme !== "dark" ? "logo-filter-primary" : ""}`}
+                className="h-11 object-contain logo-adaptive"
               />
             </Link>
           </div>
 
           <nav className="hidden lg:flex items-center space-x-8">
-            <a
-              href="/constructo"
+            <Link
+              to="/constructo"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               Constructo
-            </a>
-            <a
-              href="/serendipity"
+            </Link>
+            <Link
+              to="/serendipity"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               Serendipity
-            </a>
-            <a
-              href="/effulgence"
+            </Link>
+            <Link
+              to="/effulgence"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               Effulgence
-            </a>
+            </Link>
             <Link to="/docs" className="text-muted-foreground hover:text-primary transition-colors">
               Todas as Ferramentas
             </Link>
@@ -67,7 +68,7 @@ const Header = () => {
             <Button 
               size="sm" 
               className="bg-gradient-primary shadow-elegant"
-              onClick={() => window.location.href = '/docs'}
+              onClick={() => navigate('/docs')}
             >
               <BookOpen className="w-4 h-4 mr-2" />
               Começar

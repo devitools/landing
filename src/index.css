@@ -6,11 +6,6 @@
 All colors MUST be HSL.
 */
 
-/* Custom filters for logo */
-.logo-filter-primary {
-  filter: brightness(0) saturate(100%) invert(34%) sepia(98%) saturate(1000%) hue-rotate(250deg) brightness(95%) contrast(100%);
-}
-
 @layer base {
   :root {
     --background: 220 14% 96%;
@@ -25,6 +20,9 @@ All colors MUST be HSL.
     --primary: 263 70% 50%;
     --primary-foreground: 0 0% 98%;
     --primary-glow: 263 85% 65%;
+
+    /* Logo filter for light theme */
+    --logo-filter: brightness(0) saturate(100%) invert(24%) sepia(98%) saturate(1200%) hue-rotate(250deg) brightness(95%) contrast(100%);
 
     --secondary: 220 14% 96%;
     --secondary-foreground: 220 9% 15%;
@@ -108,6 +106,9 @@ All colors MUST be HSL.
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
+    /* Logo filter for dark theme (no filter) */
+    --logo-filter: none;
+
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
 
@@ -154,5 +155,12 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .logo-adaptive {
+    filter: var(--logo-filter);
+    transition: filter 0.2s ease;
   }
 }
