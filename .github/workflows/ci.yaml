@@ -7,39 +7,26 @@ jobs:
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: git checkout master
-      - run: git config --global user.email "ci@devi.tools"
-      - run: git config --global user.name "CI"
-
-      # configure special files
-      - run: cp .environment/devi.tools/.env .env
-      - run: cp .environment/devi.tools/docker-compose.yml docker-compose.yml
-
       - name: Checkout code
-        uses: actions/checkout@v3 # Check out your repository's code
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-        node-version: '18' # Specify the Node.js version
+          node-version: '20'
 
       - name: Install dependencies
-        run: npm install # Or yarn install if you use Yarn
+        run: npm install
 
       - name: Build React app
-        run: npm run build # Or yarn build
+        run: npm run build
 
-      # go to artifacts project, create a new git repository and add all files
-      - name: Configure repo
+      - name: Configure git
         run: |
-          rm -rf .git
-          git init
-          git add .
-          git commit --quiet -m "[deploy] $(date)"
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "ci@devi.tools"
 
-      # configure ssh
-      - name: Configure SSH
+      - name: Configure SSH Key
         run: |
           eval $(ssh-agent -s)
           mkdir -p ~/.ssh
@@ -49,13 +36,24 @@ jobs:
           ssh-add ~/.ssh/id_rsa
           echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
 
-      # setup and execute deploy
-      - name: Run push to sever
+      # example DEPLOY_HOST_PRD: devi.tools
+      - name: Configure SSH known hosts
         run: |
-          echo -e "${{ secrets.MASTER_DEPLOY_HOST }}" > ~/.ssh/known_hosts
+          echo -e "${{ secrets.DEPLOY_HOST_PRD }}" > ~/.ssh/known_hosts
           echo "chmod on ~/.ssh/known_hosts"
           chmod 644 ~/.ssh/known_hosts
-          echo "Deploy 'master' (${{ secrets.MASTER_DEPLOY_REMOTE }})"
-          git remote add production ${{ secrets.MASTER_DEPLOY_REMOTE }}
+
+      # example DEPLOY_REMOTE_PRD: ssh://heimdall@devi.tools:/projects/devi.tools/repo
+      - name: Deploy to production
+        run: |
+          rm -rf .git
+          cp .environment/devi.tools/.env .env
+          cp .environment/devi.tools/docker-compose.yml docker-compose.yml
+          rm -rf public
+          mv dist public
+          git init
+          git add .
+          git commit --quiet -m "[deploy] $(date)"
+          git remote add production ${{ secrets.DEPLOY_REMOTE_PRD }}
           git push production master --force
           
