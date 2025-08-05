@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { ArrowRight, ExternalLink } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface PackageCardProps {
   name: string;
@@ -9,10 +9,9 @@ interface PackageCardProps {
   features: string[];
   gradient: string;
   icon: React.ReactNode;
-  docsLink: string;
-  githubLink: string;
   isMain?: boolean;
-  showSoonBadge?: boolean;
+  docsLink?: string;
+  githubLink?: string;
 }
 
 const PackageCard = ({
@@ -21,11 +20,12 @@ const PackageCard = ({
   features,
   gradient,
   icon,
+  isMain = false,
   docsLink,
   githubLink,
-  isMain = false,
-  showSoonBadge = false,
 }: PackageCardProps) => {
+  const navigate = useNavigate();
+
   return (
     <Card
       className={`p-8 relative overflow-hidden border-2 transition-all duration-300 hover:shadow-elegant hover:scale-105 ${
@@ -45,14 +45,7 @@ const PackageCard = ({
           {icon}
         </div>
 
-        <div className="flex items-center gap-3 mb-4">
-          <h3 className="text-2xl font-bold text-foreground">{name}</h3>
-          {showSoonBadge && (
-            <Badge variant="secondary" className="text-xs">
-              Soon
-            </Badge>
-          )}
-        </div>
+        <h3 className="text-2xl font-bold mb-4 text-foreground">{name}</h3>
         <p className="text-muted-foreground mb-6 text-lg">{description}</p>
 
         <div className="space-y-3 mb-8">
@@ -65,11 +58,18 @@ const PackageCard = ({
         </div>
 
         <div className="flex flex-col sm:flex-row gap-3">
-          <Button className={`${gradient} shadow-elegant flex-1`}>
+          <Button
+            className={`${gradient} shadow-elegant flex-1`}
+            onClick={() => (docsLink ? navigate(docsLink) : null)}
+          >
             Documentação
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
-          <Button variant="outline" className="flex-1">
+          <Button
+            variant="outline"
+            className="flex-1"
+            onClick={() => (githubLink ? window.open(githubLink, "_blank") : null)}
+          >
             <ExternalLink className="w-4 h-4 mr-2" />
             GitHub
           </Button>
