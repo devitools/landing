@@ -14,6 +14,8 @@ import Docs from "./pages/Docs";
 import DocsConstructo from "./pages/DocsConstructo";
 import DocsSerendipity from "./pages/DocsSerendipity";
 import DocsEffulgence from "./pages/DocsEffulgence";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +41,8 @@ const App = () => (
             <Route path="/docs/constructo" element={<DocsConstructo />} />
             <Route path="/docs/serendipity" element={<DocsSerendipity />} />
             <Route path="/docs/effulgence" element={<DocsEffulgence />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

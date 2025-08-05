@@ -226,4 +226,84 @@ Por favor, resolva as pendências antes de implementar novas funcionalidades.
 
 ---
 
+## Padrões de Código do Projeto
+
+### 🇧🇷 Idiomas e Convenções
+
+#### **Labels e Textos Visíveis**
+- **Português brasileiro** para todos os textos que o usuário vê
+- **Títulos, botões, mensagens** sempre em português
+- **Conteúdo das páginas** em português
+
+#### **Código e Estruturas Técnicas**
+- **Inglês** para nomes de arquivos, funções, variáveis
+- **Inglês** para nomes de componentes e interfaces
+- **Inglês** para propriedades e métodos
+
+#### **Comentários**
+- **Evitar comentários** no código sempre que possível
+- **Código autoexplicativo** é preferível
+- **Apenas comentários essenciais** quando necessário
+
+### Exemplos Práticos
+
+```typescript
+// ✅ CORRETO
+interface UserProfileProps {
+  name: string;
+  email: string;
+}
+
+const UserProfile = ({ name, email }: UserProfileProps) => {
+  return (
+    <div>
+      <h1>Perfil do Usuário</h1>
+      <p>Nome: {name}</p>
+      <p>E-mail: {email}</p>
+    </div>
+  );
+};
+
+// ❌ INCORRETO
+interface PerfilUsuarioProps {
+  nome: string;
+  email: string;
+}
+
+// Componente para mostrar dados do usuário
+const PerfilUsuario = ({ nome, email }: PerfilUsuarioProps) => {
+  return (
+    <div>
+      <h1>User Profile</h1> {/* Texto em inglês */}
+      <p>Name: {nome}</p>
+    </div>
+  );
+};
+```
+
+### Estrutura de Arquivos
+```
+pages/
+  Privacy.tsx          // ✅ Nome em inglês
+  Terms.tsx           // ✅ Nome em inglês
+  NotFound.tsx        // ✅ Nome em inglês
+
+components/
+  UserCard.tsx        // ✅ Nome em inglês
+  ProductList.tsx     // ✅ Nome em inglês
+```
+
+### Conteúdo das Páginas
+```typescript
+// ✅ Textos em português, código em inglês
+const Privacy = () => {
+  return (
+    <div>
+      <h1>Política de Privacidade</h1>
+      <p>Seus dados estão seguros conosco...</p>
+    </div>
+  );
+};
+```
+
 **Este sistema garante transparência, rastreabilidade e qualidade em todas as implementações do projeto.**

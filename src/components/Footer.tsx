@@ -163,12 +163,12 @@ const Footer = () => {
             </a>
           </div>
           <div className="flex space-x-6 md:mt-0 py-2">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
               Privacidade
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            </Link>
+            <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors">
               Termos
-            </a>
+            </Link>
           </div>
         </div>
       </div>
