@@ -118,7 +118,7 @@ All colors MUST be HSL.
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 217.2 20% 40%;
     --accent-foreground: 210 40% 98%;
 
     /* Package-specific colors for dark mode */

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CodeBlock from "@/components/CodeBlock";
-import { ArrowRight, Package, Zap, Layers } from "lucide-react";
+import { ArrowRight, Blocks, Zap, Layers } from "lucide-react";
 
 const CodeExamples = () => {
   return (
@@ -22,7 +22,7 @@ const CodeExamples = () => {
             <div className="space-y-6 lg:col-span-1">
               <div className="flex items-center space-x-3">
                 <div className="w-12 h-12 bg-gradient-constructo rounded-xl flex items-center justify-center shadow-constructo">
-                  <Package className="w-6 h-6 text-constructo-foreground" />
+                  <Blocks className="w-6 h-6 text-constructo-foreground" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-constructo">Constructo</h3>
@@ -56,7 +56,7 @@ const CodeExamples = () => {
               <div className="pl-6">
                 <Button
                   variant="outline"
-                  className="group border-constructo/30 hover:border-constructo hover:text-constructo"
+                  className="group border-constructo /30 hover:border-constructo  hover:text-constructo-foreground hover:bg-constructo "
                 >
                   Explorar Constructo
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -179,7 +179,7 @@ $this->assertValidUser($users->first());`}
               <div className="pl-6">
                 <Button
                   variant="outline"
-                  className="group border-serendipity/30 hover:border-serendipity hover:text-serendipity"
+                  className="group border-serendipity/30 hover:border-serendipity hover:text-serendipity-foreground hover:bg-serendipity"
                 >
                   Explorar Serendipity
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -350,7 +350,7 @@ class UserRepository extends Repository
               <div className="pl-6">
                 <Button
                   variant="outline"
-                  className="group border-effulgence/30 hover:border-effulgence hover:text-effulgence"
+                  className="group border-effulgence/30 hover:border-effulgence hover:text-effulgence-foreground hover:bg-effulgence"
                 >
                   Explorar Effulgence
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

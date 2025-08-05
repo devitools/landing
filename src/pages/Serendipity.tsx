@@ -3,25 +3,25 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Download, ExternalLink, CheckCircle, Sparkles, Shield, Gauge } from "lucide-react";
+import { Code, Download, ExternalLink, CheckCircle, Zap, Shield, Gauge } from "lucide-react";
 import Hero from "@/components/Hero.tsx";
 
 const Serendipity = () => {
   const features = [
     {
-      icon: <Sparkles className="w-6 h-6" />,
-      title: "API Elegante",
-      description: "Interface intuitiva e expressiva para desenvolvimento ágil",
+      icon: <Zap className="w-6 h-6 text-serendipity" />,
+      title: "Roteamento Moderno",
+      description: "Roteamento automático com annotations PHP 8+ para APIs e Workers",
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Segurança Integrada",
-      description: "Proteções automáticas contra vulnerabilidades comuns",
+      icon: <Shield className="w-6 h-6 text-serendipity" />,
+      title: "Tratamento de Erros",
+      description: "Sistema automático de captura e tratamento de erros em background",
     },
     {
-      icon: <Gauge className="w-6 h-6" />,
-      title: "Alta Performance",
-      description: "Otimizações inteligentes para máxima velocidade",
+      icon: <Gauge className="w-6 h-6 text-serendipity" />,
+      title: "Performance Hyperf",
+      description: "Aproveite toda a performance do Swoole com simplicidade",
     },
   ];
 
@@ -62,7 +62,7 @@ $router->group(['middleware' => 'auth'], function($router) {
       {/* Hero Section */}
       <Hero>
         <div className="w-20 h-20 bg-gradient-serendipity rounded-3xl mx-auto mb-8 flex items-center justify-center shadow-serendipity">
-          <Sparkles className="w-10 h-10 text-serendipity-foreground" />
+          <Zap className="w-10 h-10 text-serendipity-foreground" />
         </div>
 
         <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent">

@@ -1,5 +1,5 @@
 import PackageCard from "./PackageCard";
-import { Package, Layers, Database, Zap, TestTube, Shield } from "lucide-react";
+import { Blocks, Zap, Layers, Database, Shield, TestTube } from "lucide-react";
 
 const Packages = () => {
   return (
@@ -20,7 +20,7 @@ const Packages = () => {
             name="Constructo"
             description="Ferramentas fundamentais para qualquer projeto PHP como serialização, validação e testes simplificados."
             gradient="bg-gradient-constructo"
-            icon={<Package className="w-7 h-7 text-white" />}
+            icon={<Blocks className="w-7 h-7 text-constructo-foreground" />}
             docsLink="/docs/constructo"
             githubLink="https://github.com/devitools/constructo"
             features={[
@@ -35,7 +35,7 @@ const Packages = () => {
             name="Serendipity"
             description="O pacote ideal para quem quer lidar com o framework Hyperf, simplificando ao máximo a ferramenta baseada no Swoole."
             gradient="bg-gradient-serendipity"
-            icon={<Zap className="w-7 h-7 text-white" />}
+            icon={<Zap className="w-7 h-7 text-serendipity-foreground" />}
             docsLink="/docs/serendipity"
             githubLink="https://github.com/devitools/serendipity"
             features={[
@@ -50,7 +50,7 @@ const Packages = () => {
             name="Effulgence"
             description="Extensão do Constructo especificamente otimizada para o framework Laravel, oferecendo ferramentas avançadas."
             gradient="bg-gradient-effulgence"
-            icon={<Layers className="w-7 h-7 text-white" />}
+            icon={<Layers className="w-7 h-7 text-effulgence-foreground" />}
             docsLink="/docs/effulgence"
             githubLink="https://github.com/devitools/effulgence"
             features={[

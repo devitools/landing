@@ -3,25 +3,34 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Download, ExternalLink, CheckCircle, Zap, Settings, Database } from "lucide-react";
+import {
+  Code,
+  Download,
+  ExternalLink,
+  CheckCircle,
+  Blocks,
+  Settings,
+  Database,
+} from "lucide-react";
 import Hero from "@/components/Hero.tsx";
 
 const Constructo = () => {
   const features = [
     {
-      icon: <Settings className="w-6 h-6" />,
-      title: "Configuração Flexível",
-      description: "Sistema de configuração poderoso e flexível para suas aplicações PHP",
+      icon: <Blocks className="w-6 h-6 text-constructo" />,
+      title: "Serialização Inteligente",
+      description:
+        "Converta objetos para arrays/JSON e vice-versa automaticamente com validação integrada",
     },
     {
-      icon: <Database className="w-6 h-6" />,
-      title: "Gestão de Dependências",
-      description: "Gerenciamento inteligente de dependências e injeção automática",
+      icon: <Database className="w-6 h-6 text-constructo" />,
+      title: "Validação Robusta",
+      description: "Sistema de validação flexível baseado na estrutura das suas classes",
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Performance Otimizada",
-      description: "Construído para máxima performance e eficiência",
+      icon: <Settings className="w-6 h-6 text-constructo" />,
+      title: "Testes Simplificados",
+      description: "Gere dados de teste realistas com base nas suas classes usando Faker",
     },
   ];
 

@@ -1,28 +1,28 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import CodeBlock from "@/components/CodeBlock";
-import { Code, Download, ExternalLink, CheckCircle, Layers, Database, Shield } from "lucide-react";
+import { CheckCircle, Code, Database, Download, ExternalLink, Layers, Shield } from "lucide-react";
 import Hero from "@/components/Hero.tsx";
 
 const Effulgence = () => {
   const features = [
     {
-      icon: <Database className="w-6 h-6" />,
-      title: "Integração Eloquent",
-      description: "Integração nativa com Eloquent ORM para desenvolvimento ágil",
+      icon: <Layers className="w-6 h-6 text-effulgence" />,
+      title: "Componentes UI",
+      description: "Biblioteca completa de componentes reutilizáveis e elegantes",
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Validação Automática",
-      description: "Sistema robusto de validação automática para DTOs Laravel",
+      icon: <Database className="w-6 h-6 text-effulgence" />,
+      title: "Sistema de Layout",
+      description: "Sistema de layout flexível e responsivo para suas interfaces",
     },
     {
-      icon: <Code className="w-6 h-6" />,
-      title: "Controllers Simplificados",
-      description: "Controllers elegantes com menos código boilerplate",
+      icon: <Shield className="w-6 h-6 text-effulgence" />,
+      title: "Themes Customizáveis",
+      description: "Sistema de temas poderoso com suporte a modo escuro automático",
     },
   ];
 
