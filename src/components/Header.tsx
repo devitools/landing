@@ -12,31 +12,43 @@ const Header = () => {
   };
 
   return (
-    <header className="border-b border-border backdrop-blur-sm sticky top-0 z-50" style={{ backgroundColor: 'hsl(var(--header-bg))' }}>
+    <header
+      className="border-b border-border backdrop-blur-sm sticky top-0 z-50"
+      style={{ backgroundColor: "hsl(var(--header-bg))" }}
+    >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link to="/" className="hover:opacity-80 transition-opacity">
-              <img 
-                src={deviLogo} 
-                alt="Devitools Logo" 
-                className={`h-11 object-contain ${theme !== "dark" ? "grayscale brightness-[0.6]" : ""}`}
+              <img
+                src={deviLogo}
+                alt="Devitools Logo"
+                className={`h-11 object-contain ${theme !== "dark" ? "grayscale brightness-[0.4]" : ""}`}
               />
             </Link>
           </div>
-          
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="/constructo" className="text-muted-foreground hover:text-primary transition-colors">
+
+          <nav className="hidden lg:flex items-center space-x-8">
+            <a
+              href="/constructo"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
               Constructo
             </a>
-            <a href="/serendipity" className="text-muted-foreground hover:text-primary transition-colors">
+            <a
+              href="/serendipity"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
               Serendipity
             </a>
-            <a href="/effulgence" className="text-muted-foreground hover:text-primary transition-colors">
+            <a
+              href="/effulgence"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
               Effulgence
             </a>
             <Link to="/docs" className="text-muted-foreground hover:text-primary transition-colors">
-              Documentação
+              Todas as Ferramentas
             </Link>
           </nav>
 
