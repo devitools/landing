@@ -20,7 +20,7 @@ const DocsIntroduction = () => {
               onClick={() => scrollToSection('requisitos')}
               className="block w-full text-left text-sm hover:text-primary transition-colors py-1"
             >
-              Documentação Devitools
+              Começando do Começo
             </button>
             <button
               onClick={() => scrollToSection('pacotes')}
@@ -62,10 +62,10 @@ const DocsIntroduction = () => {
       <div className="flex-1 space-y-8 border-l pl-8">
         <div className="space-y-4">
           <h2 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Documentação Devitools
-          </h1>
+            Começando do Começo
+          </h2>
           <p className="text-xl text-muted-foreground">
-            Bem-vindo à documentação oficial dos pacotes Devitools para PHP.
+            Bem-vindo à documentação oficial dos pacotes Devitools.
           </p>
         </div>
 
