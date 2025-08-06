@@ -4,7 +4,7 @@ import { BookOpen, Package, Wrench, Layers } from "lucide-react";
 
 const DocsIntroduction = () => {
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <div className="mx-auto space-y-8">
       <div className="space-y-4">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
           Documentação Devitools
