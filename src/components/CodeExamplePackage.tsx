@@ -35,7 +35,7 @@ const CodeExamplePackage = ({
   colorClass,
   tabs,
   reversed = false,
-  soon = false
+  soon = false,
 }: PackageExampleProps) => {
   const descriptionContent = (
     <div className="space-y-6 lg:col-span-1">
@@ -53,7 +53,7 @@ const CodeExamplePackage = ({
       </div>
 
       <div className="relative">
-        <div className={`absolute -left-1 w-1 h-full bg-gradient-to-b from-${colorClass.replace('text-', '')}/50 to-transparent rounded-full`}></div>
+        <div className={`absolute -left-1 w-1 h-full bg-gradient-to-b from-${colorClass.replace("text-", "")}/50 to-transparent rounded-full`}></div>
         <p className="text-lg text-foreground pl-6">
           {description}
         </p>
@@ -62,7 +62,7 @@ const CodeExamplePackage = ({
       <div className="space-y-3 pl-6">
         {features.map((feature, index) => (
           <div key={index} className="flex items-center space-x-3">
-            <div className={`w-2 h-2 rounded-full ${colorClass.replace('text-', 'bg-')}`}></div>
+            <div className={`w-2 h-2 rounded-full ${colorClass.replace("text-", "bg-")}`}></div>
             <span className="text-muted-foreground">{feature}</span>
           </div>
         ))}
@@ -71,7 +71,7 @@ const CodeExamplePackage = ({
       <div className="pl-6">
         <Button
           variant="outline"
-          className={`group border-${colorClass.replace('text-', '')}/30 hover:border-${colorClass.replace('text-', '')} hover:text-${colorClass.replace('text-', '')}-foreground hover:bg-${colorClass.replace('text-', '')}`}
+          className={`group border-${colorClass.replace("text-", "")}/30 hover:border-${colorClass.replace("text-", "")} hover:text-${colorClass.replace("text-", "")}-foreground hover:bg-${colorClass.replace("text-", "")}`}
         >
           Explorar {name}
           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -84,14 +84,14 @@ const CodeExamplePackage = ({
     <div className="lg:col-span-2">
       <Tabs defaultValue={tabs[0]?.value} className="w-full">
         <TabsList single={tabs.length === 1}>
-          {tabs.map((tab) => (
+          {tabs.map(tab => (
             <TabsTrigger single={tabs.length === 1} key={tab.value} value={tab.value}>
               {tab.label}
             </TabsTrigger>
           ))}
         </TabsList>
 
-        {tabs.map((tab) => (
+        {tabs.map(tab => (
           <TabsContent key={tab.value} value={tab.value}>
             <CodeBlock language="php" size="md" className={shadowClass}>
               {tab.code}

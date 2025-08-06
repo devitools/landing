@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { FileText, Scale, AlertTriangle, Users, Code, Calendar } from "lucide-react";
+import { AlertTriangle, Calendar, Code, FileText, Scale, Users } from "lucide-react";
 import Hero from "@/components/Hero.tsx";
 
 const Terms = () => {

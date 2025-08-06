@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { BookOpen, Package, Wrench, FileText } from "lucide-react";
+import { BookOpen, FileText, Package, Wrench } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -62,7 +62,7 @@ function DocsSidebar() {
           <SidebarGroupLabel>Navegação</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {navigationItems.map((item) => (
+              {navigationItems.map(item => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
                     <NavLink to={item.url} end className={getNavCls}>

@@ -1,4 +1,4 @@
-import { Code, Mail, Heart, GitPullRequestCreateArrow } from "lucide-react";
+import { Code, GitPullRequestCreateArrow, Heart, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import deviLogo from "@/assets/devitools-logo.png";
 import { Soon } from "@/components/Soon.tsx";

@@ -12,6 +12,11 @@ export default tseslint.config(
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
+      parser: tseslint.parser,
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
     },
     plugins: {
       "react-hooks": reactHooks,
@@ -29,7 +34,7 @@ export default tseslint.config(
 
       // Formatting
       "indent": ["error", 2, { SwitchCase: 1 }],
-      "quotes": ["error", "single", { avoidEscape: true }],
+      "quotes": ["error", "double", { avoidEscape: true }],
       "semi": ["error", "always"],
       "comma-dangle": ["error", "always-multiline"],
       "object-curly-spacing": ["error", "always"],
@@ -104,8 +109,6 @@ export default tseslint.config(
       "@typescript-eslint/explicit-function-return-type": "off",
       "@typescript-eslint/explicit-module-boundary-types": "off",
       "@typescript-eslint/no-explicit-any": "warn",
-      "@typescript-eslint/prefer-nullish-coalescing": "error",
-      "@typescript-eslint/prefer-optional-chain": "error",
       "@typescript-eslint/no-non-null-assertion": "warn",
 
       // Imports organization

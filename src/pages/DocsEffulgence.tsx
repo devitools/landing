@@ -4,14 +4,14 @@ import { DocsLayout } from "@/components/DocsLayout";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Layers, Download, Code, Database, Zap, Shield } from "lucide-react";
+import { Code, Database, Download, Layers, Shield, Zap } from "lucide-react";
 import CodeBlock from "@/components/CodeBlock";
 
 const DocsEffulgence = () => {
   return (
-    <div className="min-h-screen" style={{ background: 'var(--gradient-background)' }}>
+    <div className="min-h-screen" style={{ background: "var(--gradient-background)" }}>
       <Header />
-      
+
       <DocsLayout>
         <div className="space-y-8">
           {/* Header */}
@@ -25,15 +25,15 @@ const DocsEffulgence = () => {
                 <p className="text-xl text-muted-foreground">Extensão Laravel para Constructo</p>
               </div>
             </div>
-            
+
             <div className="flex flex-wrap gap-2 mb-4">
               <Badge variant="secondary">v1.0.0</Badge>
               <Badge variant="outline">Laravel 8+</Badge>
               <Badge variant="outline">PHP 8.1+</Badge>
             </div>
-            
+
             <p className="text-lg text-muted-foreground">
-              Extensão do Constructo especificamente otimizada para Laravel, oferecendo 
+              Extensão do Constructo especificamente otimizada para Laravel, oferecendo
               integração nativa com Eloquent, controllers simplificados e workflows otimizados.
             </p>
           </div>
@@ -54,11 +54,11 @@ const DocsEffulgence = () => {
                   O que é o Effulgence?
                 </h2>
                 <p className="text-muted-foreground mb-6">
-                  O Effulgence é uma extensão do Constructo desenvolvida especificamente para 
-                  o framework Laravel. Ele combina toda a potência do Constructo com as 
+                  O Effulgence é uma extensão do Constructo desenvolvida especificamente para
+                  o framework Laravel. Ele combina toda a potência do Constructo com as
                   convenções e ferramentas nativas do Laravel.
                 </p>
-                
+
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Recursos Principais</h3>
@@ -81,7 +81,7 @@ const DocsEffulgence = () => {
                       </li>
                     </ul>
                   </div>
-                  
+
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Benefícios</h3>
                     <ul className="space-y-2 text-muted-foreground">
@@ -112,19 +112,19 @@ const DocsEffulgence = () => {
                   <h3 className="font-semibold mb-1">Eloquent</h3>
                   <p className="text-sm text-muted-foreground">Integração completa</p>
                 </Card>
-                
+
                 <Card className="p-4 text-center">
                   <Code className="w-8 h-8 text-primary mx-auto mb-2" />
                   <h3 className="font-semibold mb-1">Controllers</h3>
                   <p className="text-sm text-muted-foreground">Simplificados</p>
                 </Card>
-                
+
                 <Card className="p-4 text-center">
                   <Shield className="w-8 h-8 text-accent mx-auto mb-2" />
                   <h3 className="font-semibold mb-1">Validação</h3>
                   <p className="text-sm text-muted-foreground">Automática</p>
                 </Card>
-                
+
                 <Card className="p-4 text-center">
                   <Zap className="w-8 h-8 text-warning mx-auto mb-2" />
                   <h3 className="font-semibold mb-1">Performance</h3>
@@ -139,7 +139,7 @@ const DocsEffulgence = () => {
                   <Download className="w-6 h-6 mr-2 text-primary" />
                   Instalação
                 </h2>
-                
+
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Requisitos do Sistema</h3>
@@ -178,12 +178,12 @@ const DocsEffulgence = () => {
             <TabsContent value="usage" className="space-y-6">
               <Card className="p-6">
                 <h2 className="text-2xl font-bold mb-4">Uso Básico</h2>
-                
+
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Criando um DTO</h3>
                     <CodeBlock language="php" size="md">
-{`<?php
+                      {`<?php
 
 use Devitools\\Constructo\\Data\\DataTransferObject;
 use Devitools\\Effulgence\\Traits\\EloquentSerializable;
@@ -211,7 +211,7 @@ class UserDto extends DataTransferObject
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Controller com Validação Automática</h3>
                     <CodeBlock language="php" size="md">
-{`<?php
+                      {`<?php
 
 use Devitools\\Effulgence\\Controller\\BaseController;
 use App\\DTOs\\UserDto;
@@ -243,12 +243,12 @@ class UserController extends BaseController
             <TabsContent value="advanced" className="space-y-6">
               <Card className="p-6">
                 <h2 className="text-2xl font-bold mb-4">Recursos Avançados</h2>
-                
+
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Middlewares Personalizados</h3>
                     <CodeBlock language="php" size="md">
-{`<?php
+                      {`<?php
 
 use Devitools\\Effulgence\\Middleware\\ConstructoValidation;
 
@@ -272,7 +272,7 @@ class CustomValidationMiddleware extends ConstructoValidation
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Serialização Avançada de Models</h3>
                     <CodeBlock language="php" size="md">
-{`<?php
+                      {`<?php
 
 use Devitools\\Effulgence\\Traits\\AdvancedSerialization;
 use Illuminate\\Database\\Eloquent\\Model;
@@ -297,7 +297,7 @@ class User extends Model
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Comandos Artisan Personalizados</h3>
                     <CodeBlock language="bash" size="md">
-{`# Gerar Controller com DTO
+                      {`# Gerar Controller com DTO
 php artisan make:effulgence-controller UserController --dto=UserDto
 
 # Gerar DTO com validações
@@ -313,7 +313,7 @@ php artisan make:effulgence-resource User`}
           </Tabs>
         </div>
       </DocsLayout>
-      
+
       <Footer />
     </div>
   );

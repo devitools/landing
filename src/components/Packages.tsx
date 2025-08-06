@@ -1,5 +1,5 @@
 import PackageCard from "./PackageCard";
-import { Blocks, Zap, Layers, Database, Shield, TestTube } from "lucide-react";
+import { Blocks, Database, Layers, Shield, TestTube, Zap } from "lucide-react";
 
 const Packages = () => {
   return (

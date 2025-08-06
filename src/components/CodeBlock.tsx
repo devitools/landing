@@ -4,7 +4,7 @@ import { oneDark, oneLight } from "react-syntax-highlighter/dist/esm/styles/pris
 import { useTheme } from "next-themes";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Copy, Check } from "lucide-react";
+import { Check, Copy } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 
@@ -21,7 +21,7 @@ const CodeBlock = ({
   language = "php",
   size = "md",
   showCopy = true,
-  className
+  className,
 }: CodeBlockProps) => {
   const [copied, setCopied] = useState(false);
   const { theme } = useTheme();
@@ -46,7 +46,7 @@ const CodeBlock = ({
   const sizeClasses = {
     sm: "text-xs",
     md: "text-sm",
-    lg: "text-base"
+    lg: "text-base",
   };
 
   const style = theme === "dark" ? oneDark : oneLight;
@@ -79,15 +79,15 @@ const CodeBlock = ({
         }}
         wrapLines={true}
         lineProps={{
-          style: { background: "transparent" }
+          style: { background: "transparent" },
         }}
         codeTagProps={{
-          style: { background: "transparent" }
+          style: { background: "transparent" },
         }}
         className={cn(
           "!bg-transparent overflow-x-auto p-6 [&_span]:!bg-transparent",
           sizeClasses[size],
-          showCopy && "pr-16"
+          showCopy && "pr-16",
         )}
       >
         {children.trim()}

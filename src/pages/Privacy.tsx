@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Shield, Eye, Lock, Database, UserCheck, Mail } from "lucide-react";
+import { Database, Eye, Lock, Mail, Shield, UserCheck } from "lucide-react";
 import Hero from "@/components/Hero.tsx";
 
 const Privacy = () => {

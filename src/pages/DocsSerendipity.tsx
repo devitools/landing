@@ -2,199 +2,199 @@ import { DocsLayout } from "@/components/DocsLayout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Package, Radio, Layers, Globe } from "lucide-react";
+import { Globe, Layers, Package, Radio } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CodeBlock from "@/components/CodeBlock";
 
 const DocsSerendipity = () => {
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: 'var(--gradient-background)' }}>
+    <div className="min-h-screen flex flex-col" style={{ background: "var(--gradient-background)" }}>
       <Header />
       <div className="flex-1 flex flex-col">
         <DocsLayout>
-        <div className="max-w-4xl mx-auto space-y-8">
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <Package className="h-8 w-8 text-accent" />
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <Package className="h-8 w-8 text-accent" />
+                <h1 className="text-4xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
                 Serendipity
-              </h1>
-            </div>
-            <p className="text-xl text-muted-foreground">
+                </h1>
+              </div>
+              <p className="text-xl text-muted-foreground">
               Sistema de eventos moderno e assíncrono para PHP.
-            </p>
-            <div className="flex flex-wrap gap-2">
-              <Badge>v1.5.2</Badge>
-              <Badge variant="secondary">PHP 8.1+</Badge>
-              <Badge variant="outline">Stable</Badge>
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Badge>v1.5.2</Badge>
+                <Badge variant="secondary">PHP 8.1+</Badge>
+                <Badge variant="outline">Stable</Badge>
+              </div>
             </div>
-          </div>
 
-          <Tabs defaultValue="overview" className="w-full">
-            <TabsList className="grid w-full grid-cols-4">
-              <TabsTrigger value="overview">Visão Geral</TabsTrigger>
-              <TabsTrigger value="installation">Instalação</TabsTrigger>
-              <TabsTrigger value="events">Eventos</TabsTrigger>
-              <TabsTrigger value="listeners">Listeners</TabsTrigger>
-            </TabsList>
+            <Tabs defaultValue="overview" className="w-full">
+              <TabsList className="grid w-full grid-cols-4">
+                <TabsTrigger value="overview">Visão Geral</TabsTrigger>
+                <TabsTrigger value="installation">Instalação</TabsTrigger>
+                <TabsTrigger value="events">Eventos</TabsTrigger>
+                <TabsTrigger value="listeners">Listeners</TabsTrigger>
+              </TabsList>
 
-            <TabsContent value="overview" className="space-y-6">
-              <div className="prose prose-slate dark:prose-invert max-w-none">
-                <h2>O que é o Serendipity?</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula nunc vel lorem tincidunt, 
+              <TabsContent value="overview" className="space-y-6">
+                <div className="prose prose-slate dark:prose-invert max-w-none">
+                  <h2>O que é o Serendipity?</h2>
+                  <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula nunc vel lorem tincidunt,
                   in tempor elit cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
-                </p>
-                
-                <p>
-                  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-                  Sed in libero ut nibh placerat accumsan. Proin faucibus arcu quis ante. 
+                  </p>
+
+                  <p>
+                  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                  Sed in libero ut nibh placerat accumsan. Proin faucibus arcu quis ante.
                   In hac habitasse platea dictumst.
-                </p>
+                  </p>
 
-                <h3>Funcionalidades</h3>
-                <ul>
-                  <li>Dispatcher de eventos flexível</li>
-                  <li>Suporte a eventos assíncronos</li>
-                  <li>Sistema de prioridades para listeners</li>
-                  <li>Middleware para processamento de eventos</li>
-                </ul>
-              </div>
+                  <h3>Funcionalidades</h3>
+                  <ul>
+                    <li>Dispatcher de eventos flexível</li>
+                    <li>Suporte a eventos assíncronos</li>
+                    <li>Sistema de prioridades para listeners</li>
+                    <li>Middleware para processamento de eventos</li>
+                  </ul>
+                </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <Card>
-                  <CardHeader>
-                    <Radio className="h-6 w-6 text-accent mb-2" />
-                    <CardTitle className="text-lg">Reativo</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <Card>
+                    <CardHeader>
+                      <Radio className="h-6 w-6 text-accent mb-2" />
+                      <CardTitle className="text-lg">Reativo</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-muted-foreground">
                       Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-                    </p>
-                  </CardContent>
-                </Card>
+                      </p>
+                    </CardContent>
+                  </Card>
 
-                <Card>
-                  <CardHeader>
-                    <Layers className="h-6 w-6 text-primary mb-2" />
-                    <CardTitle className="text-lg">Escalável</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">
+                  <Card>
+                    <CardHeader>
+                      <Layers className="h-6 w-6 text-primary mb-2" />
+                      <CardTitle className="text-lg">Escalável</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-muted-foreground">
                       Nulla consequat massa quis enim. Donec pede justo, fringilla vel.
-                    </p>
-                  </CardContent>
-                </Card>
+                      </p>
+                    </CardContent>
+                  </Card>
 
-                <Card>
-                  <CardHeader>
-                    <Globe className="h-6 w-6 text-success mb-2" />
-                    <CardTitle className="text-lg">Distribuído</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">
+                  <Card>
+                    <CardHeader>
+                      <Globe className="h-6 w-6 text-success mb-2" />
+                      <CardTitle className="text-lg">Distribuído</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-muted-foreground">
                       Aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </TabsContent>
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </TabsContent>
 
-            <TabsContent value="installation" className="space-y-6">
-              <div className="prose prose-slate dark:prose-invert max-w-none">
-                <h2>Instalação</h2>
-                <p>
-                  Imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. 
+              <TabsContent value="installation" className="space-y-6">
+                <div className="prose prose-slate dark:prose-invert max-w-none">
+                  <h2>Instalação</h2>
+                  <p>
+                  Imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
                   Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
-                </p>
-                
-                <h3>Via Composer</h3>
-                <CodeBlock language="bash" size="sm">
+                  </p>
+
+                  <h3>Via Composer</h3>
+                  <CodeBlock language="bash" size="sm">
                   composer require devitools/serendipity
-                </CodeBlock>
+                  </CodeBlock>
 
-                <h3>Configuração Inicial</h3>
-                <p>
-                  Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, 
+                  <h3>Configuração Inicial</h3>
+                  <p>
+                  Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae,
                   eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis.
-                </p>
+                  </p>
 
-                <CodeBlock language="php" size="md">
-{`use Devitools\\Serendipity\\EventDispatcher;
+                  <CodeBlock language="php" size="md">
+                    {`use Devitools\\Serendipity\\EventDispatcher;
 
 $dispatcher = new EventDispatcher();`}
-                </CodeBlock>
+                  </CodeBlock>
 
-                <h3>Requisitos do Sistema</h3>
-                <ul>
-                  <li>PHP 8.1 ou superior</li>
-                  <li>Extensão JSON habilitada</li>
-                  <li>Composer para autoload</li>
-                </ul>
-              </div>
-            </TabsContent>
+                  <h3>Requisitos do Sistema</h3>
+                  <ul>
+                    <li>PHP 8.1 ou superior</li>
+                    <li>Extensão JSON habilitada</li>
+                    <li>Composer para autoload</li>
+                  </ul>
+                </div>
+              </TabsContent>
 
-            <TabsContent value="events" className="space-y-6">
-              <div className="prose prose-slate dark:prose-invert max-w-none">
-                <h2>Trabalhando com Eventos</h2>
-                <p>
-                  Sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. 
+              <TabsContent value="events" className="space-y-6">
+                <div className="prose prose-slate dark:prose-invert max-w-none">
+                  <h2>Trabalhando com Eventos</h2>
+                  <p>
+                  Sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis.
                   Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-                </p>
+                  </p>
 
-                <h3>Criando Eventos</h3>
-                <CodeBlock language="php" size="md">
-{`class UserRegistered
+                  <h3>Criando Eventos</h3>
+                  <CodeBlock language="php" size="md">
+                    {`class UserRegistered
 {
     public function __construct(
         public readonly User $user,
         public readonly \\DateTime $timestamp
     ) {}
 }`}
-                </CodeBlock>
+                  </CodeBlock>
 
-                <h3>Disparando Eventos</h3>
-                <p>
-                  Ut fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac, 
+                  <h3>Disparando Eventos</h3>
+                  <p>
+                  Ut fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac,
                   vestibulum at eros. Praesent commodo cursus magna.
-                </p>
+                  </p>
 
-                <CodeBlock language="php" size="md">
-{`$event = new UserRegistered($user, new \\DateTime());
+                  <CodeBlock language="php" size="md">
+                    {`$event = new UserRegistered($user, new \\DateTime());
 $dispatcher->dispatch($event);`}
-                </CodeBlock>
+                  </CodeBlock>
 
-                <h3>Eventos Assíncronos</h3>
-                <CodeBlock language="php" size="md">
-                  {"$dispatcher->dispatchAsync($event);"}
-                </CodeBlock>
-              </div>
-            </TabsContent>
+                  <h3>Eventos Assíncronos</h3>
+                  <CodeBlock language="php" size="md">
+                    {"$dispatcher->dispatchAsync($event);"}
+                  </CodeBlock>
+                </div>
+              </TabsContent>
 
-            <TabsContent value="listeners" className="space-y-6">
-              <div className="prose prose-slate dark:prose-invert max-w-none">
-                <h2>Configurando Listeners</h2>
-                <p>
-                  Var iapibus at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. 
+              <TabsContent value="listeners" className="space-y-6">
+                <div className="prose prose-slate dark:prose-invert max-w-none">
+                  <h2>Configurando Listeners</h2>
+                  <p>
+                  Var iapibus at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
                   Vestibulum id ligula porta felis euismod semper.
-                </p>
+                  </p>
 
-                <h3>Listener Simples</h3>
-                <CodeBlock language="php" size="md">
-{`$dispatcher->listen(UserRegistered::class, function($event) {
+                  <h3>Listener Simples</h3>
+                  <CodeBlock language="php" size="md">
+                    {`$dispatcher->listen(UserRegistered::class, function($event) {
     // Enviar email de boas-vindas
     $emailService->sendWelcomeEmail($event->user);
 });`}
-                </CodeBlock>
+                  </CodeBlock>
 
-                <h3>Listener com Classe</h3>
-                <p>
+                  <h3>Listener com Classe</h3>
+                  <p>
                   Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.
-                </p>
+                  </p>
 
-                <CodeBlock language="php" size="md">
-{`class SendWelcomeEmailListener
+                  <CodeBlock language="php" size="md">
+                    {`class SendWelcomeEmailListener
 {
     public function handle(UserRegistered $event): void
     {
@@ -203,17 +203,17 @@ $dispatcher->dispatch($event);`}
 }
 
 $dispatcher->listen(UserRegistered::class, SendWelcomeEmailListener::class);`}
-                </CodeBlock>
+                  </CodeBlock>
 
-                <h3>Prioridades</h3>
-                <CodeBlock language="php" size="md">
-{`$dispatcher->listen(UserRegistered::class, $highPriorityListener, 100);
+                  <h3>Prioridades</h3>
+                  <CodeBlock language="php" size="md">
+                    {`$dispatcher->listen(UserRegistered::class, $highPriorityListener, 100);
 $dispatcher->listen(UserRegistered::class, $lowPriorityListener, 10);`}
-                </CodeBlock>
-              </div>
-            </TabsContent>
-          </Tabs>
-        </div>
+                  </CodeBlock>
+                </div>
+              </TabsContent>
+            </Tabs>
+          </div>
         </DocsLayout>
       </div>
       <Footer />

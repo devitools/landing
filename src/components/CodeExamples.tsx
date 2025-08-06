@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import CodeExamplePackage from "@/components/CodeExamplePackage.tsx";
-import { Blocks, Zap, Layers, Play, Code } from "lucide-react";
+import { Blocks, Code, Layers, Play, Zap } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const CodeExamples = () => {

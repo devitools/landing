@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CodeBlock from "@/components/CodeBlock";
-import { CheckCircle, Code, Database, Download, ExternalLink, Layers, Package, Shield, BookOpen } from "lucide-react";
+import { BookOpen, CheckCircle, Code, Database, Download, ExternalLink, Layers, Package, Shield } from "lucide-react";
 import Hero from "@/components/Hero.tsx";
 import { Soon } from "@/components/Soon.tsx";
 
@@ -63,7 +63,7 @@ const Effulgence = () => {
 // Em breve ValidateUserDto.php ... 🚀`,
     testing: `<?php
 
-// Em breve UserControllerTest.php ... 🚀`
+// Em breve UserControllerTest.php ... 🚀`,
   };
 
   return (

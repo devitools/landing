@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Code, Download, ExternalLink, CheckCircle, Zap, Shield, Gauge, Users, Wifi, Database, Activity, Timer, Globe, Cpu, BarChart3, Signal, BookOpen } from "lucide-react";
+import { Activity, BarChart3, BookOpen, CheckCircle, Code, Cpu, Database, Download, ExternalLink, Gauge, Globe, Shield, Signal, Timer, Users, Wifi, Zap } from "lucide-react";
 import Hero from "@/components/Hero.tsx";
 import CodeBlock from "@/components/CodeBlock";
 import { useNavigate } from "react-router-dom";
@@ -283,13 +283,13 @@ const Serendipity = () => {
             <CardContent>
               <Tabs defaultValue="async-routes" className="w-full">
                 <TabsList className="grid w-full grid-cols-4">
-                  {codeExamples.map((example) => (
+                  {codeExamples.map(example => (
                     <TabsTrigger key={example.id} value={example.id}>
                       {example.title}
                     </TabsTrigger>
                   ))}
                 </TabsList>
-                {codeExamples.map((example) => (
+                {codeExamples.map(example => (
                   <TabsContent key={example.id} value={example.id}>
                     <div className="space-y-4">
                       <div>
@@ -320,7 +320,7 @@ const Serendipity = () => {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
             {useCases.map((useCase, index) => (
-              <Card key={index} className={`p-6 ${useCase.ideal ? 'border-serendipity/50 bg-serendipity/5' : 'border-muted'}`}>
+              <Card key={index} className={`p-6 ${useCase.ideal ? "border-serendipity/50 bg-serendipity/5" : "border-muted"}`}>
                 <div className="flex items-start space-x-4">
                   {useCase.ideal ? (
                     <CheckCircle className="w-6 h-6 text-serendipity mt-1 flex-shrink-0" />

@@ -1,26 +1,26 @@
-import Header from "@/components/Header";
+import CodeBlock from "@/components/CodeBlock";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero.tsx";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import CodeBlock from "@/components/CodeBlock";
 import {
-  Download,
-  CheckCircle,
   Blocks,
-  Database,
-  Shield,
-  Zap,
   BookOpen,
+  CheckCircle,
+  Cog,
+  Database,
+  Download,
   Github,
   Package,
-  Users,
   Server,
+  Shield,
   TestTube,
-  Cog,
+  Users,
+  Zap,
 } from "lucide-react";
-import Hero from "@/components/Hero.tsx";
 
 const Constructo = () => {
   const features = [
