@@ -14,6 +14,11 @@ import Docs from "./pages/Docs";
 import DocsConstructo from "./pages/DocsConstructo";
 import DocsSerendipity from "./pages/DocsSerendipity";
 import DocsEffulgence from "./pages/DocsEffulgence";
+import DocsIntroducao from "./pages/docs/DocsIntroducao";
+import DocsGuias from "./pages/docs/DocsGuias";
+import DocsDicasTruques from "./pages/docs/DocsDicasTruques";
+import DocsEcossistema from "./pages/docs/DocsEcossistema";
+import DocsSobre from "./pages/docs/DocsSobre";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 
@@ -37,8 +42,14 @@ const App = () => (
             <Route path="/constructo" element={<Constructo />} />
             <Route path="/serendipity" element={<Serendipity />} />
             <Route path="/effulgence" element={<Effulgence />} />
-            <Route path="/docs" element={<Docs />} />
-            <Route path="/docs/:tab" element={<Docs />} />
+            <Route path="/docs" element={<Docs />}>
+              <Route path="introducao" element={<DocsIntroducao />} />
+              <Route path="guias" element={<DocsGuias />} />
+              <Route path="dicas-truques" element={<DocsDicasTruques />} />
+              <Route path="ecossistema" element={<DocsEcossistema />} />
+              <Route path="sobre" element={<DocsSobre />} />
+              <Route index element={<DocsIntroducao />} />
+            </Route>
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
