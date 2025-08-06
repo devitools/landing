@@ -16,6 +16,7 @@ import DocsSerendipity from "./pages/DocsSerendipity";
 import DocsEffulgence from "./pages/DocsEffulgence";
 import DocsIntroduction from "./pages/docs/DocsIntroduction";
 import DocsGuides from "./pages/docs/DocsGuides";
+import DocsExamples from "./pages/docs/DocsExamples";
 import DocsTips from "./pages/docs/DocsTips";
 import DocsEcosystem from "./pages/docs/DocsEcosystem";
 import DocsAbout from "./pages/docs/DocsAbout";
@@ -45,6 +46,7 @@ const App = () => (
             <Route path="/docs" element={<Docs />}>
               <Route path="introduction" element={<DocsIntroduction />} />
               <Route path="guides" element={<DocsGuides />} />
+              <Route path="examples" element={<DocsExamples />} />
               <Route path="tips" element={<DocsTips />} />
               <Route path="ecosystem" element={<DocsEcosystem />} />
               <Route path="about" element={<DocsAbout />} />

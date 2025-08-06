@@ -6,6 +6,7 @@ const Docs = () => {
   const navigationItems = [
     { label: "Introdução", path: "/docs/introduction" },
     { label: "Guias", path: "/docs/guides" },
+    { label: "Exemplos", path: "/docs/examples" },
     { label: "Dicas & Truques", path: "/docs/tips" },
     { label: "Ecossistema", path: "/docs/ecosystem" },
     { label: "Sobre", path: "/docs/about" },
