@@ -1,66 +1,44 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useLocation, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { NavLink, Outlet } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import DocsIntroducao from "./docs/DocsIntroducao";
-import DocsGuias from "./docs/DocsGuias";
-import DocsDicasTruques from "./docs/DocsDicasTruques";
-import DocsEcossistema from "./docs/DocsEcossistema";
-import DocsSobre from "./docs/DocsSobre";
 
 const Docs = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
-  
-  // Extrair a aba ativa da URL
-  const currentTab = location.pathname.split('/docs/')[1] || 'introducao';
-  
-  const handleTabChange = (value: string) => {
-    navigate(`/docs/${value}`);
-  };
-
-  // Redirecionar para /docs/introducao se estiver apenas em /docs
-  useEffect(() => {
-    if (location.pathname === '/docs') {
-      navigate('/docs/introducao', { replace: true });
-    }
-  }, [location.pathname, navigate]);
+  const navigationItems = [
+    { label: "Introdução", path: "/docs/introducao" },
+    { label: "Guias", path: "/docs/guias" },
+    { label: "Dicas & Truques", path: "/docs/dicas-truques" },
+    { label: "Ecossistema", path: "/docs/ecossistema" },
+    { label: "Sobre", path: "/docs/sobre" },
+  ];
 
   return (
     <div className="min-h-screen flex flex-col" style={{ background: 'var(--gradient-background)' }}>
       <Header />
       <div className="flex-1 flex flex-col">
-        <div className="container mx-auto px-4 py-8">
-          <Tabs value={currentTab} onValueChange={handleTabChange} className="w-full">
-            <TabsList className="grid w-full grid-cols-5 mb-8">
-              <TabsTrigger value="introducao">Introdução</TabsTrigger>
-              <TabsTrigger value="guias">Guias</TabsTrigger>
-              <TabsTrigger value="dicas-truques">Dicas & Truques</TabsTrigger>
-              <TabsTrigger value="ecossistema">Ecossistema</TabsTrigger>
-              <TabsTrigger value="sobre">Sobre</TabsTrigger>
-            </TabsList>
-            
-            <TabsContent value="introducao" className="mt-0">
-              <DocsIntroducao />
-            </TabsContent>
-            
-            <TabsContent value="guias" className="mt-0">
-              <DocsGuias />
-            </TabsContent>
-            
-            <TabsContent value="dicas-truques" className="mt-0">
-              <DocsDicasTruques />
-            </TabsContent>
-            
-            <TabsContent value="ecossistema" className="mt-0">
-              <DocsEcossistema />
-            </TabsContent>
-            
-            <TabsContent value="sobre" className="mt-0">
-              <DocsSobre />
-            </TabsContent>
-          </Tabs>
+        <div className="border-b border-border bg-background/50 backdrop-blur-sm sticky top-0 z-10">
+          <div className="container mx-auto px-4">
+            <nav className="flex space-x-8">
+              {navigationItems.map((item) => (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  className={({ isActive }) =>
+                    `py-4 px-2 text-sm font-medium transition-colors hover:text-primary border-b-2 ${
+                      isActive
+                        ? "text-primary border-primary"
+                        : "text-muted-foreground border-transparent hover:border-primary/50"
+                    }`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              ))}
+            </nav>
+          </div>
+        </div>
+        
+        <div className="flex-1 container mx-auto px-4 py-8">
+          <Outlet />
         </div>
       </div>
       <Footer />
