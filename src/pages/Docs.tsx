@@ -39,7 +39,7 @@ const Docs = () => {
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between">
               {/* Desktop navigation - hidden on mobile */}
-              <nav className="hidden lg:flex space-x-8">
+              <nav className="hidden md:flex space-x-8">
                 {navigationItems.map(item => (
                   <NavLink
                     key={item.path}
@@ -58,7 +58,7 @@ const Docs = () => {
               </nav>
 
               {/* Mobile dropdown menu */}
-              <div className="lg:hidden py-2">
+              <div className="md:hidden py-2">
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" size="sm" className="flex items-center space-x-2">
@@ -69,10 +69,7 @@ const Docs = () => {
                   <DropdownMenuContent align="start" className="w-48 bg-background">
                     {navigationItems.map(item => (
                       <DropdownMenuItem key={item.path} asChild>
-                        <NavLink
-                          to={item.path}
-                          className="w-full cursor-pointer"
-                        >
+                        <NavLink to={item.path} className="w-full cursor-pointer">
                           {item.label}
                         </NavLink>
                       </DropdownMenuItem>
