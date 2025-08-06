@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
-import { BookOpen, FileText, Package, Wrench } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -14,7 +11,8 @@ import {
   SidebarTrigger,
   useSidebar,
 } from "@/components/ui/sidebar";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { BookOpen, FileText, Package, Wrench } from "lucide-react";
+import { NavLink, useLocation } from "react-router-dom";
 
 const navigationItems = [
   {
@@ -45,7 +43,7 @@ function DocsSidebar() {
   const currentPath = location.pathname;
 
   const isActive = (path: string) => currentPath === path;
-  const getNavCls = ({ isActive }: { isActive: boolean }) =>
+  const getNavCls = () =>
     isActive ? "bg-primary/10 text-primary font-medium" : "hover:bg-muted/50";
 
   return (
@@ -95,9 +93,7 @@ export function DocsLayout({ children }: DocsLayoutProps) {
             <h1 className="text-xl font-semibold">Documentação</h1>
           </header>
           <main className="flex-1 overflow-auto">
-            <div className="p-6 max-w-none">
-              {children}
-            </div>
+            <div className="p-6 max-w-none">{children}</div>
           </main>
         </div>
       </SidebarProvider>
