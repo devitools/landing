@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Package, Users, Globe, GitBranch } from "lucide-react";
 
-const DocsEcossistema = () => {
+const DocsEcosystem = () => {
   return (
     <div className="max-w-4xl mx-auto space-y-8">
       <div className="space-y-4">
@@ -153,4 +153,4 @@ const DocsEcossistema = () => {
   );
 };
 
-export default DocsEcossistema;
+export default DocsEcosystem;

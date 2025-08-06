@@ -4,11 +4,11 @@ import Footer from "@/components/Footer";
 
 const Docs = () => {
   const navigationItems = [
-    { label: "Introdução", path: "/docs/introducao" },
-    { label: "Guias", path: "/docs/guias" },
-    { label: "Dicas & Truques", path: "/docs/dicas-truques" },
-    { label: "Ecossistema", path: "/docs/ecossistema" },
-    { label: "Sobre", path: "/docs/sobre" },
+    { label: "Introdução", path: "/docs/introduction" },
+    { label: "Guias", path: "/docs/guides" },
+    { label: "Dicas & Truques", path: "/docs/tips" },
+    { label: "Ecossistema", path: "/docs/ecosystem" },
+    { label: "Sobre", path: "/docs/about" },
   ];
 
   return (

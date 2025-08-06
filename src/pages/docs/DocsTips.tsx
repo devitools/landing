@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Lightbulb, Target, Rocket, Shield } from "lucide-react";
 
-const DocsDicasTruques = () => {
+const DocsTips = () => {
   return (
     <div className="max-w-4xl mx-auto space-y-8">
       <div className="space-y-4">
@@ -146,4 +146,4 @@ const DocsDicasTruques = () => {
   );
 };
 
-export default DocsDicasTruques;
+export default DocsTips;

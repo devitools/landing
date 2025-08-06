@@ -14,11 +14,11 @@ import Docs from "./pages/Docs";
 import DocsConstructo from "./pages/DocsConstructo";
 import DocsSerendipity from "./pages/DocsSerendipity";
 import DocsEffulgence from "./pages/DocsEffulgence";
-import DocsIntroducao from "./pages/docs/DocsIntroducao";
-import DocsGuias from "./pages/docs/DocsGuias";
-import DocsDicasTruques from "./pages/docs/DocsDicasTruques";
-import DocsEcossistema from "./pages/docs/DocsEcossistema";
-import DocsSobre from "./pages/docs/DocsSobre";
+import DocsIntroduction from "./pages/docs/DocsIntroduction";
+import DocsGuides from "./pages/docs/DocsGuides";
+import DocsTips from "./pages/docs/DocsTips";
+import DocsEcosystem from "./pages/docs/DocsEcosystem";
+import DocsAbout from "./pages/docs/DocsAbout";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 
@@ -43,12 +43,12 @@ const App = () => (
             <Route path="/serendipity" element={<Serendipity />} />
             <Route path="/effulgence" element={<Effulgence />} />
             <Route path="/docs" element={<Docs />}>
-              <Route path="introducao" element={<DocsIntroducao />} />
-              <Route path="guias" element={<DocsGuias />} />
-              <Route path="dicas-truques" element={<DocsDicasTruques />} />
-              <Route path="ecossistema" element={<DocsEcossistema />} />
-              <Route path="sobre" element={<DocsSobre />} />
-              <Route index element={<DocsIntroducao />} />
+              <Route path="introduction" element={<DocsIntroduction />} />
+              <Route path="guides" element={<DocsGuides />} />
+              <Route path="tips" element={<DocsTips />} />
+              <Route path="ecosystem" element={<DocsEcosystem />} />
+              <Route path="about" element={<DocsAbout />} />
+              <Route index element={<DocsIntroduction />} />
             </Route>
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />

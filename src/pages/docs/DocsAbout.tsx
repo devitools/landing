@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Heart, Code, Target, Users } from "lucide-react";
 
-const DocsSobre = () => {
+const DocsAbout = () => {
   return (
     <div className="max-w-4xl mx-auto space-y-8">
       <div className="space-y-4">
@@ -144,4 +144,4 @@ const DocsSobre = () => {
   );
 };
 
-export default DocsSobre;
+export default DocsAbout;
