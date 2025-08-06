@@ -1,22 +1,36 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Clock, Code } from "lucide-react";
+import { DocsResponsiveSidebar, SidebarItem } from "@/components/DocsResponsiveSidebar";
 
 const Examples = () => {
+  const sidebarItems: SidebarItem[] = [
+    { id: "constructo", label: "Constructo" },
+    { id: "validacao-forms", label: "Validação de Forms", level: 1 },
+    { id: "gerenciamento-estado", label: "Gerenciamento de Estado", level: 1 },
+    { id: "serendipity", label: "Serendipity" },
+    { id: "apis-rest", label: "APIs REST", level: 1 },
+    { id: "cache-inteligente", label: "Cache Inteligente", level: 1 },
+    { id: "effulgence", label: "Effulgence" },
+    { id: "documentacao-api", label: "Documentação de API", level: 1 },
+    { id: "testes-automatizados", label: "Testes Automatizados", level: 1 },
+  ];
+
+  const handleItemClick = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="flex gap-8">
-      {/* Sumário - Coluna Esquerda */}
-      <div className="w-64 flex-shrink-0">
-        <div className="sticky top-6 p-4">
-          <nav className="space-y-2">
-            <div className="block w-full text-left text-sm text-muted-foreground py-1">
-              Em Desenvolvimento
-            </div>
-          </nav>
-        </div>
-      </div>
+      <DocsResponsiveSidebar 
+        items={sidebarItems}
+        onItemClick={handleItemClick}
+        title="Exemplos"
+        description="Navegue pelos exemplos práticos"
+      />
 
       {/* Conteúdo Principal - Coluna Direita */}
-      <div className="flex-1 space-y-8 border-l pl-8">
+      <div className="flex-1 space-y-8 lg:border-l lg:pl-8">
         <div className="space-y-4">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Exemplos Práticos
