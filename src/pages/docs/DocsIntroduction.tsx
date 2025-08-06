@@ -14,10 +14,7 @@ const DocsIntroduction = () => {
     <div className="flex gap-8">
       {/* Sumário - Coluna Esquerda */}
       <div className="w-64 flex-shrink-0">
-        <div className="sticky top-6 border rounded-lg bg-background/50 p-4">
-          <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
-            Nesta Página
-          </h3>
+        <div className="sticky top-6 p-4">
           <nav className="space-y-2">
             <button
               onClick={() => scrollToSection('introducao')}
@@ -68,7 +65,7 @@ const DocsIntroduction = () => {
       </div>
 
       {/* Conteúdo Principal - Coluna Direita */}
-      <div className="flex-1 space-y-8">
+      <div className="flex-1 space-y-8 border-l pl-8">
         <div className="space-y-4">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Documentação Devitools
