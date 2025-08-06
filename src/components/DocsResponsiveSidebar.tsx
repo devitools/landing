@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export interface SidebarItem {
   id: string;
@@ -34,7 +34,7 @@ export function DocsResponsiveSidebar({
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const mql = window.matchMedia('(min-width: 1024px)');
+    const mql = window.matchMedia("(min-width: 1024px)");
     const onChange = () => {
       setIsLargeScreen(window.innerWidth >= 1024);
     };
