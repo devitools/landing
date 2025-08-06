@@ -20,6 +20,15 @@ import DocsExamples from "./pages/docs/DocsExamples";
 import DocsTips from "./pages/docs/DocsTips";
 import DocsReference from "./pages/docs/DocsReference";
 import DocsAbout from "./pages/docs/DocsAbout";
+import ReferenceIndex from "./pages/docs/reference/Index";
+import ReferenceConstructo from "./pages/docs/reference/Constructo";
+import ReferenceSerendipity from "./pages/docs/reference/Serendipity";
+import ReferenceEffulgence from "./pages/docs/reference/Effulgence";
+import ReferenceTevun from "./pages/docs/reference/Tevun";
+import ReferenceHttp from "./pages/docs/reference/Http";
+import ReferenceDocekrize from "./pages/docs/reference/Docekrize";
+import ReferenceDockerfile from "./pages/docs/reference/Dockerfile";
+import ReferenceArceau from "./pages/docs/reference/Arceau";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 
@@ -48,7 +57,17 @@ const App = () => (
               <Route path="guides" element={<DocsGuides />} />
               <Route path="examples" element={<DocsExamples />} />
               <Route path="tips" element={<DocsTips />} />
-              <Route path="reference" element={<DocsReference />} />
+              <Route path="reference" element={<DocsReference />}>
+                <Route index element={<ReferenceIndex />} />
+                <Route path="constructo" element={<ReferenceConstructo />} />
+                <Route path="serendipity" element={<ReferenceSerendipity />} />
+                <Route path="effulgence" element={<ReferenceEffulgence />} />
+                <Route path="tevun" element={<ReferenceTevun />} />
+                <Route path="http" element={<ReferenceHttp />} />
+                <Route path="docekrize" element={<ReferenceDocekrize />} />
+                <Route path="dockerfile" element={<ReferenceDockerfile />} />
+                <Route path="arceau" element={<ReferenceArceau />} />
+              </Route>
               <Route path="about" element={<DocsAbout />} />
               <Route index element={<DocsIntroduction />} />
             </Route>
