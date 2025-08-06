@@ -6,6 +6,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useScrollDirection } from "@/hooks/use-scroll-direction";
 import { Github, Menu, Moon, Play, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -15,6 +16,7 @@ const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const isMobile = useIsMobile();
+  const scrollDirection = useScrollDirection();
 
   const isActiveLink = (path: string) => {
     return location.pathname === path || location.pathname.startsWith(path + "/");
@@ -26,7 +28,9 @@ const Header = () => {
 
   return (
     <header
-      className="border-b border-border backdrop-blur-sm sticky top-0 z-50"
+      className={`border-b border-border backdrop-blur-sm sticky top-0 z-50 transition-transform duration-300 ease-in-out ${
+        scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"
+      }`}
       style={{ backgroundColor: "hsl(var(--header-bg))" }}
     >
       <div className="container mx-auto px-6 py-4">
