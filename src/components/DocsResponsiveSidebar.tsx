@@ -64,7 +64,7 @@ export function DocsResponsiveSidebar({
     return (
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
-          <Button variant="outline" size="icon" className="fixed top-20 left-4 z-50 md:hidden">
+          <Button variant="outline" size="icon" className="fixed top-36 right-4 z-50 md:hidden">
             <Menu className="h-4 w-4" />
           </Button>
         </SheetTrigger>
