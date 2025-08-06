@@ -1,8 +1,10 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const Docs = () => {
+  const location = useLocation();
+  
   const navigationItems = [
     { label: "Introdução", path: "/docs/introduction" },
     { label: "Guias", path: "/docs/guides" },
@@ -11,6 +13,14 @@ const Docs = () => {
     { label: "Referência", path: "/docs/reference" },
     { label: "Sobre", path: "/docs/about" },
   ];
+
+  const isActiveLink = (path: string) => {
+    // Se estamos em /docs (sem subrota), considerar "Introdução" como ativo
+    if (location.pathname === "/docs" && path === "/docs/introduction") {
+      return true;
+    }
+    return location.pathname === path || location.pathname.startsWith(path + '/');
+  };
 
   return (
     <div className="min-h-screen flex flex-col" style={{ background: 'var(--gradient-background)' }}>
@@ -23,9 +33,9 @@ const Docs = () => {
                 <NavLink
                   key={item.path}
                   to={item.path}
-                  className={({ isActive }) =>
+                  className={() =>
                     `py-4 px-2 text-sm font-medium transition-colors hover:text-primary border-b-2 ${
-                      isActive
+                      isActiveLink(item.path)
                         ? "text-primary border-primary"
                         : "text-muted-foreground border-transparent hover:border-primary/50"
                     }`
