@@ -1,6 +1,7 @@
 import { Code, GitPullRequestCreateArrow, Heart, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
+
 import { Soon } from "@/components/Soon.tsx";
 
 const Footer = () => {

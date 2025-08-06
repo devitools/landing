@@ -53,6 +53,7 @@ const App = () => (
             <Route path="/serendipity" element={<Serendipity />} />
             <Route path="/effulgence" element={<Effulgence />} />
             <Route path="/docs" element={<Docs />}>
+              <Route index element={<DocsIntroduction />} />
               <Route path="introduction" element={<DocsIntroduction />} />
               <Route path="guides" element={<DocsGuides />} />
               <Route path="examples" element={<DocsExamples />} />
@@ -69,7 +70,6 @@ const App = () => (
                 <Route path="arceau" element={<ReferenceArceau />} />
               </Route>
               <Route path="about" element={<DocsAbout />} />
-              <Route index element={<DocsIntroduction />} />
             </Route>
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
