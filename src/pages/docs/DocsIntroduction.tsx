@@ -17,16 +17,10 @@ const DocsIntroduction = () => {
         <div className="sticky top-6 p-4">
           <nav className="space-y-2">
             <button
-              onClick={() => scrollToSection('introducao')}
-              className="block w-full text-left text-sm hover:text-primary transition-colors py-1"
-            >
-              Introdução
-            </button>
-            <button
               onClick={() => scrollToSection('requisitos')}
               className="block w-full text-left text-sm hover:text-primary transition-colors py-1"
             >
-              Requisitos do Sistema
+              Documentação Devitools
             </button>
             <button
               onClick={() => scrollToSection('pacotes')}
@@ -67,7 +61,7 @@ const DocsIntroduction = () => {
       {/* Conteúdo Principal - Coluna Direita */}
       <div className="flex-1 space-y-8 border-l pl-8">
         <div className="space-y-4">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Documentação Devitools
           </h1>
           <p className="text-xl text-muted-foreground">
