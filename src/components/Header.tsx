@@ -83,11 +83,10 @@ const Header = () => {
             <Button
               className="hidden xs:flex"
               variant="ghost"
-              size="sm"
+              size="icon"
               onClick={() => window.open("https://github.com/devitools", "_blank")}
             >
               <Github className="w-4 h-4" />
-              <span className="hidden sm:flex ml-2">GitHub</span>
             </Button>
             <Button
               size="sm"
