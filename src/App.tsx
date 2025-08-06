@@ -18,7 +18,7 @@ import DocsIntroduction from "./pages/docs/DocsIntroduction";
 import DocsGuides from "./pages/docs/DocsGuides";
 import DocsExamples from "./pages/docs/DocsExamples";
 import DocsTips from "./pages/docs/DocsTips";
-import DocsEcosystem from "./pages/docs/DocsEcosystem";
+import DocsReference from "./pages/docs/DocsReference";
 import DocsAbout from "./pages/docs/DocsAbout";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
@@ -48,7 +48,7 @@ const App = () => (
               <Route path="guides" element={<DocsGuides />} />
               <Route path="examples" element={<DocsExamples />} />
               <Route path="tips" element={<DocsTips />} />
-              <Route path="ecosystem" element={<DocsEcosystem />} />
+              <Route path="reference" element={<DocsReference />} />
               <Route path="about" element={<DocsAbout />} />
               <Route index element={<DocsIntroduction />} />
             </Route>
