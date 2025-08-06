@@ -89,7 +89,6 @@ const Header = () => {
               {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </Button>
             <Button
-              className="hidden xs:flex"
               variant="ghost"
               size="icon"
               onClick={() => window.open("https://github.com/devitools", "_blank")}

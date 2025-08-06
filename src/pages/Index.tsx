@@ -25,7 +25,7 @@ const Index = () => {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent leading-tight">
-            Eleve seu nível de desenvolvimento
+            Conheça nossas ferramentas
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground m-8 max-w-3xl mx-auto">
