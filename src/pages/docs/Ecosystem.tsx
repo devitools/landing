@@ -1,8 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Package, Users, Globe, GitBranch } from "lucide-react";
+import { GitBranch, Globe, Package, Users } from "lucide-react";
 
-const DocsEcosystem = () => {
+const Ecosystem = () => {
   return (
     <div className="mx-auto space-y-8">
       <div className="space-y-4">
@@ -21,9 +21,7 @@ const DocsEcosystem = () => {
               <Package className="h-6 w-6 text-primary" />
               <CardTitle>Pacotes Oficiais</CardTitle>
             </div>
-            <CardDescription>
-              Biblioteca completa de pacotes mantidos pela equipe
-            </CardDescription>
+            <CardDescription>Biblioteca completa de pacotes mantidos pela equipe</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
@@ -49,9 +47,7 @@ const DocsEcosystem = () => {
               <Users className="h-6 w-6 text-accent" />
               <CardTitle>Comunidade</CardTitle>
             </div>
-            <CardDescription>
-              Conecte-se com outros desenvolvedores
-            </CardDescription>
+            <CardDescription>Conecte-se com outros desenvolvedores</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
@@ -77,9 +73,7 @@ const DocsEcosystem = () => {
               <Globe className="h-6 w-6 text-success" />
               <CardTitle>Recursos Externos</CardTitle>
             </div>
-            <CardDescription>
-              Ferramentas e bibliotecas complementares
-            </CardDescription>
+            <CardDescription>Ferramentas e bibliotecas complementares</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
@@ -105,9 +99,7 @@ const DocsEcosystem = () => {
               <GitBranch className="h-6 w-6 text-warning" />
               <CardTitle>Contribuições</CardTitle>
             </div>
-            <CardDescription>
-              Como contribuir para o projeto
-            </CardDescription>
+            <CardDescription>Como contribuir para o projeto</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
@@ -153,4 +145,4 @@ const DocsEcosystem = () => {
   );
 };
 
-export default DocsEcosystem;
+export default Ecosystem;

@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code, Clock } from "lucide-react";
+import { Clock, Code } from "lucide-react";
 
-const DocsExamples = () => {
+const Examples = () => {
   return (
     <div className="flex gap-8">
       {/* Sumário - Coluna Esquerda */}
@@ -41,8 +41,9 @@ const DocsExamples = () => {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground">
-              Em breve você encontrará aqui exemplos completos de uso dos pacotes Devitools, 
-              incluindo casos de uso comuns, implementações de referência e código de exemplo pronto para usar.
+              Em breve você encontrará aqui exemplos completos de uso dos pacotes Devitools,
+              incluindo casos de uso comuns, implementações de referência e código de exemplo pronto
+              para usar.
             </p>
           </CardContent>
         </Card>
@@ -51,4 +52,4 @@ const DocsExamples = () => {
   );
 };
 
-export default DocsExamples;
+export default Examples;

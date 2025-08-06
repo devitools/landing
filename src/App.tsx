@@ -11,24 +11,20 @@ import Constructo from "./pages/Constructo";
 import Serendipity from "./pages/Serendipity";
 import Effulgence from "./pages/Effulgence";
 import Docs from "./pages/Docs";
-import DocsConstructo from "./pages/DocsConstructo";
-import DocsSerendipity from "./pages/DocsSerendipity";
-import DocsEffulgence from "./pages/DocsEffulgence";
-import DocsIntroduction from "./pages/docs/DocsIntroduction";
-import DocsGuides from "./pages/docs/DocsGuides";
-import DocsExamples from "./pages/docs/DocsExamples";
-import DocsTips from "./pages/docs/DocsTips";
-import DocsReference from "./pages/docs/DocsReference";
-import DocsAbout from "./pages/docs/DocsAbout";
-import ReferenceIndex from "./pages/docs/reference/Index";
-import ReferenceConstructo from "./pages/docs/reference/Constructo";
-import ReferenceSerendipity from "./pages/docs/reference/Serendipity";
-import ReferenceEffulgence from "./pages/docs/reference/Effulgence";
-import ReferenceTevun from "./pages/docs/reference/Tevun";
-import ReferenceHttp from "./pages/docs/reference/Http";
-import ReferenceDocekrize from "./pages/docs/reference/Docekrize";
-import ReferenceDockerfile from "./pages/docs/reference/Dockerfile";
-import ReferenceArceau from "./pages/docs/reference/Arceau";
+import DocsIntroduction from "./pages/Docs/Introduction.tsx";
+import DocsGuides from "./pages/Docs/Guides.tsx";
+import DocsExamples from "./pages/Docs/Examples.tsx";
+import DocsReference from "./pages/Docs/Reference.tsx";
+import DocsAbout from "./pages/Docs/About.tsx";
+import DocsReferenceIndex from "@/pages/Docs/Reference/Index";
+import DocsReferenceConstructo from "@/pages/Docs/Reference/Constructo";
+import DocsReferenceSerendipity from "@/pages/Docs/Reference/Serendipity";
+import DocsReferenceEffulgence from "@/pages/Docs/Reference/Effulgence";
+import DocsReferenceTevun from "@/pages/Docs/Reference/Tevun";
+import DocsReferenceHttp from "@/pages/Docs/Reference/Http";
+import DocsReferenceDocekrize from "@/pages/Docs/Reference/Docekrize";
+import DocsReferenceDockerfile from "@/pages/Docs/Reference/Dockerfile";
+import DocsReferenceArceau from "@/pages/Docs/Reference/Arceau";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 
@@ -36,12 +32,7 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="dark"
-      enableSystem
-      disableTransitionOnChange
-    >
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
       <TooltipProvider>
         <Toaster />
         <Sonner />
@@ -57,17 +48,16 @@ const App = () => (
               <Route path="introduction" element={<DocsIntroduction />} />
               <Route path="guides" element={<DocsGuides />} />
               <Route path="examples" element={<DocsExamples />} />
-              <Route path="tips" element={<DocsTips />} />
               <Route path="reference" element={<DocsReference />}>
-                <Route index element={<ReferenceIndex />} />
-                <Route path="constructo" element={<ReferenceConstructo />} />
-                <Route path="serendipity" element={<ReferenceSerendipity />} />
-                <Route path="effulgence" element={<ReferenceEffulgence />} />
-                <Route path="tevun" element={<ReferenceTevun />} />
-                <Route path="http" element={<ReferenceHttp />} />
-                <Route path="docekrize" element={<ReferenceDocekrize />} />
-                <Route path="dockerfile" element={<ReferenceDockerfile />} />
-                <Route path="arceau" element={<ReferenceArceau />} />
+                <Route index element={<DocsReferenceIndex />} />
+                <Route path="constructo" element={<DocsReferenceConstructo />} />
+                <Route path="serendipity" element={<DocsReferenceSerendipity />} />
+                <Route path="effulgence" element={<DocsReferenceEffulgence />} />
+                <Route path="tevun" element={<DocsReferenceTevun />} />
+                <Route path="http" element={<DocsReferenceHttp />} />
+                <Route path="docekrize" element={<DocsReferenceDocekrize />} />
+                <Route path="dockerfile" element={<DocsReferenceDockerfile />} />
+                <Route path="arceau" element={<DocsReferenceArceau />} />
               </Route>
               <Route path="about" element={<DocsAbout />} />
             </Route>

@@ -1,28 +1,28 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { BookOpen, Package, Wrench, Layers } from "lucide-react";
 import { DocsResponsiveSidebar, type SidebarItem } from "@/components/DocsResponsiveSidebar";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Layers, Package, Wrench } from "lucide-react";
 
-const DocsIntroduction = () => {
+const Introduction = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const sidebarItems: SidebarItem[] = [
-    { id: 'requisitos', label: 'Começando do Começo', level: 0 },
-    { id: 'pacotes', label: 'Pacotes Principais', level: 0 },
-    { id: 'constructo', label: 'Constructo', level: 1 },
-    { id: 'serendipity', label: 'Serendipity', level: 1 },
-    { id: 'effulgence', label: 'Effulgence', level: 1 },
-    { id: 'instalacao', label: 'Instalação Rápida', level: 0 },
+    { id: "requisitos", label: "Começando do Começo", level: 0 },
+    { id: "pacotes", label: "Pacotes Principais", level: 0 },
+    { id: "constructo", label: "Constructo", level: 1 },
+    { id: "serendipity", label: "Serendipity", level: 1 },
+    { id: "effulgence", label: "Effulgence", level: 1 },
+    { id: "instalacao", label: "Instalação Rápida", level: 0 },
   ];
 
   return (
     <div className="flex gap-8">
-      <DocsResponsiveSidebar 
+      <DocsResponsiveSidebar
         items={sidebarItems}
         onItemClick={scrollToSection}
         title="Sumário da Introdução"
@@ -43,15 +43,17 @@ const DocsIntroduction = () => {
         <div className="prose prose-slate dark:prose-invert max-w-none">
           <h2 id="introducao">Introdução</h2>
           <p>
-            O Devitools é um conjunto de ferramentas modernas para desenvolvimento PHP que visa simplificar e acelerar 
-            o processo de criação de aplicações robustas e escaláveis. Nossos pacotes fornecem soluções elegantes para 
-            os desafios mais comuns no desenvolvimento PHP contemporâneo.
+            O Devitools é um conjunto de ferramentas modernas para desenvolvimento PHP que visa
+            simplificar e acelerar o processo de criação de aplicações robustas e escaláveis. Nossos
+            pacotes fornecem soluções elegantes para os desafios mais comuns no desenvolvimento PHP
+            contemporâneo.
           </p>
-          
+
           <p>
-            Com uma arquitetura bem pensada e APIs intuitivas, o Devitools permite que desenvolvedores foquem no que 
-            realmente importa: criar valor para seus usuários. Nossos pacotes seguem as melhores práticas da comunidade 
-            PHP e são extensivamente testados para garantir a máxima confiabilidade.
+            Com uma arquitetura bem pensada e APIs intuitivas, o Devitools permite que
+            desenvolvedores foquem no que realmente importa: criar valor para seus usuários. Nossos
+            pacotes seguem as melhores práticas da comunidade PHP e são extensivamente testados para
+            garantir a máxima confiabilidade.
           </p>
 
           <h3 id="requisitos">Requisitos do Sistema</h3>
@@ -72,13 +74,12 @@ const DocsIntroduction = () => {
                   <Wrench className="h-6 w-6 text-primary" />
                   <CardTitle>Constructo</CardTitle>
                 </div>
-                <CardDescription>
-                  Ferramentas fundamentais para projetos PHP
-                </CardDescription>
+                <CardDescription>Ferramentas fundamentais para projetos PHP</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Sistema completo de serialização, validação e geração de dados fake para acelerar o desenvolvimento PHP.
+                  Sistema completo de serialização, validação e geração de dados fake para acelerar
+                  o desenvolvimento PHP.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="secondary">Serialização</Badge>
@@ -94,13 +95,12 @@ const DocsIntroduction = () => {
                   <Package className="h-6 w-6 text-accent" />
                   <CardTitle>Serendipity</CardTitle>
                 </div>
-                <CardDescription>
-                  Extensão otimizada para Hyperf
-                </CardDescription>
+                <CardDescription>Extensão otimizada para Hyperf</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Ferramentas avançadas para desenvolvimento com Hyperf, incluindo workers, rotas e tratamento de erros.
+                  Ferramentas avançadas para desenvolvimento com Hyperf, incluindo workers, rotas e
+                  tratamento de erros.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="secondary">Hyperf</Badge>
@@ -116,13 +116,12 @@ const DocsIntroduction = () => {
                   <Layers className="h-6 w-6 text-success" />
                   <CardTitle>Effulgence</CardTitle>
                 </div>
-                <CardDescription>
-                  Extensão otimizada para Laravel
-                </CardDescription>
+                <CardDescription>Extensão otimizada para Laravel</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Integração completa com Laravel, incluindo Eloquent, controllers simplificados e middlewares otimizados.
+                  Integração completa com Laravel, incluindo Eloquent, controllers simplificados e
+                  middlewares otimizados.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="secondary">Laravel</Badge>
@@ -140,8 +139,10 @@ const DocsIntroduction = () => {
             Instale os pacotes Devitools via Composer para começar a usar em seus projetos PHP.
           </p>
           <div className="bg-background rounded border p-4 font-mono text-sm">
-            composer require devitools/constructo<br />
-            composer require devitools/serendipity<br />
+            composer require devitools/constructo
+            <br />
+            composer require devitools/serendipity
+            <br />
             composer require devitools/effulgence
           </div>
         </div>
@@ -150,4 +151,4 @@ const DocsIntroduction = () => {
   );
 };
 
-export default DocsIntroduction;
+export default Introduction;

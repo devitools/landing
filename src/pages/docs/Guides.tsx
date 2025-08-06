@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { BookOpen, Code, FileText, Zap } from "lucide-react";
 
-const DocsGuides = () => {
+const Guides = () => {
   return (
     <div className="space-y-8">
       <div className="space-y-4">
@@ -21,9 +21,7 @@ const DocsGuides = () => {
               <BookOpen className="h-6 w-6 text-primary" />
               <CardTitle>Primeiros Passos</CardTitle>
             </div>
-            <CardDescription>
-              Configure seu primeiro projeto com Devitools
-            </CardDescription>
+            <CardDescription>Configure seu primeiro projeto com Devitools</CardDescription>
           </CardHeader>
           <CardContent>
             <p className="text-sm text-muted-foreground mb-4">
@@ -42,9 +40,7 @@ const DocsGuides = () => {
               <Code className="h-6 w-6 text-accent" />
               <CardTitle>Desenvolvimento Avançado</CardTitle>
             </div>
-            <CardDescription>
-              Técnicas avançadas e melhores práticas
-            </CardDescription>
+            <CardDescription>Técnicas avançadas e melhores práticas</CardDescription>
           </CardHeader>
           <CardContent>
             <p className="text-sm text-muted-foreground mb-4">
@@ -63,9 +59,7 @@ const DocsGuides = () => {
               <FileText className="h-6 w-6 text-success" />
               <CardTitle>API Reference</CardTitle>
             </div>
-            <CardDescription>
-              Documentação completa das APIs
-            </CardDescription>
+            <CardDescription>Documentação completa das APIs</CardDescription>
           </CardHeader>
           <CardContent>
             <p className="text-sm text-muted-foreground mb-4">
@@ -84,9 +78,7 @@ const DocsGuides = () => {
               <Zap className="h-6 w-6 text-warning" />
               <CardTitle>Performance</CardTitle>
             </div>
-            <CardDescription>
-              Otimizações e tuning de performance
-            </CardDescription>
+            <CardDescription>Otimizações e tuning de performance</CardDescription>
           </CardHeader>
           <CardContent>
             <p className="text-sm text-muted-foreground mb-4">
@@ -121,4 +113,4 @@ const DocsGuides = () => {
   );
 };
 
-export default DocsGuides;
+export default Guides;

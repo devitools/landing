@@ -1,16 +1,16 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { Soon } from "@/components/Soon";
 
-const DocsReference = () => {
+const Reference = () => {
   const packages = [
     "constructo",
-    "serendipity", 
+    "serendipity",
     "effulgence",
     "tevun",
     "http",
     "docekrize",
     "dockerfile",
-    "arceau"
+    "arceau",
   ];
 
   return (
@@ -20,7 +20,7 @@ const DocsReference = () => {
         <div className="sticky top-6 p-4">
           <nav className="space-y-2">
             <h3 className="text-sm font-semibold text-foreground mb-3">Pacotes & Ferramentas</h3>
-            {packages.map((packageName) => (
+            {packages.map(packageName => (
               <NavLink
                 key={packageName}
                 to={`/docs/reference/${packageName}`}
@@ -48,4 +48,4 @@ const DocsReference = () => {
   );
 };
 
-export default DocsReference;
+export default Reference;

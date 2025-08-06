@@ -1,8 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Heart, Code, Target, Users } from "lucide-react";
+import { Code, Heart, Target, Users } from "lucide-react";
 
-const DocsAbout = () => {
+const About = () => {
   return (
     <div className="mx-auto space-y-8">
       <div className="space-y-4">
@@ -17,14 +17,16 @@ const DocsAbout = () => {
       <div className="prose prose-slate dark:prose-invert max-w-none">
         <h2>Nossa História</h2>
         <p>
-          O Devitools nasceu da necessidade de simplificar e acelerar o desenvolvimento de aplicações PHP modernas. 
-          Criado por desenvolvedores que enfrentavam os mesmos desafios diários, o projeto visa fornecer 
-          ferramentas robustas e bem testadas para a comunidade PHP.
+          O Devitools nasceu da necessidade de simplificar e acelerar o desenvolvimento de
+          aplicações PHP modernas. Criado por desenvolvedores que enfrentavam os mesmos desafios
+          diários, o projeto visa fornecer ferramentas robustas e bem testadas para a comunidade
+          PHP.
         </p>
-        
+
         <p>
-          Desde o início, nosso foco tem sido criar soluções que não apenas resolvem problemas técnicos, 
-          mas que também melhoram a experiência do desenvolvedor e promovem boas práticas de desenvolvimento.
+          Desde o início, nosso foco tem sido criar soluções que não apenas resolvem problemas
+          técnicos, mas que também melhoram a experiência do desenvolvedor e promovem boas práticas
+          de desenvolvimento.
         </p>
       </div>
 
@@ -38,8 +40,9 @@ const DocsAbout = () => {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground">
-              Democratizar o acesso a ferramentas de desenvolvimento de alta qualidade, 
-              tornando o desenvolvimento PHP mais eficiente, seguro e agradável para desenvolvedores de todos os níveis.
+              Democratizar o acesso a ferramentas de desenvolvimento de alta qualidade, tornando o
+              desenvolvimento PHP mais eficiente, seguro e agradável para desenvolvedores de todos
+              os níveis.
             </p>
           </CardContent>
         </Card>
@@ -80,15 +83,21 @@ const DocsAbout = () => {
             <div className="space-y-3">
               <div className="p-2 bg-muted/50 rounded">
                 <h4 className="font-semibold">PHP 8+</h4>
-                <p className="text-sm text-muted-foreground">Aproveitamos os recursos mais modernos do PHP</p>
+                <p className="text-sm text-muted-foreground">
+                  Aproveitamos os recursos mais modernos do PHP
+                </p>
               </div>
               <div className="p-2 bg-muted/50 rounded">
                 <h4 className="font-semibold">PSR Standards</h4>
-                <p className="text-sm text-muted-foreground">Seguimos os padrões da comunidade PHP</p>
+                <p className="text-sm text-muted-foreground">
+                  Seguimos os padrões da comunidade PHP
+                </p>
               </div>
               <div className="p-2 bg-muted/50 rounded">
                 <h4 className="font-semibold">Composer</h4>
-                <p className="text-sm text-muted-foreground">Integração nativa com o ecossistema PHP</p>
+                <p className="text-sm text-muted-foreground">
+                  Integração nativa com o ecossistema PHP
+                </p>
               </div>
             </div>
           </CardContent>
@@ -103,8 +112,8 @@ const DocsAbout = () => {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground mb-3">
-              Uma equipe apaixonada de desenvolvedores brasileiros trabalhando para 
-              tornar o desenvolvimento PHP mais acessível e eficiente.
+              Uma equipe apaixonada de desenvolvedores brasileiros trabalhando para tornar o
+              desenvolvimento PHP mais acessível e eficiente.
             </p>
             <div className="space-y-2">
               <div className="flex items-center justify-between">
@@ -144,4 +153,4 @@ const DocsAbout = () => {
   );
 };
 
-export default DocsAbout;
+export default About;

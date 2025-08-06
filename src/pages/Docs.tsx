@@ -1,35 +1,36 @@
-import { NavLink, Outlet, useLocation } from "react-router-dom";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 
 const Docs = () => {
   const location = useLocation();
-  
+
   const navigationItems = [
     { label: "Introdução", path: "/docs/introduction" },
+    { label: "Referência", path: "/docs/reference" },
     { label: "Guias", path: "/docs/guides" },
     { label: "Exemplos", path: "/docs/examples" },
-    { label: "Dicas & Truques", path: "/docs/tips" },
-    { label: "Referência", path: "/docs/reference" },
     { label: "Sobre", path: "/docs/about" },
   ];
 
   const isActiveLink = (path: string) => {
-    // Se estamos em /docs (sem subrota), considerar "Introdução" como ativo
     if (location.pathname === "/docs" && path === "/docs/introduction") {
       return true;
     }
-    return location.pathname === path || location.pathname.startsWith(path + '/');
+    return location.pathname === path || location.pathname.startsWith(path + "/");
   };
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: 'var(--gradient-background)' }}>
+    <div
+      className="min-h-screen flex flex-col"
+      style={{ background: "var(--gradient-background)" }}
+    >
       <Header />
       <div className="flex-1 flex flex-col">
         <div className="border-b border-border bg-background/50 backdrop-blur-sm sticky top-0 z-10">
           <div className="container mx-auto px-4">
             <nav className="flex space-x-8">
-              {navigationItems.map((item) => (
+              {navigationItems.map(item => (
                 <NavLink
                   key={item.path}
                   to={item.path}
@@ -47,8 +48,9 @@ const Docs = () => {
             </nav>
           </div>
         </div>
-        
-        <div className="flex-1">
+
+        <div className="flex-1 relative">
+          <div className="absolute inset-0 bg-gradient-hero opacity-5"></div>
           <div className="container mx-auto px-4 py-8">
             <Outlet />
           </div>
