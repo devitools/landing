@@ -1,9 +1,19 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { Menu } from "lucide-react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 
 const Docs = () => {
   const location = useLocation();
+  const isMobile = useIsMobile();
 
   const navigationItems = [
     { label: "Introdução", path: "/docs/introduction" },
@@ -29,23 +39,52 @@ const Docs = () => {
       <div className="flex-1 flex flex-col">
         <div className="border-b border-border bg-background/50 backdrop-blur-sm sticky top-0 z-10">
           <div className="container mx-auto px-4">
-            <nav className="flex space-x-8">
-              {navigationItems.map(item => (
-                <NavLink
-                  key={item.path}
-                  to={item.path}
-                  className={() =>
-                    `py-4 px-2 text-sm font-medium transition-colors hover:text-primary border-b-2 ${
-                      isActiveLink(item.path)
-                        ? "text-primary border-primary"
-                        : "text-muted-foreground border-transparent hover:border-primary/50"
-                    }`
-                  }
-                >
-                  {item.label}
-                </NavLink>
-              ))}
-            </nav>
+            <div className="flex items-center justify-between">
+              {/* Desktop navigation - hidden on mobile */}
+              <nav className={`flex space-x-8 ${isMobile ? 'hidden' : ''}`}>
+                {navigationItems.map(item => (
+                  <NavLink
+                    key={item.path}
+                    to={item.path}
+                    className={() =>
+                      `py-4 px-2 text-sm font-medium transition-colors hover:text-primary border-b-2 ${
+                        isActiveLink(item.path)
+                          ? "text-primary border-primary"
+                          : "text-muted-foreground border-transparent hover:border-primary/50"
+                      }`
+                    }
+                  >
+                    {item.label}
+                  </NavLink>
+                ))}
+              </nav>
+
+              {/* Mobile dropdown menu */}
+              {isMobile && (
+                <div className="py-2">
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="ghost" size="sm" className="flex items-center space-x-2">
+                        <Menu className="w-4 h-4" />
+                        <span className="text-sm">Menu</span>
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="start" className="w-48 bg-background">
+                      {navigationItems.map(item => (
+                        <DropdownMenuItem key={item.path} asChild>
+                          <NavLink
+                            to={item.path}
+                            className="w-full cursor-pointer"
+                          >
+                            {item.label}
+                          </NavLink>
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
+              )}
+            </div>
           </div>
         </div>
 
