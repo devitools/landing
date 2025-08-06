@@ -7,6 +7,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils.ts";
 import { Menu } from "lucide-react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 
@@ -39,18 +40,17 @@ const Docs = () => {
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between">
               {/* Desktop navigation - hidden on mobile */}
-              <nav className="hidden md:flex space-x-8">
+              <nav className="hidden lg:flex space-x-8">
                 {navigationItems.map(item => (
                   <NavLink
                     key={item.path}
                     to={item.path}
-                    className={() =>
-                      `py-4 px-2 text-sm font-medium transition-colors hover:text-primary border-b-2 ${
-                        isActiveLink(item.path)
-                          ? "text-primary border-primary"
-                          : "text-muted-foreground border-transparent hover:border-primary/50"
-                      }`
-                    }
+                    className={cn(
+                      "py-4 px-2 text-sm font-medium transition-colors hover:text-primary border-b-2",
+                      isActiveLink(item.path)
+                        ? "text-primary border-primary"
+                        : "text-muted-foreground border-transparent hover:border-primary/50",
+                    )}
                   >
                     {item.label}
                   </NavLink>
@@ -58,7 +58,7 @@ const Docs = () => {
               </nav>
 
               {/* Mobile dropdown menu */}
-              <div className="md:hidden py-2">
+              <div className="lg:hidden py-2">
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" size="sm" className="flex items-center space-x-2">
@@ -69,7 +69,13 @@ const Docs = () => {
                   <DropdownMenuContent align="start" className="w-48 bg-background">
                     {navigationItems.map(item => (
                       <DropdownMenuItem key={item.path} asChild>
-                        <NavLink to={item.path} className="w-full cursor-pointer">
+                        <NavLink
+                          to={item.path}
+                          className={cn(
+                            "w-full cursor-pointer",
+                            isActiveLink(item.path) ? "text-primary" : "",
+                          )}
+                        >
                           {item.label}
                         </NavLink>
                       </DropdownMenuItem>

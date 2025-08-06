@@ -5,8 +5,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useIsMobile } from "@/hooks/use-mobile";
 import { useScrollDirection } from "@/hooks/use-scroll-direction";
+import { cn } from "@/lib/utils.ts";
 import { Github, Menu, Moon, Play, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -15,7 +15,6 @@ const Header = () => {
   const { theme, setTheme } = useTheme();
   const navigate = useNavigate();
   const location = useLocation();
-  const isMobile = useIsMobile();
   const scrollDirection = useScrollDirection();
 
   const isActiveLink = (path: string) => {
@@ -47,42 +46,47 @@ const Header = () => {
 
           <nav className="hidden lg:flex items-center space-x-8">
             <Link
+              to="/"
+              className={cn(
+                "transition-colors hover:text-primary",
+                isActiveLink("/") ? "text-primary bold" : "text-muted-foreground",
+              )}
+            >
+              Início
+            </Link>
+            <Link
               to="/constructo"
-              className={`transition-colors hover:text-primary ${
-                isActiveLink("/constructo")
-                  ? "text-primary"
-                  : "text-muted-foreground"
-              }`}
+              className={cn(
+                "transition-colors hover:text-primary",
+                isActiveLink("/constructo") ? "text-primary" : "text-muted-foreground",
+              )}
             >
               Constructo
             </Link>
             <Link
               to="/serendipity"
-              className={`transition-colors hover:text-primary ${
-                isActiveLink("/serendipity")
-                  ? "text-primary"
-                  : "text-muted-foreground"
-              }`}
+              className={cn(
+                "transition-colors hover:text-primary",
+                isActiveLink("/serendipity") ? "text-primary" : "text-muted-foreground",
+              )}
             >
               Serendipity
             </Link>
             <Link
               to="/effulgence"
-              className={`transition-colors hover:text-primary ${
-                isActiveLink("/effulgence")
-                  ? "text-primary"
-                  : "text-muted-foreground"
-              }`}
+              className={cn(
+                "transition-colors hover:text-primary",
+                isActiveLink("/effulgence") ? "text-primary" : "text-muted-foreground",
+              )}
             >
               Effulgence
             </Link>
             <Link
               to="/docs"
-              className={`transition-colors hover:text-primary ${
-                isActiveLink("/docs")
-                  ? "text-primary"
-                  : "text-muted-foreground"
-              }`}
+              className={cn(
+                "transition-colors hover:text-primary",
+                isActiveLink("/docs") ? "text-primary" : "text-muted-foreground",
+              )}
             >
               Documentação
             </Link>
@@ -101,7 +105,7 @@ const Header = () => {
             </Button>
 
             {/* Mobile menu dropdown */}
-            {isMobile && (
+            <div className="flex lg:hidden">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" size="icon">
@@ -111,8 +115,22 @@ const Header = () => {
                 <DropdownMenuContent align="end" className="w-48 bg-background">
                   <DropdownMenuItem asChild>
                     <Link
+                      to="/"
+                      className={cn(
+                        "transition-colors hover:text-primary",
+                        isActiveLink("/") ? "text-primary bold" : "bold",
+                      )}
+                    >
+                      Início
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link
                       to="/constructo"
-                      className="w-full cursor-pointer"
+                      className={cn(
+                        "transition-colors hover:text-primary",
+                        isActiveLink("/constructo") ? "text-primary bold" : "bold",
+                      )}
                     >
                       Constructo
                     </Link>
@@ -120,7 +138,10 @@ const Header = () => {
                   <DropdownMenuItem asChild>
                     <Link
                       to="/serendipity"
-                      className="w-full cursor-pointer"
+                      className={cn(
+                        "transition-colors hover:text-primary",
+                        isActiveLink("/serendipity") ? "text-primary bold" : "bold",
+                      )}
                     >
                       Serendipity
                     </Link>
@@ -128,7 +149,10 @@ const Header = () => {
                   <DropdownMenuItem asChild>
                     <Link
                       to="/effulgence"
-                      className="w-full cursor-pointer"
+                      className={cn(
+                        "transition-colors hover:text-primary",
+                        isActiveLink("/effulgence") ? "text-primary bold" : "bold",
+                      )}
                     >
                       Effulgence
                     </Link>
@@ -136,28 +160,22 @@ const Header = () => {
                   <DropdownMenuItem asChild>
                     <Link
                       to="/docs"
-                      className="w-full cursor-pointer"
+                      className={cn(
+                        "transition-colors hover:text-primary",
+                        isActiveLink("/docs") ? "text-primary bold" : "bold",
+                      )}
                     >
                       Documentação
                     </Link>
                   </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link
-                      to="/docs"
-                      className="w-full cursor-pointer flex items-center"
-                    >
-                      <Play className="w-4 h-4 mr-2" />
-                      Começar
-                    </Link>
-                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-            )}
+            </div>
 
             {/* Desktop "Começar" button - hidden on mobile */}
             <Button
               size="sm"
-              className={`bg-gradient-primary shadow-elegant ${isMobile ? 'hidden' : ''}`}
+              className="hidden lg:flex bg-gradient-primary hover:shadow-glow hover:scale-105 transition-all duration-300"
               onClick={() => navigate("/docs")}
             >
               <Play className="w-4 h-4 mr-2" />

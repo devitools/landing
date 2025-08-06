@@ -25,7 +25,7 @@ const Index = () => {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent leading-tight">
-            Conheça nossas ferramentas
+            Conheça as nossas soluções e ferramentas
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground m-8 max-w-3xl mx-auto">
@@ -36,7 +36,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button
               size="lg"
-              className="bg-gradient-primary shadow-glow text-lg px-8 py-6"
+              className="bg-gradient-primary hover:shadow-glow hover:scale-105 transition-all duration-300 text-lg px-8 py-6"
               onClick={() => navigate("/docs")}
             >
               <Play className="w-5 h-5 mr-2" />

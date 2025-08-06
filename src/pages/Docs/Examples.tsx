@@ -22,7 +22,7 @@ const Examples = () => {
 
   return (
     <div className="flex gap-8">
-      <DocsResponsiveSidebar 
+      <DocsResponsiveSidebar
         items={sidebarItems}
         onItemClick={handleItemClick}
         title="Exemplos"
@@ -30,7 +30,7 @@ const Examples = () => {
       />
 
       {/* Conteúdo Principal - Coluna Direita */}
-      <div className="flex-1 space-y-8 lg:border-l lg:pl-8">
+      <div className="flex-1 space-y-8 lg:border-l lg:pl-8 pt-[16px]">
         <div className="space-y-4">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Exemplos Práticos

@@ -30,7 +30,7 @@ const Introduction = () => {
       />
 
       {/* Conteúdo Principal */}
-      <div className="flex-1 space-y-8 md:border-l md:pl-8">
+      <div className="flex-1 space-y-8 lg:border-l md:pl-8">
         <div className="space-y-4">
           <h2 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Começando do Começo

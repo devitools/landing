@@ -129,22 +129,23 @@ const CodeExamples = () => {
           />
         </div>
 
-        <div className="flex flex-col sm:flex-row-reverse gap-4 justify-center mt-16">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-16">
           <Button
             size="lg"
-            className="bg-gradient-primary shadow-glow"
-            onClick={() => navigate("/docs")}
-          >
-            <Play className="w-5 h-5 mr-2" />
-            Começar Agora
-          </Button>
-          <Button
-            size="lg"
-            className="bg-gradient-hero shadow-glow"
+            className="bg-gradient-primary hover:shadow-glow hover:scale-105 transition-all duration-300 text-lg px-8 py-6"
             onClick={() => navigate("/docs/examples")}
           >
             <Code className="w-5 h-5 mr-2" />
             Explorar Mais Exemplos
+          </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            className="text-lg px-8 py-6"
+            onClick={() => navigate("/docs")}
+          >
+            <Play className="w-5 h-5 mr-2" />
+            Começar Agora
           </Button>
         </div>
       </div>
