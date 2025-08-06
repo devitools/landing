@@ -1,14 +1,21 @@
-import { useState } from "react";
-import { useIsMobile } from "@/hooks/use-mobile";
-import { Menu, X } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { cn } from "@/lib/utils";
+import { Menu } from "lucide-react";
+import { useState } from "react";
 
 export interface SidebarItem {
   id: string;
   label: string;
-  level?: number; // 0 for main items, 1 for sub-items
+  level?: number;
 }
 
 interface DocsResponsiveSidebarProps {
@@ -18,11 +25,11 @@ interface DocsResponsiveSidebarProps {
   description?: string;
 }
 
-export function DocsResponsiveSidebar({ 
-  items, 
-  onItemClick, 
+export function DocsResponsiveSidebar({
+  items,
+  onItemClick,
   title = "Sumário",
-  description = "Navegue pelo conteúdo"
+  description = "Navegue pelo conteúdo",
 }: DocsResponsiveSidebarProps) {
   const isMobile = useIsMobile();
   const [isOpen, setIsOpen] = useState(false);
@@ -37,15 +44,13 @@ export function DocsResponsiveSidebar({
   const SidebarContent = () => (
     <div className="p-4">
       <nav className="space-y-2">
-        {items.map((item) => (
+        {items.map(item => (
           <button
             key={item.id}
             onClick={() => handleItemClick(item.id)}
             className={cn(
               "block w-full text-left transition-colors py-1 hover:text-primary",
-              item.level === 1 
-                ? "ml-3 text-xs text-muted-foreground" 
-                : "text-sm"
+              item.level === 1 ? "ml-3 text-xs text-muted-foreground" : "text-sm",
             )}
           >
             {item.level === 1 ? `• ${item.label}` : item.label}
@@ -59,11 +64,7 @@ export function DocsResponsiveSidebar({
     return (
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
-          <Button 
-            variant="outline" 
-            size="icon"
-            className="fixed top-20 left-4 z-50 md:hidden"
-          >
+          <Button variant="outline" size="icon" className="fixed top-20 left-4 z-50 md:hidden">
             <Menu className="h-4 w-4" />
           </Button>
         </SheetTrigger>
