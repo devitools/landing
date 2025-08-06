@@ -7,10 +7,9 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export interface SidebarItem {
   id: string;
@@ -31,12 +30,22 @@ export function DocsResponsiveSidebar({
   title = "Sumário",
   description = "Navegue pelo conteúdo",
 }: DocsResponsiveSidebarProps) {
-  const isMobile = useIsMobile();
+  const [isLargeScreen, setIsLargeScreen] = useState<boolean | undefined>(undefined);
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const mql = window.matchMedia('(min-width: 1024px)');
+    const onChange = () => {
+      setIsLargeScreen(window.innerWidth >= 1024);
+    };
+    mql.addEventListener("change", onChange);
+    setIsLargeScreen(window.innerWidth >= 1024);
+    return () => mql.removeEventListener("change", onChange);
+  }, []);
 
   const handleItemClick = (id: string) => {
     onItemClick(id);
-    if (isMobile) {
+    if (!isLargeScreen) {
       setIsOpen(false);
     }
   };
@@ -60,11 +69,11 @@ export function DocsResponsiveSidebar({
     </div>
   );
 
-  if (isMobile) {
+  if (!isLargeScreen) {
     return (
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
-          <Button variant="outline" size="icon" className="fixed top-36 right-4 z-50 md:hidden">
+          <Button variant="outline" size="icon" className="fixed top-36 right-4 z-50 lg:hidden">
             <Menu className="h-4 w-4" />
           </Button>
         </SheetTrigger>
@@ -80,7 +89,7 @@ export function DocsResponsiveSidebar({
   }
 
   return (
-    <div className="w-64 flex-shrink-0">
+    <div className="w-64 flex-shrink-0 hidden lg:block">
       <div className="sticky top-6">
         <SidebarContent />
       </div>
