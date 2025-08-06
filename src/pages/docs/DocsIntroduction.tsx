@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BookOpen, Package, Wrench, Layers } from "lucide-react";
+import { DocsResponsiveSidebar, type SidebarItem } from "@/components/DocsResponsiveSidebar";
 
 const DocsIntroduction = () => {
   const scrollToSection = (id: string) => {
@@ -10,56 +11,26 @@ const DocsIntroduction = () => {
     }
   };
 
+  const sidebarItems: SidebarItem[] = [
+    { id: 'requisitos', label: 'Começando do Começo', level: 0 },
+    { id: 'pacotes', label: 'Pacotes Principais', level: 0 },
+    { id: 'constructo', label: 'Constructo', level: 1 },
+    { id: 'serendipity', label: 'Serendipity', level: 1 },
+    { id: 'effulgence', label: 'Effulgence', level: 1 },
+    { id: 'instalacao', label: 'Instalação Rápida', level: 0 },
+  ];
+
   return (
     <div className="flex gap-8">
-      {/* Sumário - Coluna Esquerda */}
-      <div className="w-64 flex-shrink-0">
-        <div className="sticky top-6 p-4">
-          <nav className="space-y-2">
-            <button
-              onClick={() => scrollToSection('requisitos')}
-              className="block w-full text-left text-sm hover:text-primary transition-colors py-1"
-            >
-              Começando do Começo
-            </button>
-            <button
-              onClick={() => scrollToSection('pacotes')}
-              className="block w-full text-left text-sm hover:text-primary transition-colors py-1"
-            >
-              Pacotes Principais
-            </button>
-            <div className="ml-3 space-y-1">
-              <button
-                onClick={() => scrollToSection('constructo')}
-                className="block w-full text-left text-xs text-muted-foreground hover:text-primary transition-colors py-1"
-              >
-                • Constructo
-              </button>
-              <button
-                onClick={() => scrollToSection('serendipity')}
-                className="block w-full text-left text-xs text-muted-foreground hover:text-primary transition-colors py-1"
-              >
-                • Serendipity
-              </button>
-              <button
-                onClick={() => scrollToSection('effulgence')}
-                className="block w-full text-left text-xs text-muted-foreground hover:text-primary transition-colors py-1"
-              >
-                • Effulgence
-              </button>
-            </div>
-            <button
-              onClick={() => scrollToSection('instalacao')}
-              className="block w-full text-left text-sm hover:text-primary transition-colors py-1"
-            >
-              Instalação Rápida
-            </button>
-          </nav>
-        </div>
-      </div>
+      <DocsResponsiveSidebar 
+        items={sidebarItems}
+        onItemClick={scrollToSection}
+        title="Sumário da Introdução"
+        description="Navegue pelo conteúdo da introdução"
+      />
 
-      {/* Conteúdo Principal - Coluna Direita */}
-      <div className="flex-1 space-y-8 border-l pl-8">
+      {/* Conteúdo Principal */}
+      <div className="flex-1 space-y-8 md:border-l md:pl-8">
         <div className="space-y-4">
           <h2 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Começando do Começo
