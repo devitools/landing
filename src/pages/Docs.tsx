@@ -7,13 +7,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { useIsMobile } from "@/hooks/use-mobile";
 import { Menu } from "lucide-react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 
 const Docs = () => {
   const location = useLocation();
-  const isMobile = useIsMobile();
 
   const navigationItems = [
     { label: "Introdução", path: "/docs/introduction" },
@@ -41,7 +39,7 @@ const Docs = () => {
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between">
               {/* Desktop navigation - hidden on mobile */}
-              <nav className={`flex space-x-8 ${isMobile ? 'hidden' : ''}`}>
+              <nav className="hidden lg:flex space-x-8">
                 {navigationItems.map(item => (
                   <NavLink
                     key={item.path}
@@ -60,30 +58,28 @@ const Docs = () => {
               </nav>
 
               {/* Mobile dropdown menu */}
-              {isMobile && (
-                <div className="py-2">
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" size="sm" className="flex items-center space-x-2">
-                        <Menu className="w-4 h-4" />
-                        <span className="text-sm">Documentação</span>
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="start" className="w-48 bg-background">
-                      {navigationItems.map(item => (
-                        <DropdownMenuItem key={item.path} asChild>
-                          <NavLink
-                            to={item.path}
-                            className="w-full cursor-pointer"
-                          >
-                            {item.label}
-                          </NavLink>
-                        </DropdownMenuItem>
-                      ))}
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </div>
-              )}
+              <div className="lg:hidden py-2">
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" size="sm" className="flex items-center space-x-2">
+                      <Menu className="w-4 h-4" />
+                      <span className="text-sm">Documentação</span>
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="start" className="w-48 bg-background">
+                    {navigationItems.map(item => (
+                      <DropdownMenuItem key={item.path} asChild>
+                        <NavLink
+                          to={item.path}
+                          className="w-full cursor-pointer"
+                        >
+                          {item.label}
+                        </NavLink>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
             </div>
           </div>
         </div>
