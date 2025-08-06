@@ -4,7 +4,7 @@ import { BookOpen, Code, FileText, Zap } from "lucide-react";
 
 const DocsGuides = () => {
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <div className="space-y-8">
       <div className="space-y-4">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
           Guias de Desenvolvimento
