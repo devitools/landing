@@ -66,7 +66,7 @@ const Docs = () => {
                     <DropdownMenuTrigger asChild>
                       <Button variant="ghost" size="sm" className="flex items-center space-x-2">
                         <Menu className="w-4 h-4" />
-                        <span className="text-sm">Menu</span>
+                        <span className="text-sm">Documentação</span>
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="start" className="w-48 bg-background">
