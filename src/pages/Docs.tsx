@@ -37,8 +37,10 @@ const Docs = () => {
           </div>
         </div>
         
-        <div className="flex-1 container mx-auto px-4 py-8">
-          <Outlet />
+        <div className="flex-1">
+          <div className="container mx-auto px-4 py-8">
+            <Outlet />
+          </div>
         </div>
       </div>
       <Footer />
