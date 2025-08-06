@@ -38,6 +38,7 @@ const App = () => (
             <Route path="/serendipity" element={<Serendipity />} />
             <Route path="/effulgence" element={<Effulgence />} />
             <Route path="/docs" element={<Docs />} />
+            <Route path="/docs/:tab" element={<Docs />} />
             <Route path="/docs/constructo" element={<DocsConstructo />} />
             <Route path="/docs/serendipity" element={<DocsSerendipity />} />
             <Route path="/docs/effulgence" element={<DocsEffulgence />} />
