@@ -1,5 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Github, Moon, Play, Sun } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { Github, Menu, Moon, Play, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
@@ -7,6 +14,7 @@ const Header = () => {
   const { theme, setTheme } = useTheme();
   const navigate = useNavigate();
   const location = useLocation();
+  const isMobile = useIsMobile();
 
   const isActiveLink = (path: string) => {
     return location.pathname === path || location.pathname.startsWith(path + "/");
@@ -88,9 +96,65 @@ const Header = () => {
             >
               <Github className="w-4 h-4" />
             </Button>
+
+            {/* Mobile menu dropdown */}
+            {isMobile && (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="icon">
+                    <Menu className="w-4 h-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-48 bg-background">
+                  <DropdownMenuItem asChild>
+                    <Link
+                      to="/constructo"
+                      className="w-full cursor-pointer"
+                    >
+                      Constructo
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      to="/serendipity"
+                      className="w-full cursor-pointer"
+                    >
+                      Serendipity
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      to="/effulgence"
+                      className="w-full cursor-pointer"
+                    >
+                      Effulgence
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      to="/docs"
+                      className="w-full cursor-pointer"
+                    >
+                      Documentação
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link
+                      to="/docs"
+                      className="w-full cursor-pointer flex items-center"
+                    >
+                      <Play className="w-4 h-4 mr-2" />
+                      Começar
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            )}
+
+            {/* Desktop "Começar" button - hidden on mobile */}
             <Button
               size="sm"
-              className="bg-gradient-primary shadow-elegant"
+              className={`bg-gradient-primary shadow-elegant ${isMobile ? 'hidden' : ''}`}
               onClick={() => navigate("/docs")}
             >
               <Play className="w-4 h-4 mr-2" />
