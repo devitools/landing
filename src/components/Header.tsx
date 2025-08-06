@@ -1,12 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Github, Moon, Play, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Link, useNavigate } from "react-router-dom";
-import deviLogo from "@/assets/devitools-logo.png";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const isActiveLink = (path: string) => {
+    return location.pathname === path || location.pathname.startsWith(path + '/');
+  };
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
@@ -22,7 +26,7 @@ const Header = () => {
           <div className="flex items-center">
             <Link to="/" className="hover:opacity-80 transition-opacity">
               <img
-                src={deviLogo}
+                src="/devitools-logo.png"
                 alt="Devitools Logo"
                 className="h-11 object-contain logo-adaptive"
               />
@@ -32,23 +36,42 @@ const Header = () => {
           <nav className="hidden lg:flex items-center space-x-8">
             <Link
               to="/constructo"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className={`transition-colors hover:text-primary ${
+                isActiveLink('/constructo') 
+                  ? 'text-primary' 
+                  : 'text-muted-foreground'
+              }`}
             >
               Constructo
             </Link>
             <Link
               to="/serendipity"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className={`transition-colors hover:text-primary ${
+                isActiveLink('/serendipity') 
+                  ? 'text-primary' 
+                  : 'text-muted-foreground'
+              }`}
             >
               Serendipity
             </Link>
             <Link
               to="/effulgence"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className={`transition-colors hover:text-primary ${
+                isActiveLink('/effulgence') 
+                  ? 'text-primary' 
+                  : 'text-muted-foreground'
+              }`}
             >
               Effulgence
             </Link>
-            <Link to="/docs" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link 
+              to="/docs" 
+              className={`transition-colors hover:text-primary ${
+                isActiveLink('/docs') 
+                  ? 'text-primary' 
+                  : 'text-muted-foreground'
+              }`}
+            >
               Todas as Soluções
             </Link>
           </nav>

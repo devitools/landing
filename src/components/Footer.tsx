@@ -1,6 +1,6 @@
 import { Code, GitPullRequestCreateArrow, Heart, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-import deviLogo from "@/assets/devitools-logo.png";
+
 import { Soon } from "@/components/Soon.tsx";
 
 const Footer = () => {
@@ -52,7 +52,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-4">
               <Link to="/" className="hover:opacity-80 transition-opacity">
                 <img
-                  src={deviLogo}
+                  src="/devitools-logo.png"
                   alt="Devitools Logo"
                   className="h-10 object-contain logo-adaptive"
                 />
