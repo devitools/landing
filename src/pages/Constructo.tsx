@@ -105,9 +105,7 @@ const Constructo = () => {
       title: "Serialização",
       description:
         "Apenas defina os tipos dos argumentos do construtor que sua classe deve receber e deixa o resto com o Builder",
-      code: `<?php
-# ...
-use Constructo\\Core\\Serialize\\Builder;
+      code: `use Constructo\\Core\\Serialize\\Builder;
 use Constructo\\Support\\Set;
 use Constructo\\Type\\Timestamp;
 
@@ -201,33 +199,42 @@ echo sprintf("#   Data de Nascimento: %s\\n", $set->get('birth_date'));
     {
       id: "validation",
       title: "Validação",
-      description: "Valide dados com regras flexíveis baseadas em atributos",
-      code: `<?php
-use Devitools\\Constructo\\Validator;
-use Devitools\\Constructo\\Rules\\{Required, Email, MinLength};
+      description:
+        "Simplesmente utilize as propriedades da classe que receberá os dados para gerar as regras de validação para sua `action`",
+      code: `use Constructo\\Factory\\ReflectorFactory;
+use Constructo\\Type\\Timestamp;
 
-class UserRegistration extends Validator
+use function array_export;
+
+// Defina sua entidade informando os valores das propriedades no construtor
+readonly class User
 {
-    #[Required, MinLength(2)]
-    public string $name;
-    
-    #[Required, Email]
-    public string $email;
-    
-    #[Required, MinLength(8)]
-    public string $password;
+    public function __construct(
+        public int $id,
+        public string $name,
+        public Timestamp $birthDate,
+        public bool $isActive = true,
+        public array $tags = [],
+    ) {
+    }
 }
 
-$registration = new UserRegistration();
-$registration->name = 'João';
-$registration->email = 'joao@email.com';
-$registration->password = 'senha123';
+// Crie o reflector e obtenha o schema da entidade
+$schema = ReflectorFactory::createFrom()->make()->reflect(User::class);
 
-if ($registration->isValid()) {
-    // Dados válidos, prosseguir
-} else {
-    $errors = $registration->getErrors();
-}`,
+echo "# Regras de validação \\n";
+echo array_export($schema->rules(), 1);
+echo "\\n";
+
+# Regras de validação
+[
+    'id' => ['required', 'integer'],
+    'name' => ['required', 'string'],
+    'birth_date' => ['required', 'date'],
+    'is_active' => ['sometimes', 'required', 'boolean'],
+    'tags' => ['sometimes', 'required', 'array'],
+]
+`,
     },
     {
       id: "testing",
