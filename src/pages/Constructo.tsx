@@ -23,16 +23,32 @@ import {
 } from "lucide-react";
 
 const Constructo = () => {
+  const handleInstallClick = () => {
+    navigator.clipboard.writeText("composer require devitools/constructo");
+  };
+
+  const handleGithubClick = () => {
+    window.open("https://github.com/devitools/constructo", "_blank");
+  };
+
+  const handlePackagistClick = () => {
+    window.open("https://packagist.org/packages/devitools/constructo", "_blank");
+  };
+
+  const handleDocsClick = () => {
+    window.open("/docs/constructo", "_blank");
+  };
+
   const features = [
     {
       icon: <Blocks className="w-6 h-6 text-constructo-foreground" />,
-      title: "Codec Inteligente",
-      description: "Converta objetos para arrays e vice-versa sem nenhuma configuração",
+      title: "Serialização Inteligente",
+      description: "Converta arrays em instâncias usando apenas os tipos da classe",
     },
     {
       icon: <Database className="w-6 h-6 text-constructo-foreground" />,
-      title: "Validação Robusta",
-      description: "Sistema de validação flexível baseado na estrutura das suas classes",
+      title: "Desserialização Eficiente",
+      description: "Converta objetos em arrays formatando valores automaticamente",
     },
     {
       icon: <TestTube className="w-6 h-6 text-constructo-foreground" />,
@@ -79,22 +95,6 @@ const Constructo = () => {
       benefits: ["Configuração unificada", "Serialização consistente", "Performance otimizada"],
     },
   ];
-
-  const handleInstallClick = () => {
-    navigator.clipboard.writeText("composer require devitools/constructo");
-  };
-
-  const handleGithubClick = () => {
-    window.open("https://github.com/devitools/constructo", "_blank");
-  };
-
-  const handlePackagistClick = () => {
-    window.open("https://packagist.org/packages/devitools/constructo", "_blank");
-  };
-
-  const handleDocsClick = () => {
-    window.open("/docs/constructo", "_blank");
-  };
 
   return (
     <div className="min-h-screen" style={{ background: "var(--gradient-background)" }}>

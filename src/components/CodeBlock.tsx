@@ -52,7 +52,12 @@ const CodeBlock = ({
   const style = theme === "dark" ? oneDark : oneLight;
 
   return (
-    <Card className={cn("overflow-hidden relative", className)}>
+    <Card
+      className={cn(
+        "overflow-hidden relative bg-background brightness-100 dark:brightness-125",
+        className,
+      )}
+    >
       {showCopy && (
         <Button
           size="sm"
@@ -60,11 +65,7 @@ const CodeBlock = ({
           onClick={handleCopy}
           className="absolute top-3 right-3 z-10 hover:bg-muted/50"
         >
-          {copied ? (
-            <Check className="w-4 h-4" />
-          ) : (
-            <Copy className="w-4 h-4" />
-          )}
+          {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
         </Button>
       )}
 
