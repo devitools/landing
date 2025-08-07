@@ -9,7 +9,7 @@ interface ResponsiveLayoutSidebarItem {
 
 interface ResponsiveLayoutSidebarProps {
   items: ResponsiveLayoutSidebarItem[];
-  onItemClick: (id: string) => void;
+  onItemClick: (item: ResponsiveLayoutSidebarItem) => void;
   title?: string;
   description?: string;
 }
@@ -24,7 +24,7 @@ const ResponsiveLayoutSidebar = (props: ResponsiveLayoutSidebarProps) => {
       {items.map(item => (
         <button
           key={item.id}
-          onClick={() => onItemClick(item.id)}
+          onClick={() => onItemClick(item)}
           className={cn(
             "block w-full text-left transition-colors py-1 hover:text-primary",
             item.level === 1

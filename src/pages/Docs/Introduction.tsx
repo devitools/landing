@@ -10,8 +10,8 @@ import React, { useRef } from "react";
 
 const Introduction = () => {
   const layoutRef = useRef<ResponsiveLayoutRef>(null);
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
+  const scrollToSection = (item: ResponsiveLayoutSidebarItem) => {
+    const element = document.getElementById(item.id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }

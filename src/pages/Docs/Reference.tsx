@@ -52,8 +52,8 @@ const Reference = () => {
     },
   ];
 
-  const handleItemClick = (id: string) => {
-    navigate(`/docs/reference/${id}`);
+  const handleItemClick = (item: ResponsiveLayoutSidebarItem) => {
+    navigate(`/docs/reference/${item.id}`);
   };
 
   return (
