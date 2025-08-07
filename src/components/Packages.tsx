@@ -21,7 +21,7 @@ const Packages = () => {
             description="Ferramentas fundamentais para qualquer projeto PHP como serialização, validação e testes simplificados."
             gradient="bg-gradient-constructo"
             icon={<Blocks className="w-7 h-7 text-constructo-foreground" />}
-            docsLink="/docs/constructo"
+            docsLink="/constructo"
             githubLink="https://github.com/devitools/constructo"
             features={[
               "Serialização / Desserialização automática de classes",
@@ -36,7 +36,7 @@ const Packages = () => {
             description="O pacote ideal para quem quer lidar com o framework Hyperf, simplificando ao máximo a ferramenta baseada no Swoole."
             gradient="bg-gradient-serendipity"
             icon={<Zap className="w-7 h-7 text-serendipity-foreground" />}
-            docsLink="/docs/serendipity"
+            docsLink="/serendipity"
             githubLink="https://github.com/devitools/serendipity"
             features={[
               "Simplificação de consumo de rotas e requisições HTTP",
@@ -51,7 +51,7 @@ const Packages = () => {
             description="Extensão do Constructo especificamente otimizada para o framework Laravel, oferecendo ferramentas avançadas."
             gradient="bg-gradient-effulgence"
             icon={<Layers className="w-7 h-7 text-effulgence-foreground" />}
-            docsLink="/docs/effulgence"
+            docsLink="/effulgence"
             githubLink="https://github.com/devitools/effulgence"
             showSoonBadge={true}
             features={[

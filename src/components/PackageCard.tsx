@@ -69,7 +69,7 @@ const PackageCard = ({
             className={`${gradient} shadow-elegant flex-1`}
             onClick={() => (docsLink ? navigate(docsLink) : null)}
           >
-            Documentação
+            Saiba Mais
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>
           <Button
