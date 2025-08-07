@@ -36,7 +36,7 @@ const Docs = () => {
     >
       <Header />
       <div className="flex-1 flex flex-col">
-        <div className="border-b border-border bg-background/50 backdrop-blur-sm sticky top-0 z-10">
+        <div className="border-b-2 border-border bg-background/50 backdrop-blur-sm sticky top-0 z-10">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between">
               {/* Desktop navigation - hidden on mobile */}
@@ -89,7 +89,7 @@ const Docs = () => {
 
         <div className="flex-1 relative">
           <div className="absolute inset-0 bg-gradient-hero opacity-5"></div>
-          <div className="container mx-auto px-4 py-8">
+          <div>
             <Outlet />
           </div>
         </div>
