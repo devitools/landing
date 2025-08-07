@@ -55,7 +55,7 @@ const ResponsiveLayout = forwardRef<ResponsiveLayoutRef, ResponsiveLayoutProps>(
   );
 
   return (
-    <div className="flex relative min-h-[400px]">
+    <div className="flex relative min-h-[calc(100vh-140px)]">
       {/* Backdrop */}
       <div
         ref={backdropRef}
@@ -66,7 +66,7 @@ const ResponsiveLayout = forwardRef<ResponsiveLayoutRef, ResponsiveLayoutProps>(
       <ResponsiveLayoutWrapper
         ref={sidebarRef}
         className={cn(
-          "w-3/12 lg:w-2/12 min-w-[240px] md:min-w-fit h-full -translate-x-full transition-transform duration-100",
+          "w-3/12 lg:w-2/12 min-w-[240px] md:min-w-fit h-full overflow-auto -translate-x-full transition-transform duration-100",
           "absolute top-0 left-0 z-10 bg-background",
           "lg:relative lg:block lg:bg-transparent lg:translate-x-0",
         )}

@@ -3,11 +3,16 @@ import {
   ResponsiveLayoutSidebar,
   ResponsiveLayoutSidebarItem,
 } from "@/components/docs/ResponsiveLayoutSidebar.tsx";
-import React, { useRef } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import React, { useRef, useState } from "react";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
+
+function formatSolutionHeader(current: ResponsiveLayoutSidebarItem | undefined) {
+  return current ? `Nossa Solução: ${current.label}` : "Nossas Soluções";
+}
 
 const Reference = () => {
   const layoutRef = useRef<ResponsiveLayoutRef>(null);
+  const location = useLocation();
   const navigate = useNavigate();
   const sidebarItems: ResponsiveLayoutSidebarItem[] = [
     {
@@ -51,15 +56,20 @@ const Reference = () => {
       level: 0,
     },
   ];
+  const current = sidebarItems.find(item => location.pathname === `/docs/reference/${item.id}`);
+  const initialTitle = formatSolutionHeader(current);
+  const [title, setTitle] = useState(initialTitle);
 
   const handleItemClick = (item: ResponsiveLayoutSidebarItem) => {
+    setTitle(formatSolutionHeader(item));
+    layoutRef.current?.closeSidebar();
     navigate(`/docs/reference/${item.id}`);
   };
 
   return (
     <ResponsiveLayout
       ref={layoutRef}
-      title={"Nossas Soluções"}
+      title={title}
       leftContent={<ResponsiveLayoutSidebar items={sidebarItems} onItemClick={handleItemClick} />}
       rightContent={
         <div className="relative">
