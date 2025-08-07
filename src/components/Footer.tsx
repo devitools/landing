@@ -93,7 +93,7 @@ const Footer = () => {
           </div>
 
           <div className="px-1 min-w-[130px]">
-            <h3 className="font-semibold text-foreground mb-4">Soluções</h3>
+            <h3 className="font-semibold text-foreground mb-4">Ferramentas</h3>
             <ul className="space-y-2">
               <li>
                 <Link
