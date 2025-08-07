@@ -14,23 +14,38 @@ const ResponsiveLayout: React.FC<ResponsiveLayoutProps> = ({
   title,
 }) => {
   const sidebarRef = useRef<HTMLDivElement>(null);
+  const backdropRef = useRef<HTMLDivElement>(null);
 
   const handleToggle = () => {
-    if (sidebarRef.current) {
+    if (sidebarRef.current && backdropRef.current) {
       sidebarRef.current.classList.toggle("translate-x-0");
       sidebarRef.current.classList.toggle("-translate-x-full");
+      backdropRef.current.classList.toggle("opacity-50");
+      backdropRef.current.classList.toggle("opacity-0");
+      backdropRef.current.classList.toggle("pointer-events-auto");
+      backdropRef.current.classList.toggle("pointer-events-none");
     }
   };
 
   const handleClose = () => {
-    if (sidebarRef.current) {
+    if (sidebarRef.current && backdropRef.current) {
       sidebarRef.current.classList.remove("translate-x-0");
       sidebarRef.current.classList.add("-translate-x-full");
+      backdropRef.current.classList.remove("opacity-50");
+      backdropRef.current.classList.add("opacity-0");
+      backdropRef.current.classList.remove("pointer-events-auto");
+      backdropRef.current.classList.add("pointer-events-none");
     }
   };
 
   return (
     <div className="flex relative min-h-[400px]">
+      <div
+        ref={backdropRef}
+        onClick={handleClose}
+        className="absolute inset-0 bg-black opacity-0 pointer-events-none transition-opacity duration-100 z-[5] lg:hidden"
+      />
+
       <div
         ref={sidebarRef}
         className={cn(
@@ -40,7 +55,10 @@ const ResponsiveLayout: React.FC<ResponsiveLayoutProps> = ({
         )}
       >
         <div className="flex justify-end lg:hidden">
-          <button onClick={handleClose} className="hover:bg-red-300 rounded p-1 transition-colors">
+          <button
+            onClick={handleClose}
+            className="hover:bg-destructive/50 rounded p-1 transition-colors"
+          >
             <X className="h-5 w-5" />
           </button>
         </div>
@@ -51,7 +69,7 @@ const ResponsiveLayout: React.FC<ResponsiveLayoutProps> = ({
         <div className="flex items-center gap-3 mb-4">
           <button
             onClick={handleToggle}
-            className="lg:hidden shadow hover:shadow-md transition-all"
+            className="lg:hidden shadow hover:shadow-md transition-all hover:bg-success/50"
           >
             <Menu className="w-4 h-4" />
           </button>
