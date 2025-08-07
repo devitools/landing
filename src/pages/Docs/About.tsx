@@ -1,10 +1,11 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ResponsiveLayoutWrapper } from "@/components/ResponsiveLayout.tsx";
 import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code, Heart, Target, Users } from "lucide-react";
 
 const About = () => {
   return (
-    <div className="mx-auto space-y-8">
+    <ResponsiveLayoutWrapper className="mx-auto space-y-8">
       <div className="space-y-4">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
           Sobre o Devitools
@@ -149,7 +150,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </ResponsiveLayoutWrapper>
   );
 };
 

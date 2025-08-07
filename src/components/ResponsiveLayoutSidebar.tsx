@@ -27,7 +27,9 @@ const ResponsiveLayoutSidebar = (props: ResponsiveLayoutSidebarProps) => {
           onClick={() => onItemClick(item.id)}
           className={cn(
             "block w-full text-left transition-colors py-1 hover:text-primary",
-            item.level === 1 ? "ml-3 text-xs text-muted-foreground" : "text-sm",
+            item.level === 1
+              ? "ml-3 text-xs md:text-sm text-muted-foreground"
+              : "text-sm md:text-base",
           )}
         >
           {item.level === 1 ? `• ${item.label}` : item.label}
@@ -38,5 +40,5 @@ const ResponsiveLayoutSidebar = (props: ResponsiveLayoutSidebarProps) => {
 };
 
 ResponsiveLayoutSidebar.displayName = "ResponsiveLayout";
-export default ResponsiveLayoutSidebar;
+export { ResponsiveLayoutSidebar };
 export type { ResponsiveLayoutSidebarItem };

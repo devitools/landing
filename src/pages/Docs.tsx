@@ -89,7 +89,7 @@ const Docs = () => {
 
         <div className="flex-1 relative">
           <div className="absolute inset-0 bg-gradient-hero opacity-5"></div>
-          <div>
+          <div className="container p-0">
             <Outlet />
           </div>
         </div>

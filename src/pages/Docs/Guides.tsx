@@ -1,10 +1,11 @@
+import { ResponsiveLayoutWrapper } from "@/components/ResponsiveLayout.tsx";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BookOpen, Code, FileText, Zap } from "lucide-react";
 
 const Guides = () => {
   return (
-    <div className="space-y-8">
+    <ResponsiveLayoutWrapper className="space-y-8">
       <div className="space-y-4">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
           Guias de Desenvolvimento
@@ -109,7 +110,7 @@ const Guides = () => {
           </div>
         </div>
       </div>
-    </div>
+    </ResponsiveLayoutWrapper>
   );
 };
 

@@ -1,5 +1,6 @@
-import ResponsiveLayout, { ResponsiveLayoutRef } from "@/components/ResponsiveLayout.tsx";
-import ResponsiveLayoutSidebar, {
+import { ResponsiveLayout, ResponsiveLayoutRef } from "@/components/ResponsiveLayout.tsx";
+import {
+  ResponsiveLayoutSidebar,
   ResponsiveLayoutSidebarItem,
 } from "@/components/ResponsiveLayoutSidebar.tsx";
 import React, { useRef } from "react";

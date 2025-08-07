@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils.ts";
-import React, { forwardRef, useImperativeHandle, useRef } from "react";
 import { Menu, X } from "lucide-react";
+import React, { forwardRef, useImperativeHandle, useRef } from "react";
 
 interface ResponsiveLayoutProps {
   leftContent: React.ReactNode;
@@ -11,6 +11,13 @@ interface ResponsiveLayoutProps {
 interface ResponsiveLayoutRef {
   closeSidebar: () => void;
 }
+
+const ResponsiveLayoutWrapper = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  (args: React.HTMLAttributes<HTMLDivElement>, ref) => {
+    const { className, ...props } = args;
+    return <div ref={ref} className={cn('p-5 lg:px-6"', className)} {...props} />;
+  },
+);
 
 const ResponsiveLayout = forwardRef<ResponsiveLayoutRef, ResponsiveLayoutProps>((props, ref) => {
   const { leftContent, rightContent, title } = props;
@@ -56,12 +63,13 @@ const ResponsiveLayout = forwardRef<ResponsiveLayoutRef, ResponsiveLayoutProps>(
         className="absolute inset-0 bg-black opacity-0 pointer-events-none transition-opacity duration-100 z-[5] lg:hidden"
       />
 
-      <div
+      <ResponsiveLayoutWrapper
         ref={sidebarRef}
         className={cn(
-          "h-full w-3/12 min-w-[240px] -translate-x-full transition-transform duration-100",
-          "absolute top-0 left-0 z-10 bg-background p-5",
-          "lg:relative lg:block lg:bg-transparent lg:translate-x-0 lg:px-6",
+          "h-full w-3/12 lg:w-2/12 min-w-[240px] md:min-w-fit -translate-x-full transition-transform duration-100",
+          "absolute top-0 left-0 z-10 bg-background",
+          "lg:relative lg:block lg:bg-transparent lg:translate-x-0",
+          "p-5 lg:px-6",
         )}
       >
         <div className="flex justify-end lg:hidden">
@@ -70,9 +78,9 @@ const ResponsiveLayout = forwardRef<ResponsiveLayoutRef, ResponsiveLayoutProps>(
           </button>
         </div>
         <div>{leftContent}</div>
-      </div>
+      </ResponsiveLayoutWrapper>
 
-      <div className="w-full lg:w-9/12 p-5 lg:px-6">
+      <ResponsiveLayoutWrapper className="w-full lg:10/12">
         <div className="flex items-center gap-3 mb-4">
           <button
             onClick={handleToggle}
@@ -87,12 +95,13 @@ const ResponsiveLayout = forwardRef<ResponsiveLayoutRef, ResponsiveLayoutProps>(
           )}
         </div>
         <div>{rightContent}</div>
-      </div>
+      </ResponsiveLayoutWrapper>
     </div>
   );
 });
 
 ResponsiveLayout.displayName = "ResponsiveLayout";
+ResponsiveLayoutWrapper.displayName = "ResponsiveLayoutWrapper";
 
-export default ResponsiveLayout;
+export { ResponsiveLayout, ResponsiveLayoutWrapper };
 export type { ResponsiveLayoutRef };
