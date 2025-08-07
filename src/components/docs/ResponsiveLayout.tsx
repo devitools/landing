@@ -15,7 +15,7 @@ interface ResponsiveLayoutRef {
 const ResponsiveLayoutWrapper = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   (args: React.HTMLAttributes<HTMLDivElement>, ref) => {
     const { className, ...props } = args;
-    return <div ref={ref} className={cn('p-5 lg:px-6"', className)} {...props} />;
+    return <div ref={ref} className={cn("p-5 lg:px-10", className)} {...props} />;
   },
 );
 
@@ -66,10 +66,9 @@ const ResponsiveLayout = forwardRef<ResponsiveLayoutRef, ResponsiveLayoutProps>(
       <ResponsiveLayoutWrapper
         ref={sidebarRef}
         className={cn(
-          "h-full w-3/12 lg:w-2/12 min-w-[240px] md:min-w-fit -translate-x-full transition-transform duration-100",
+          "w-3/12 lg:w-2/12 min-w-[240px] md:min-w-fit h-full -translate-x-full transition-transform duration-100",
           "absolute top-0 left-0 z-10 bg-background",
           "lg:relative lg:block lg:bg-transparent lg:translate-x-0",
-          "p-5 lg:px-6",
         )}
       >
         <div className="flex justify-end lg:hidden">

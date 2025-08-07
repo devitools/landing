@@ -1,15 +1,24 @@
-import { DocsLayout } from "@/components/DocsLayout";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { DocsLayout } from "@/components/DocsLayout.tsx";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card.tsx";
+import { Badge } from "@/components/ui/badge.tsx";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs.tsx";
 import { Globe, Layers, Package, Radio } from "lucide-react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import CodeBlock from "@/components/CodeBlock";
+import Header from "@/components/Header.tsx";
+import Footer from "@/components/Footer.tsx";
+import CodeBlock from "@/components/CodeBlock.tsx";
 
 const DocsSerendipity = () => {
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: "var(--gradient-background)" }}>
+    <div
+      className="min-h-screen flex flex-col"
+      style={{ background: "var(--gradient-background)" }}
+    >
       <Header />
       <div className="flex-1 flex flex-col">
         <DocsLayout>
@@ -18,11 +27,11 @@ const DocsSerendipity = () => {
               <div className="flex items-center space-x-3">
                 <Package className="h-8 w-8 text-accent" />
                 <h1 className="text-4xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-                Serendipity
+                  Serendipity
                 </h1>
               </div>
               <p className="text-xl text-muted-foreground">
-              Sistema de eventos moderno e assíncrono para PHP.
+                Sistema de eventos moderno e assíncrono para PHP.
               </p>
               <div className="flex flex-wrap gap-2">
                 <Badge>v1.5.2</Badge>
@@ -43,14 +52,15 @@ const DocsSerendipity = () => {
                 <div className="prose prose-slate dark:prose-invert max-w-none">
                   <h2>O que é o Serendipity?</h2>
                   <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula nunc vel lorem tincidunt,
-                  in tempor elit cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula nunc
+                    vel lorem tincidunt, in tempor elit cursus. Vestibulum ante ipsum primis in
+                    faucibus orci luctus et ultrices posuere cubilia curae.
                   </p>
 
                   <p>
-                  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                  Sed in libero ut nibh placerat accumsan. Proin faucibus arcu quis ante.
-                  In hac habitasse platea dictumst.
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                    turpis egestas. Sed in libero ut nibh placerat accumsan. Proin faucibus arcu
+                    quis ante. In hac habitasse platea dictumst.
                   </p>
 
                   <h3>Funcionalidades</h3>
@@ -70,7 +80,7 @@ const DocsSerendipity = () => {
                     </CardHeader>
                     <CardContent>
                       <p className="text-sm text-muted-foreground">
-                      Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                        Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
                       </p>
                     </CardContent>
                   </Card>
@@ -82,7 +92,7 @@ const DocsSerendipity = () => {
                     </CardHeader>
                     <CardContent>
                       <p className="text-sm text-muted-foreground">
-                      Nulla consequat massa quis enim. Donec pede justo, fringilla vel.
+                        Nulla consequat massa quis enim. Donec pede justo, fringilla vel.
                       </p>
                     </CardContent>
                   </Card>
@@ -94,7 +104,7 @@ const DocsSerendipity = () => {
                     </CardHeader>
                     <CardContent>
                       <p className="text-sm text-muted-foreground">
-                      Aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut.
+                        Aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut.
                       </p>
                     </CardContent>
                   </Card>
@@ -105,19 +115,19 @@ const DocsSerendipity = () => {
                 <div className="prose prose-slate dark:prose-invert max-w-none">
                   <h2>Instalação</h2>
                   <p>
-                  Imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-                  Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+                    Imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                    Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
                   </p>
 
                   <h3>Via Composer</h3>
                   <CodeBlock language="bash" size="sm">
-                  composer require devitools/serendipity
+                    composer require devitools/serendipity
                   </CodeBlock>
 
                   <h3>Configuração Inicial</h3>
                   <p>
-                  Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae,
-                  eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis.
+                    Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat
+                    vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis.
                   </p>
 
                   <CodeBlock language="php" size="md">
@@ -139,8 +149,9 @@ $dispatcher = new EventDispatcher();`}
                 <div className="prose prose-slate dark:prose-invert max-w-none">
                   <h2>Trabalhando com Eventos</h2>
                   <p>
-                  Sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis.
-                  Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+                    Sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere
+                    consectetur est at lobortis. Fusce dapibus, tellus ac cursus commodo, tortor
+                    mauris condimentum nibh.
                   </p>
 
                   <h3>Criando Eventos</h3>
@@ -156,8 +167,8 @@ $dispatcher = new EventDispatcher();`}
 
                   <h3>Disparando Eventos</h3>
                   <p>
-                  Ut fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac,
-                  vestibulum at eros. Praesent commodo cursus magna.
+                    Ut fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur
+                    ac, vestibulum at eros. Praesent commodo cursus magna.
                   </p>
 
                   <CodeBlock language="php" size="md">
@@ -176,8 +187,8 @@ $dispatcher->dispatch($event);`}
                 <div className="prose prose-slate dark:prose-invert max-w-none">
                   <h2>Configurando Listeners</h2>
                   <p>
-                  Var iapibus at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                  Vestibulum id ligula porta felis euismod semper.
+                    Var iapibus at eros. Praesent commodo cursus magna, vel scelerisque nisl
+                    consectetur et. Vestibulum id ligula porta felis euismod semper.
                   </p>
 
                   <h3>Listener Simples</h3>
@@ -190,7 +201,8 @@ $dispatcher->dispatch($event);`}
 
                   <h3>Listener com Classe</h3>
                   <p>
-                  Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum.
+                    Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis
+                    consectetur purus sit amet fermentum.
                   </p>
 
                   <CodeBlock language="php" size="md">

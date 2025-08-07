@@ -1,15 +1,24 @@
-import { DocsLayout } from "@/components/DocsLayout";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { DocsLayout } from "@/components/DocsLayout.tsx";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card.tsx";
+import { Badge } from "@/components/ui/badge.tsx";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs.tsx";
 import { Code, Settings, Wrench, Zap } from "lucide-react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import CodeBlock from "@/components/CodeBlock";
+import Header from "@/components/Header.tsx";
+import Footer from "@/components/Footer.tsx";
+import CodeBlock from "@/components/CodeBlock.tsx";
 
 const DocsConstructo = () => {
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: "var(--gradient-background)" }}>
+    <div
+      className="min-h-screen flex flex-col"
+      style={{ background: "var(--gradient-background)" }}
+    >
       <Header />
       <div className="flex-1 flex flex-col">
         <DocsLayout>
@@ -18,11 +27,11 @@ const DocsConstructo = () => {
               <div className="flex items-center space-x-3">
                 <Wrench className="h-8 w-8 text-primary" />
                 <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Constructo
+                  Constructo
                 </h1>
               </div>
               <p className="text-xl text-muted-foreground">
-              Container de injeção de dependência moderno e elegante para PHP.
+                Container de injeção de dependência moderno e elegante para PHP.
               </p>
               <div className="flex flex-wrap gap-2">
                 <Badge>v2.1.0</Badge>
@@ -43,13 +52,15 @@ const DocsConstructo = () => {
                 <div className="prose prose-slate dark:prose-invert max-w-none">
                   <h2>O que é o Constructo?</h2>
                   <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </p>
 
                   <p>
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
                   </p>
 
                   <h3>Características Principais</h3>
@@ -69,7 +80,8 @@ const DocsConstructo = () => {
                     </CardHeader>
                     <CardContent>
                       <p className="text-sm text-muted-foreground">
-                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                        doloremque.
                       </p>
                     </CardContent>
                   </Card>
@@ -81,7 +93,7 @@ const DocsConstructo = () => {
                     </CardHeader>
                     <CardContent>
                       <p className="text-sm text-muted-foreground">
-                      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.
+                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.
                       </p>
                     </CardContent>
                   </Card>
@@ -93,7 +105,7 @@ const DocsConstructo = () => {
                     </CardHeader>
                     <CardContent>
                       <p className="text-sm text-muted-foreground">
-                      Et harum quidem rerum facilis est et expedita distinctio nam libero tempore.
+                        Et harum quidem rerum facilis est et expedita distinctio nam libero tempore.
                       </p>
                     </CardContent>
                   </Card>
@@ -104,13 +116,14 @@ const DocsConstructo = () => {
                 <div className="prose prose-slate dark:prose-invert max-w-none">
                   <h2>Instalação</h2>
                   <p>
-                  Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                  sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                    adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+                    dolore magnam aliquam quaerat voluptatem.
                   </p>
 
                   <h3>Via Composer</h3>
                   <CodeBlock language="bash" size="sm">
-                  composer require devitools/constructo
+                    composer require devitools/constructo
                   </CodeBlock>
 
                   <h3>Requisitos</h3>
@@ -122,8 +135,8 @@ const DocsConstructo = () => {
 
                   <h3>Verificação da Instalação</h3>
                   <p>
-                  Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-                  nisi ut aliquid ex ea commodi consequatur.
+                    Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+                    laboriosam, nisi ut aliquid ex ea commodi consequatur.
                   </p>
                 </div>
               </TabsContent>
@@ -132,8 +145,9 @@ const DocsConstructo = () => {
                 <div className="prose prose-slate dark:prose-invert max-w-none">
                   <h2>Uso Básico</h2>
                   <p>
-                  Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
-                  vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+                    Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+                    molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
+                    pariatur.
                   </p>
 
                   <h3>Exemplo Simples</h3>
@@ -148,8 +162,9 @@ $service = $container->resolve(UserService::class);`}
 
                   <h3>Definindo Dependências</h3>
                   <p>
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-                  deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                    praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
+                    excepturi sint occaecati cupiditate non provident.
                   </p>
 
                   <CodeBlock language="php" size="md">
@@ -163,8 +178,8 @@ $container->singleton(ConfigService::class);`}
                 <div className="prose prose-slate dark:prose-invert max-w-none">
                   <h2>Uso Avançado</h2>
                   <p>
-                  Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
-                  Et harum quidem rerum facilis est et expedita distinctio.
+                    Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et
+                    dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
                   </p>
 
                   <h3>Factories Customizadas</h3>
@@ -180,8 +195,8 @@ $container->singleton(ConfigService::class);`}
 
                   <h3>Contextos e Scopes</h3>
                   <p>
-                  Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus
-                  id quod maxime placeat facere possimus, omnis voluptas assumenda est.
+                    Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
+                    minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.
                   </p>
 
                   <CodeBlock language="php" size="md">

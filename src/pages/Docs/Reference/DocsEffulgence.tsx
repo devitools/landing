@@ -1,11 +1,11 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { DocsLayout } from "@/components/DocsLayout";
-import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Header from "@/components/Header.tsx";
+import Footer from "@/components/Footer.tsx";
+import { DocsLayout } from "@/components/DocsLayout.tsx";
+import { Badge } from "@/components/ui/badge.tsx";
+import { Card } from "@/components/ui/card.tsx";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs.tsx";
 import { Code, Database, Download, Layers, Shield, Zap } from "lucide-react";
-import CodeBlock from "@/components/CodeBlock";
+import CodeBlock from "@/components/CodeBlock.tsx";
 
 const DocsEffulgence = () => {
   return (
@@ -33,8 +33,8 @@ const DocsEffulgence = () => {
             </div>
 
             <p className="text-lg text-muted-foreground">
-              Extensão do Constructo especificamente otimizada para Laravel, oferecendo
-              integração nativa com Eloquent, controllers simplificados e workflows otimizados.
+              Extensão do Constructo especificamente otimizada para Laravel, oferecendo integração
+              nativa com Eloquent, controllers simplificados e workflows otimizados.
             </p>
           </div>
 
@@ -50,13 +50,12 @@ const DocsEffulgence = () => {
             <TabsContent value="overview" className="space-y-6">
               <Card className="p-6">
                 <h2 className="text-2xl font-bold mb-4 flex items-center">
-                  <Layers className="w-6 h-6 mr-2 text-success" />
-                  O que é o Effulgence?
+                  <Layers className="w-6 h-6 mr-2 text-success" />O que é o Effulgence?
                 </h2>
                 <p className="text-muted-foreground mb-6">
-                  O Effulgence é uma extensão do Constructo desenvolvida especificamente para
-                  o framework Laravel. Ele combina toda a potência do Constructo com as
-                  convenções e ferramentas nativas do Laravel.
+                  O Effulgence é uma extensão do Constructo desenvolvida especificamente para o
+                  framework Laravel. Ele combina toda a potência do Constructo com as convenções e
+                  ferramentas nativas do Laravel.
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-6">
@@ -161,7 +160,9 @@ const DocsEffulgence = () => {
                   <div>
                     <h3 className="text-lg font-semibold mb-3">Publicar Configurações</h3>
                     <CodeBlock language="bash" size="sm">
-                      {"php artisan vendor:publish --provider=\"Devitools\\Effulgence\\EffulgenceServiceProvider\""}
+                      {
+                        'php artisan vendor:publish --provider="Devitools\\Effulgence\\EffulgenceServiceProvider"'
+                      }
                     </CodeBlock>
                   </div>
 
@@ -209,7 +210,9 @@ class UserDto extends DataTransferObject
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-semibold mb-3">Controller com Validação Automática</h3>
+                    <h3 className="text-lg font-semibold mb-3">
+                      Controller com Validação Automática
+                    </h3>
                     <CodeBlock language="php" size="md">
                       {`<?php
 
