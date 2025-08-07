@@ -1,4 +1,4 @@
-import { ResponsiveLayoutWrapper } from "@/components/ResponsiveLayout.tsx";
+import { ResponsiveLayoutWrapper } from "@/components/docs/ResponsiveLayout.tsx";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code, Heart, Target, Users } from "lucide-react";

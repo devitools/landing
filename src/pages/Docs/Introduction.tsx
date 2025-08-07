@@ -1,8 +1,8 @@
-import { ResponsiveLayout, ResponsiveLayoutRef } from "@/components/ResponsiveLayout.tsx";
+import { ResponsiveLayout, ResponsiveLayoutRef } from "@/components/docs/ResponsiveLayout.tsx";
 import {
   ResponsiveLayoutSidebar,
   ResponsiveLayoutSidebarItem,
-} from "@/components/ResponsiveLayoutSidebar.tsx";
+} from "@/components/docs/ResponsiveLayoutSidebar.tsx";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Layers, Package, Wrench } from "lucide-react";

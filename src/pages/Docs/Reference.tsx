@@ -1,8 +1,8 @@
-import { ResponsiveLayout, ResponsiveLayoutRef } from "@/components/ResponsiveLayout.tsx";
+import { ResponsiveLayout, ResponsiveLayoutRef } from "@/components/docs/ResponsiveLayout.tsx";
 import {
   ResponsiveLayoutSidebar,
   ResponsiveLayoutSidebarItem,
-} from "@/components/ResponsiveLayoutSidebar.tsx";
+} from "@/components/docs/ResponsiveLayoutSidebar.tsx";
 import React, { useRef } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 
