@@ -5,9 +5,6 @@ const ReferenceIndex = () => {
   return (
     <div className="space-y-8">
       <div className="space-y-4">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-          Referência de Pacotes
-        </h1>
         <p className="text-xl text-muted-foreground">
           Documentação detalhada dos pacotes e ferramentas Devitools.
         </p>
@@ -28,7 +25,7 @@ const ReferenceIndex = () => {
         </CardHeader>
         <CardContent>
           <p className="text-muted-foreground">
-            Em breve você encontrará aqui a referência completa de todos os pacotes Devitools, 
+            Em breve você encontrará aqui a referência completa de todos os pacotes Devitools,
             incluindo APIs, exemplos de uso e guias de implementação para cada ferramenta.
           </p>
         </CardContent>

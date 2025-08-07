@@ -1,47 +1,52 @@
-import { DocsResponsiveSidebar } from "@/components/DocsResponsiveSidebar";
+import ResponsiveLayout, { ResponsiveLayoutRef } from "@/components/ResponsiveLayout.tsx";
+import ResponsiveLayoutSidebar, {
+  ResponsiveLayoutSidebarItem,
+} from "@/components/ResponsiveLayoutSidebar.tsx";
+import React, { useRef } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 
 const Reference = () => {
+  const layoutRef = useRef<ResponsiveLayoutRef>(null);
   const navigate = useNavigate();
-  const sidebarItems = [
+  const sidebarItems: ResponsiveLayoutSidebarItem[] = [
     {
       id: "constructo",
-      label: "constructo",
+      label: "Constructo",
       level: 0,
     },
     {
       id: "serendipity",
-      label: "serendipity",
+      label: "Serendipity",
       level: 0,
     },
     {
       id: "effulgence",
-      label: "effulgence",
+      label: "Effulgence",
       level: 0,
     },
     {
       id: "tevun",
-      label: "tevun",
+      label: "Tevun",
       level: 0,
     },
     {
       id: "http",
-      label: "http",
+      label: "Http",
       level: 0,
     },
     {
       id: "docekrize",
-      label: "docekrize",
+      label: "Docekrize",
       level: 0,
     },
     {
       id: "dockerfile",
-      label: "dockerfile",
+      label: "Dockerfile",
       level: 0,
     },
     {
       id: "arceau",
-      label: "arceau",
+      label: "Arceau",
       level: 0,
     },
   ];
@@ -51,20 +56,16 @@ const Reference = () => {
   };
 
   return (
-    <div className="flex gap-8">
-      {/* Sidebar responsivo */}
-      <DocsResponsiveSidebar
-        items={sidebarItems}
-        onItemClick={handleItemClick}
-        title="Pacotes & Ferramentas"
-        description="Navegue pelos packages e ferramentas disponíveis"
-      />
-
-      {/* Conteúdo Principal */}
-      <div className="flex-1 lg:border-l lg:pl-8">
-        <Outlet />
-      </div>
-    </div>
+    <ResponsiveLayout
+      ref={layoutRef}
+      title={"Nossas Soluções"}
+      leftContent={<ResponsiveLayoutSidebar items={sidebarItems} onItemClick={handleItemClick} />}
+      rightContent={
+        <div className="relative">
+          <Outlet />
+        </div>
+      }
+    />
   );
 };
 

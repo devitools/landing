@@ -53,15 +53,15 @@ const ResponsiveLayout = forwardRef<ResponsiveLayoutRef, ResponsiveLayoutProps>(
       <div
         ref={backdropRef}
         onClick={handleClose}
-        className="fixed inset-0 bg-black opacity-0 pointer-events-none transition-opacity duration-100 z-[5] lg:hidden"
+        className="absolute inset-0 bg-black opacity-0 pointer-events-none transition-opacity duration-100 z-[5] lg:hidden"
       />
 
       <div
         ref={sidebarRef}
         className={cn(
           "h-full w-3/12 min-w-[240px] -translate-x-full transition-transform duration-100",
-          "absolute top-0 left-0 z-10 bg-background p-[10px]",
-          "lg:relative lg:block lg:bg-transparent lg:translate-x-0 lg:p-5",
+          "absolute top-0 left-0 z-10 bg-background p-5",
+          "lg:relative lg:block lg:bg-transparent lg:translate-x-0 lg:px-6",
         )}
       >
         <div className="flex justify-end lg:hidden">
@@ -72,7 +72,7 @@ const ResponsiveLayout = forwardRef<ResponsiveLayoutRef, ResponsiveLayoutProps>(
         <div>{leftContent}</div>
       </div>
 
-      <div className="w-full lg:w-9/12 p-[20px] lg:p-5">
+      <div className="w-full lg:w-9/12 p-5 lg:px-6">
         <div className="flex items-center gap-3 mb-4">
           <button
             onClick={handleToggle}
