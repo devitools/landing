@@ -18,17 +18,17 @@ const Index = () => {
           <div className="flex items-center justify-center mb-6">
             <div className="flex items-center space-x-2 bg-primary/10 px-4 py-2 rounded-full">
               <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">
+              <span className="text-xs md:text-sm font-medium text-primary">
                 Ferramentas modernas para o dev moderno
               </span>
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent leading-tight">
-            Conheça as nossas soluções e ferramentas
+          <h1 className="text-4xl md:text-7xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent leading-tight">
+            Hackeie sua produtividade com Devitools
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground m-8 max-w-3xl mx-auto">
+          <p className="text-md md:text-2xl text-muted-foreground m-8 max-w-3xl mx-auto">
             Utilize ferramentas modernas e elegantes para acelerar seu fluxo de trabalho e melhorar
             a experiência de desenvolvimento
           </p>

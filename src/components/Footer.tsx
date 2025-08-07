@@ -89,6 +89,14 @@ const Footer = () => {
                   <Soon className="text-2xs p-0 px-[4px] text-white dark:text-background dark:bg-red-300" />
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/docs/reference/arceau"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Arceau
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -113,26 +121,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/docs/reference/dockerize"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Dockerize
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/docs/reference/dockerfile"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Dockerfile
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/docs/reference/arceau"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Arceau
                 </Link>
               </li>
             </ul>

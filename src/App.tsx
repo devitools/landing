@@ -9,7 +9,6 @@ import DocsIntroduction from "@/pages/Docs/Introduction.tsx";
 import DocsReference from "@/pages/Docs/Reference.tsx";
 import DocsReferenceArceau from "@/pages/Docs/Reference/Arceau";
 import DocsReferenceConstructo from "@/pages/Docs/Reference/Constructo";
-import DocsReferenceDocekrize from "@/pages/Docs/Reference/Docekrize";
 import DocsReferenceDockerfile from "@/pages/Docs/Reference/Dockerfile";
 import DocsReferenceEffulgence from "@/pages/Docs/Reference/Effulgence";
 import DocsReferenceHttp from "@/pages/Docs/Reference/Http";
@@ -55,7 +54,6 @@ const App = () => (
                 <Route path="effulgence" element={<DocsReferenceEffulgence />} />
                 <Route path="tevun" element={<DocsReferenceTevun />} />
                 <Route path="http" element={<DocsReferenceHttp />} />
-                <Route path="docekrize" element={<DocsReferenceDocekrize />} />
                 <Route path="dockerfile" element={<DocsReferenceDockerfile />} />
                 <Route path="arceau" element={<DocsReferenceArceau />} />
               </Route>

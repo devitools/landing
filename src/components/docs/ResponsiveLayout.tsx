@@ -55,7 +55,7 @@ const ResponsiveLayout = forwardRef<ResponsiveLayoutRef, ResponsiveLayoutProps>(
   );
 
   return (
-    <div className="flex relative min-h-[calc(100vh-140px)]">
+    <div className="flex relative min-h-[400px]">
       {/* Backdrop */}
       <div
         ref={backdropRef}

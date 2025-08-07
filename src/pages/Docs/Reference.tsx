@@ -41,11 +41,6 @@ const Reference = () => {
       level: 0,
     },
     {
-      id: "docekrize",
-      label: "Docekrize",
-      level: 0,
-    },
-    {
       id: "dockerfile",
       label: "Dockerfile",
       level: 0,
