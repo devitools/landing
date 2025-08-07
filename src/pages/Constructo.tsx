@@ -26,9 +26,8 @@ const Constructo = () => {
   const features = [
     {
       icon: <Blocks className="w-6 h-6 text-constructo-foreground" />,
-      title: "Serialização Inteligente",
-      description:
-        "Converta objetos para arrays/JSON e vice-versa automaticamente com validação integrada",
+      title: "Codec Inteligente",
+      description: "Converta objetos para arrays e vice-versa sem nenhuma configuração",
     },
     {
       icon: <Database className="w-6 h-6 text-constructo-foreground" />,
@@ -209,8 +208,8 @@ const Constructo = () => {
           <div className="max-w-6xl mx-auto">
             <Tabs defaultValue="container" className="w-full">
               <TabsList>
-                <TabsTrigger value="container">Container DI</TabsTrigger>
-                <TabsTrigger value="serialization">Serialização</TabsTrigger>
+                <TabsTrigger value="container">Serialização</TabsTrigger>
+                <TabsTrigger value="serialization">Desserialização</TabsTrigger>
                 <TabsTrigger value="validation">Validação</TabsTrigger>
                 <TabsTrigger value="testing">Testes</TabsTrigger>
               </TabsList>
@@ -218,36 +217,58 @@ const Constructo = () => {
               <TabsContent value="container">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Container de Injeção de Dependências</CardTitle>
+                    <CardTitle>Serialização inteligente</CardTitle>
                     <CardDescription>
-                      Configure e use o container PSR-11 para gerenciar dependências
+                      Apenas defina os tipos dos argumentos do construtor que sua classe deve
+                      receber e deixa o resto com o Builder
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <CodeBlock language="php">
                       {`<?php
-use Devitools\\Constructo\\Container;
-use Devitools\\Constructo\\Configuration;
+# ...
+use Constructo\\Core\\Serialize\\Builder;
+use Constructo\\Support\\Set;
+use Constructo\\Type\\Timestamp;
 
-// Configuração do container
-$config = new Configuration([
-    'database' => [
-        'host' => 'localhost',
-        'driver' => 'mysql'
-    ],
-    'cache' => [
-        'driver' => 'redis',
-        'ttl' => 3600
-    ]
+// Defina sua entidade informando os valores das propriedades no construtor
+readonly class User
+{
+    public function __construct(
+        public int $id,
+        public string $name,
+        public Timestamp $birthDate,
+        public bool $isActive = true,
+        public array $tags = [],
+    ) {}
+}
+
+// Monte um set com os dados (de JSON, banco de dados, etc.)
+$set = Set::createFrom([
+    'id' => 1,
+    'name' => 'João Silva',
+    'birth_date' => '1981-08-13',
+    'is_active' => true,
+    'tags' => ['nice', 'welcome'],
 ]);
 
-// Container de dependências
-$container = new Container($config);
-$container->singleton(DatabaseService::class);
-$container->bind(CacheInterface::class, RedisCache::class);
+// Crie um novo builder e use-o para construir o objeto
+$user = (new Builder())->build(User::class, $set);
 
-// Resolução automática com injeção
-$service = $container->resolve(UserService::class);`}
+echo "Usuário: \\n";
+echo sprintf("  ID: %s\\n", $user->id);
+echo sprintf("  Nome: %s\\n", $user->name);
+echo sprintf("  Ativo: %s\\n", $user->isActive ? 'Sim' : 'Não');
+echo sprintf("  Tags: %s\\n", implode(', ', $user->tags));
+echo sprintf("  Data de Nascimento: %s\\n", $user->birthDate->format('Y-m-d'));
+
+# Usuário:
+#   ID: 1
+#   Nome: João Silva
+#   Ativo: Sim
+#   Tags: nice, welcome
+#   Data de Nascimento: 1981-08-13
+`}
                     </CodeBlock>
                   </CardContent>
                 </Card>

@@ -175,8 +175,7 @@ const Footer = () => {
 
         <div className="border-t border-border pt-6 flex flex-col lg:flex-row justify-between items-center">
           <p className="text-muted-foreground text-xs py-2">
-            © {new Date().getFullYear()} Devitools. Desenvolvido com{" "}
-            <Heart className="w-4 h-4 inline mx-1 text-accent" /> pela comunidade.
+            © {new Date().getFullYear()} Devitools | desenvolvido no 🇧🇷 com 💖️ pela comunidade
           </p>
 
           {/* Link para o repositório */}
