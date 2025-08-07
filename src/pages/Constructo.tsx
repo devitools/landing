@@ -13,9 +13,11 @@ import { scrollTo } from "@/lib/utils.ts";
 import {
   Blocks,
   Cog,
+  Command,
   Database,
   Download,
   Github,
+  Network,
   Package,
   Server,
   Shield,
@@ -78,36 +80,36 @@ const Constructo = () => {
   const useCases = [
     {
       icon: <Server className="w-8 h-8 text-constructo-foreground" />,
-      title: "APIs REST/GraphQL",
+      title: "Endpoints e Workers",
       description:
         "Ideal para construção de APIs modernas com serialização automática e validação robusta",
       benefits: ["Serialização automática", "Validação de entrada", "Configuração flexível"],
     },
     {
       icon: <Users className="w-8 h-8 text-constructo-foreground" />,
-      title: "Aplicações Enterprise",
+      title: "Sistemas de gestão",
       description:
-        "Perfeito para sistemas complexos que precisam de arquitetura sólida e manutenível",
+        "Perfeito para usar a própria estrutura do projeto para poder testar os limites da aplicação",
       benefits: ["Injeção de dependências", "Configuração centralizada", "Testes facilitados"],
     },
     {
-      icon: <Zap className="w-8 h-8 text-constructo-foreground" />,
-      title: "Microserviços",
+      icon: <Network className="w-8 h-8 text-constructo-foreground" />,
+      title: "Microsserviços",
       description:
-        "Construa microserviços PHP com configuração padronizada e comunicação eficiente",
-      benefits: ["Configuração unificada", "Serialização consistente", "Performance otimizada"],
+        "Construa microsserviços PHP com configuração padronizada e comunicação eficiente",
+      benefits: ["Configuração unificada", "Serialização consistente", "Desempenho otimizado"],
     },
   ];
 
   const codeExamples = [
     {
-      id: "container",
+      id: "serialization",
       title: "Serialização",
       description:
         "Apenas defina os tipos dos argumentos do construtor que sua classe deve receber e deixa o resto com o Builder",
       code: `use Constructo\\Core\\Serialize\\Builder;
 use Constructo\\Support\\Set;
-use Constructo\\Type\\Timestamp;
+use DateTime;
 
 // Defina sua entidade informando os valores das propriedades no construtor
 readonly class User
@@ -115,7 +117,7 @@ readonly class User
     public function __construct(
         public int $id,
         public string $name,
-        public Timestamp $birthDate,
+        public DateTime $birthDate,
         public bool $isActive = true,
         public array $tags = [],
     ) {}
@@ -148,14 +150,12 @@ echo sprintf("  Data de Nascimento: %s\\n", $user->birthDate->format('Y-m-d'));
 #   Data de Nascimento: 1981-08-13`,
     },
     {
-      id: "serialization",
+      id: "deserialization",
       title: "Desserialização",
       description:
         "Passe uma instância de objeto e converta-a em um objeto facilmente convertível para em array associativo ou JSON",
-      code: `
-use Constructo\\Core\\Deserialize\\Demolisher;
-use Constructo\\Support\\Set;
-use Constructo\\Type\\Timestamp;
+      code: `use Constructo\\Core\\Deserialize\\Demolisher;
+use DateTime;
 
 // Defina sua entidade informando os valores das propriedades no construtor
 readonly class User
@@ -163,7 +163,7 @@ readonly class User
     public function __construct(
         public int $id,
         public string $name,
-        public Timestamp $birthDate,
+        public DateTime $birthDate,
         public bool $isActive = true,
         public array $tags = [],
     ) {}
@@ -173,7 +173,7 @@ readonly class User
 $user = new User(
     id: 1,
     name: 'João Silva',
-    birthDate: new Timestamp('1981-08-13'),
+    birthDate: new DateTime('1981-08-13'),
     isActive: true,
     tags: ['nice', 'welcome'],
 );
@@ -181,13 +181,12 @@ $user = new User(
 // Crie um novo demolisher e use-o para destruir o objeto
 $object = (new Demolisher())->demolish($user);
 
-$set = Set::createFrom((array) $object);
 echo "# Usuário: \\n";
-echo sprintf("#   ID: %s\\n", $set->get('id'));
-echo sprintf("#   Nome: %s\\n", $set->get('name'));
-echo sprintf("#   Ativo: %s\\n", $set->get('is_active') ? 'Sim' : 'Não');
-echo sprintf("#   Tags: %s\\n", implode(', ', $set->get('tags')));
-echo sprintf("#   Data de Nascimento: %s\\n", $set->get('birth_date'));
+echo sprintf("#   ID: %s\\n", $object->id);
+echo sprintf("#   Nome: %s\\n", $object->name);
+echo sprintf("#   Ativo: %s\\n", $object->is_active ? 'Sim' : 'Não');
+echo sprintf("#   Tags: %s\\n", implode(', ', $object->tags));
+echo sprintf("#   Data de Nascimento: %s\\n", $object->birth_date);
 
 # Usuário:
 #   ID: 1
@@ -202,7 +201,7 @@ echo sprintf("#   Data de Nascimento: %s\\n", $set->get('birth_date'));
       description:
         "Simplesmente utilize as propriedades da classe que receberá os dados para gerar as regras de validação para sua `action`",
       code: `use Constructo\\Factory\\ReflectorFactory;
-use Constructo\\Type\\Timestamp;
+use DateTime;
 
 use function array_export;
 
@@ -212,7 +211,7 @@ readonly class User
     public function __construct(
         public int $id,
         public string $name,
-        public Timestamp $birthDate,
+        public DateTime $birthDate,
         public bool $isActive = true,
         public array $tags = [],
     ) {
@@ -226,7 +225,7 @@ echo "# Regras de validação \\n";
 echo array_export($schema->rules(), 1);
 echo "\\n";
 
-# Regras de validação
+# Regras de validação geradas:
 [
     'id' => ['required', 'integer'],
     'name' => ['required', 'string'],
@@ -239,32 +238,36 @@ echo "\\n";
     {
       id: "testing",
       title: "Testes",
-      description: "Use Faker para gerar dados realistas baseados nas suas classes",
-      code: `<?php
-use Devitools\\Constructo\\Testing\\Factory;
+      description:
+        "Combine alguns recursos para gerar dados de forma dinâmica a partir da estrutura das classes envolvidas na rotina de teste",
+      code: `use App\\Domain\\Entity\\User;
+use App\\Infrastructure\\Persistence\\Postgres\\PostgresUserRepository;
+use Constructo\\Testing\\BuilderExtension;
+use Constructo\\Testing\\FakerExtension;
+use Constructo\\Testing\\MakeExtension;
+use Illuminate\\Foundation\\Testing\\TestCase;
 
-class UserFactory extends Factory
+class UserRepositoryTest extends TestCase
 {
-    protected string $model = User::class;
-    
-    public function definition(): array
+    use MakeExtension;
+    use FakerExtension;
+    use BuilderExtension;
+
+    final public function test_create_user_successfully(): void
     {
-        return [
-            'name' => $this->faker->name(),
-            'email' => $this->faker->email(),
-            'createdAt' => $this->faker->dateTime()
-        ];
+        // Assert
+        $values = $this->faker()->fake(User::class);
+        $user = $this->builder()->build(User::class, $values);
+        $userRepository = $this->make(PostgresUserRepository::class);
+
+        // Act
+        $result = $this->userRepository->create($user);
+
+        // Assert
+        $this->assertNotNull($result);
+        $this->assertDatabaseHas('users', ['email' => $user->email]);
     }
-}
-
-// Gerar um usuário fake
-$user = UserFactory::make();
-
-// Gerar múltiplos usuários
-$users = UserFactory::times(10)->make();
-
-// Persistir no banco (se configurado)
-$user = UserFactory::create();`,
+}`,
     },
   ];
 
@@ -274,12 +277,12 @@ $user = UserFactory::create();`,
       description: "Totalmente compatível com PSR-11, PSR-4 e outros padrões",
     },
     {
-      title: "Type Safety",
-      description: "Aproveite ao máximo o PHP 8.0+ com tipagem forte",
+      title: "Tipagem Forte",
+      description: "Aproveite ao máximo o PHP 8.0+ os recursos de tipagem forte",
     },
     {
       title: "Performance",
-      description: "Otimizado para alta performance em produção",
+      description: "Otimizado para alto desempenho em produção",
     },
     {
       title: "Flexibilidade",

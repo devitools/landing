@@ -14,7 +14,7 @@ interface CodeExamplesProps {
 
 const CodeExamples = ({ examples }: CodeExamplesProps) => {
   return (
-    <section className="py-20 px-6 bg-card/30">
+    <section className="py-20 bg-card/30">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Exemplos Práticos</h2>

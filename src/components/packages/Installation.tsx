@@ -9,7 +9,7 @@ interface InstallationProps {
 
 const Installation = ({ onPackagistClick, onDocsClick }: InstallationProps) => {
   return (
-    <section id="installation" className="py-16 px-6 bg-card/30">
+    <section id="installation" className="py-16 bg-card/30">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Instalação Rápida</h2>

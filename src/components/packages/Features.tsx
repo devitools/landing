@@ -14,7 +14,7 @@ interface FeaturesProps {
 
 const Features = ({ features }: FeaturesProps) => {
   return (
-    <section className="py-20 px-6">
+    <section className="py-20">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Recursos Principais</h2>

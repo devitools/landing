@@ -1,3 +1,4 @@
+import CodeBlock from "@/components/CodeBlock.tsx";
 import {
   Card,
   CardContent,
@@ -5,8 +6,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card.tsx";
-import CodeBlock from "@/components/CodeBlock.tsx";
-import { ReactNode } from "react";
 
 interface CodeTabProps {
   title: string;
@@ -18,11 +17,11 @@ interface CodeTabProps {
 const CodeTab = ({ title, description, code, language = "php" }: CodeTabProps) => {
   return (
     <Card>
-      <CardHeader>
+      <CardHeader className="px-3 pt-4 pb-2 lg:px-6 lg:pt-6">
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="px-3 pt-2 pb-4 lg:px-6 lg:pt-3 lg:pb-6">
         <CodeBlock language={language}>{code}</CodeBlock>
       </CardContent>
     </Card>

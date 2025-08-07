@@ -19,7 +19,7 @@ interface CodeBlockProps {
 const CodeBlock = ({
   children,
   language = "php",
-  size = "md",
+  size,
   showCopy = true,
   className,
 }: CodeBlockProps) => {
@@ -56,7 +56,7 @@ const CodeBlock = ({
   return (
     <Card
       className={cn(
-        "overflow-hidden relative bg-background brightness-100 dark:brightness-125",
+        "overflow-hidden relative bg-background brightness-100 dark:brightness-150",
         className,
       )}
     >
@@ -89,7 +89,7 @@ const CodeBlock = ({
         }}
         className={cn(
           "!bg-transparent overflow-x-auto p-6 [&_span]:!bg-transparent",
-          sizeClasses[size],
+          size ? sizeClasses[size] : "text-xs md:text-sm",
           showCopy && "pr-16",
         )}
       >
