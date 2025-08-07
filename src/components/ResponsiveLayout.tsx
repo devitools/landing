@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils.ts";
-import React, { useRef } from "react";
+import React, { forwardRef, useImperativeHandle, useRef } from "react";
 import { Menu, X } from "lucide-react";
 
 interface ResponsiveLayoutProps {
@@ -8,11 +8,12 @@ interface ResponsiveLayoutProps {
   title?: string;
 }
 
-const ResponsiveLayout: React.FC<ResponsiveLayoutProps> = ({
-  leftContent,
-  rightContent,
-  title,
-}) => {
+interface ResponsiveLayoutRef {
+  closeSidebar: () => void;
+}
+
+const ResponsiveLayout = forwardRef<ResponsiveLayoutRef, ResponsiveLayoutProps>((props, ref) => {
+  const { leftContent, rightContent, title } = props;
   const sidebarRef = useRef<HTMLDivElement>(null);
   const backdropRef = useRef<HTMLDivElement>(null);
 
@@ -38,12 +39,21 @@ const ResponsiveLayout: React.FC<ResponsiveLayoutProps> = ({
     }
   };
 
+  useImperativeHandle(
+    ref,
+    () => ({
+      closeSidebar: handleClose,
+    }),
+    [],
+  );
+
   return (
     <div className="flex relative min-h-[400px]">
+      {/* Backdrop */}
       <div
         ref={backdropRef}
         onClick={handleClose}
-        className="absolute inset-0 bg-black opacity-0 pointer-events-none transition-opacity duration-100 z-[5] lg:hidden"
+        className="fixed inset-0 bg-black opacity-0 pointer-events-none transition-opacity duration-100 z-[5] lg:hidden"
       />
 
       <div
@@ -55,10 +65,7 @@ const ResponsiveLayout: React.FC<ResponsiveLayoutProps> = ({
         )}
       >
         <div className="flex justify-end lg:hidden">
-          <button
-            onClick={handleClose}
-            className="hover:bg-destructive/50 rounded p-1 transition-colors"
-          >
+          <button onClick={handleClose} className="hover:bg-red-300 rounded p-1 transition-colors">
             <X className="h-5 w-5" />
           </button>
         </div>
@@ -69,7 +76,7 @@ const ResponsiveLayout: React.FC<ResponsiveLayoutProps> = ({
         <div className="flex items-center gap-3 mb-4">
           <button
             onClick={handleToggle}
-            className="lg:hidden shadow hover:shadow-md transition-all hover:bg-success/50"
+            className="lg:hidden shadow hover:shadow-md transition-all"
           >
             <Menu className="w-4 h-4" />
           </button>
@@ -83,6 +90,9 @@ const ResponsiveLayout: React.FC<ResponsiveLayoutProps> = ({
       </div>
     </div>
   );
-};
+});
+
+ResponsiveLayout.displayName = "ResponsiveLayout";
 
 export default ResponsiveLayout;
+export type { ResponsiveLayoutRef };

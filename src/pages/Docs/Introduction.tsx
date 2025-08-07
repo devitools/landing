@@ -1,20 +1,23 @@
-import { type SidebarItem } from "@/components/DocsResponsiveSidebar";
-import ResponsiveLayout from "@/components/ResponsiveLayout.tsx";
+import ResponsiveLayout, { ResponsiveLayoutRef } from "@/components/ResponsiveLayout.tsx";
+import ResponsiveLayoutSidebar, {
+  ResponsiveLayoutSidebarItem,
+} from "@/components/ResponsiveLayoutSidebar.tsx";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { cn } from "@/lib/utils.ts";
 import { Layers, Package, Wrench } from "lucide-react";
-import React from "react";
+import React, { useRef } from "react";
 
 const Introduction = () => {
+  const layoutRef = useRef<ResponsiveLayoutRef>(null);
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    layoutRef.current?.closeSidebar();
   };
 
-  const sidebarItems: SidebarItem[] = [
+  const sidebarItems: ResponsiveLayoutSidebarItem[] = [
     { id: "requisitos", label: "Começando do Começo", level: 0 },
     { id: "pacotes", label: "Pacotes Principais", level: 0 },
     { id: "constructo", label: "Constructo", level: 1 },
@@ -25,23 +28,9 @@ const Introduction = () => {
 
   return (
     <ResponsiveLayout
+      ref={layoutRef}
       title={"Começando do Começo"}
-      leftContent={
-        <div>
-          {sidebarItems.map(item => (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className={cn(
-                "block w-full text-left transition-colors py-1 hover:text-primary",
-                item.level === 1 ? "ml-3 text-xs text-muted-foreground" : "text-sm",
-              )}
-            >
-              {item.level === 1 ? `• ${item.label}` : item.label}
-            </button>
-          ))}
-        </div>
-      }
+      leftContent={<ResponsiveLayoutSidebar items={sidebarItems} onItemClick={scrollToSection} />}
       rightContent={
         <div className="space-y-8">
           <div className="space-y-4">
