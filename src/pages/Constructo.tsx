@@ -1,8 +1,15 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero.tsx";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import Benefits from "@/components/packages/Benefits.tsx";
+import CodeExamples from "@/components/packages/CodeExamples.tsx";
+
+import Features from "@/components/packages/Features.tsx";
+import Installation from "@/components/packages/Installation.tsx";
+import UseCases from "@/components/packages/UseCases.tsx";
+import { Badge } from "@/components/ui/badge.tsx";
+import { Button } from "@/components/ui/button.tsx";
+import { scrollTo } from "@/lib/utils.ts";
 import {
   Blocks,
   Cog,
@@ -17,15 +24,9 @@ import {
   Zap,
 } from "lucide-react";
 
-import Features from "@/components/packages/Features.tsx";
-import CodeExamples from "@/components/packages/CodeExamples.tsx";
-import UseCases from "@/components/packages/UseCases.tsx";
-import Benefits from "@/components/packages/Benefits.tsx";
-import Installation from "@/components/packages/Installation.tsx";
-
 const Constructo = () => {
   const handleInstallClick = () => {
-    navigator.clipboard.writeText("composer require devitools/constructo");
+    scrollTo("installation");
   };
 
   const handleGithubClick = () => {
