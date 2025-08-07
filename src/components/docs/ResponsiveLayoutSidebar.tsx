@@ -7,14 +7,16 @@ interface ResponsiveLayoutSidebarItem {
   level?: number;
 }
 
-interface ResponsiveLayoutSidebarProps {
-  items: ResponsiveLayoutSidebarItem[];
-  onItemClick: (item: ResponsiveLayoutSidebarItem) => void;
+interface ResponsiveLayoutSidebarProps<T extends ResponsiveLayoutSidebarItem> {
+  items: T[];
+  onItemClick: (item: T) => void;
   title?: string;
   description?: string;
 }
 
-const ResponsiveLayoutSidebar = (props: ResponsiveLayoutSidebarProps) => {
+const ResponsiveLayoutSidebar = <T extends ResponsiveLayoutSidebarItem>(
+  props: ResponsiveLayoutSidebarProps<T>,
+) => {
   const { items, onItemClick, title = "", description = "" } = props;
 
   return (
@@ -41,4 +43,4 @@ const ResponsiveLayoutSidebar = (props: ResponsiveLayoutSidebarProps) => {
 
 ResponsiveLayoutSidebar.displayName = "ResponsiveLayout";
 export { ResponsiveLayoutSidebar };
-export type { ResponsiveLayoutSidebarItem };
+export type { ResponsiveLayoutSidebarItem, ResponsiveLayoutSidebarProps };
