@@ -150,7 +150,7 @@ echo sprintf("  Data de Nascimento: %s\\n", $user->birthDate->format('Y-m-d'));
       id: "deserialization",
       title: "Desserialização",
       description:
-        "Passe uma instância de objeto e converta-a em um objeto facilmente convertível para em array associativo ou JSON",
+        "Passe uma instância de uma classe e converta-a em um objeto facilmente convertível para em array associativo ou JSON",
       code: `use Constructo\\Core\\Deserialize\\Demolisher;
 use DateTime;
 
@@ -166,7 +166,7 @@ readonly class User
     ) {}
 }
 
-// Instancie o objeto que deseja converter para array
+// Crie a instância que deseja deserializer
 $user = new User(
     id: 1,
     name: 'João Silva',
@@ -175,7 +175,7 @@ $user = new User(
     tags: ['nice', 'welcome'],
 );
 
-// Crie um novo demolisher e use-o para converter o objeto para array
+// Crie um novo demolisher e use-o para deserializer a sua instância
 $object = (new Demolisher())->demolish($user);
 
 echo "# Usuário: \\n";
