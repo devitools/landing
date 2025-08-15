@@ -124,16 +124,16 @@ readonly class User
 }
 
 // Monte um set com os dados (de JSON, banco de dados, etc.)
-$set = Set::createFrom([
+$data = [
     'id' => 1,
     'name' => 'João Silva',
     'birth_date' => '1981-08-13',
     'is_active' => true,
     'tags' => ['nice', 'welcome'],
-]);
+];
 
 // Crie um novo builder e use-o para construir o objeto
-$user = (new Builder())->build(User::class, $set);
+$user = (new Builder())->build(User::class, $data);
 
 echo "Usuário: \\n";
 echo sprintf("  ID: %s\\n", $user->id);
