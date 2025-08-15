@@ -166,7 +166,7 @@ readonly class User
     ) {}
 }
 
-// Crie a instância que deseja deserializer
+// Crie a instância que deseja desserializar
 $user = new User(
     id: 1,
     name: 'João Silva',
@@ -175,7 +175,7 @@ $user = new User(
     tags: ['nice', 'welcome'],
 );
 
-// Crie um novo demolisher e use-o para deserializer a sua instância
+// Crie um novo demolisher e use-o para desserializar a sua instância
 $object = (new Demolisher())->demolish($user);
 
 echo "# Usuário: \\n";
