@@ -5,9 +5,16 @@ import CodeBlock from "@/components/CodeBlock.tsx";
 interface InstallationProps {
   onPackagistClick: () => void;
   onDocsClick: () => void;
+  buttonVariant?: string;
+  buttonTextColor?: string;
 }
 
-const Installation = ({ onPackagistClick, onDocsClick }: InstallationProps) => {
+const Installation = ({
+  onPackagistClick,
+  onDocsClick,
+  buttonVariant = "bg-gradient-constructo",
+  buttonTextColor = "text-constructo-foreground",
+}: InstallationProps) => {
   return (
     <section id="installation" className="py-16 bg-card/30">
       <div className="container mx-auto">
@@ -28,7 +35,7 @@ const Installation = ({ onPackagistClick, onDocsClick }: InstallationProps) => {
             </Button>
             <Button
               onClick={onDocsClick}
-              className="bg-gradient-constructo text-constructo-foreground transition-all hover:shadow-glow gap-2"
+              className={`${buttonVariant} ${buttonTextColor} transition-all hover:shadow-glow gap-2`}
             >
               <BookOpen className="w-4 h-4" />
               Primeiros Passos

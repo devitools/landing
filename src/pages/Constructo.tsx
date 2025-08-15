@@ -13,7 +13,6 @@ import { scrollTo } from "@/lib/utils.ts";
 import {
   Blocks,
   Cog,
-  Command,
   Database,
   Download,
   Github,
@@ -23,7 +22,6 @@ import {
   Shield,
   TestTube,
   Users,
-  Zap,
 } from "lucide-react";
 
 const Constructo = () => {
@@ -108,7 +106,6 @@ const Constructo = () => {
       description:
         "Apenas defina os tipos dos argumentos do construtor que sua classe deve receber e deixa o resto com o Builder",
       code: `use Constructo\\Core\\Serialize\\Builder;
-use Constructo\\Support\\Set;
 use DateTime;
 
 // Defina sua entidade informando os valores das propriedades no construtor
