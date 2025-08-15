@@ -166,7 +166,7 @@ readonly class User
     ) {}
 }
 
-// Instancie o objeto que deseja destruir
+// Instancie o objeto que deseja converter para array
 $user = new User(
     id: 1,
     name: 'João Silva',
@@ -175,7 +175,7 @@ $user = new User(
     tags: ['nice', 'welcome'],
 );
 
-// Crie um novo demolisher e use-o para destruir o objeto
+// Crie um novo demolisher e use-o para converter o objeto para array
 $object = (new Demolisher())->demolish($user);
 
 echo "# Usuário: \\n";
