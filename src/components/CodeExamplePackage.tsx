@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import CodeBlock from "@/components/CodeBlock";
@@ -14,7 +15,7 @@ interface PackageExampleProps {
   name: string;
   subtitle: string;
   description: string;
-  features: string[];
+  features: (FeatureItem | string)[];
   icon: React.ReactNode;
   gradientClass: string;
   shadowClass: string;
@@ -22,6 +23,15 @@ interface PackageExampleProps {
   tabs: TabContent[];
   reversed?: boolean;
   soon?: boolean;
+}
+
+interface FeatureItem {
+  title: string;
+  description?: string;
+}
+
+function normalizeFeature(feature: FeatureItem | string): FeatureItem {
+  return typeof feature === "string" ? { title: feature } : feature;
 }
 
 const CodeExamplePackage = ({
@@ -37,10 +47,18 @@ const CodeExamplePackage = ({
   reversed = false,
   soon = false,
 }: PackageExampleProps) => {
+  const [openFeature, setOpenFeature] = useState<number | null>(null);
+
+  const toggleFeature = (index: number) => {
+    setOpenFeature(openFeature === index ? null : index);
+  };
+
   const descriptionContent = (
     <div className="space-y-6 lg:col-span-1">
       <div className="flex items-center space-x-3">
-        <div className={`w-12 h-12 ${gradientClass} rounded-xl flex items-center justify-center ${shadowClass}`}>
+        <div
+          className={`w-12 h-12 ${gradientClass} rounded-xl flex items-center justify-center ${shadowClass}`}
+        >
           {icon}
         </div>
         <div>
@@ -60,12 +78,51 @@ const CodeExamplePackage = ({
       </div>
 
       <div className="space-y-3 pl-6">
-        {features.map((feature, index) => (
-          <div key={index} className="flex items-center space-x-3">
-            <div className={`w-2 h-2 rounded-full ${colorClass.replace("text-", "bg-")}`}></div>
-            <span className="text-muted-foreground">{feature}</span>
-          </div>
-        ))}
+        {features.map((feature, index) => {
+          const { title, description } = normalizeFeature(feature);
+
+          const isOpen = openFeature === index;
+
+          return (
+            <div key={index} className="flex flex-col">
+              {description ? (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => toggleFeature(index)}
+                    className="flex items-center space-x-3 cursor-pointer group focus:outline-none"
+                  >
+                    <div
+                      className={`w-2 h-2 rounded-full ${colorClass.replace(
+                        "text-",
+                        "bg-"
+                      )} group-hover:scale-125 transition-transform`}
+                    />
+                    <span className="text-muted-foreground group-hover:text-foreground transition-colors">
+              {title}
+            </span>
+                  </button>
+
+                  {isOpen && (
+                    <div className="mt-2 pl-5 pr-2 py-2 bg-background border rounded-md shadow-sm transition-all">
+                      {description}
+                    </div>
+                  )}
+                </>
+              ) : (
+                <div className="flex items-center space-x-3">
+                  <div
+                    className={`w-2 h-2 rounded-full ${colorClass.replace(
+                      "text-",
+                      "bg-"
+                    )}`}
+                  />
+                  <span className="text-muted-foreground">{title}</span>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
 
       <div className="pl-6">
@@ -84,8 +141,12 @@ const CodeExamplePackage = ({
     <div className="lg:col-span-2">
       <Tabs defaultValue={tabs[0]?.value} className="w-full">
         <TabsList single={tabs.length === 1}>
-          {tabs.map(tab => (
-            <TabsTrigger single={tabs.length === 1} key={tab.value} value={tab.value}>
+          {tabs.map((tab) => (
+            <TabsTrigger
+              single={tabs.length === 1}
+              key={tab.value}
+              value={tab.value}
+            >
               {tab.label}
             </TabsTrigger>
           ))}
@@ -106,10 +167,10 @@ const CodeExamplePackage = ({
     return (
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
         <div className="space-y-6 lg:col-start-3 lg:col-span-1">
-          {descriptionContent.props.children}
+          {descriptionContent}
         </div>
         <div className="lg:col-start-1 lg:col-span-2 lg:row-start-1">
-          {codeContent.props.children}
+          {codeContent}
         </div>
       </div>
     );

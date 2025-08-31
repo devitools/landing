@@ -86,7 +86,23 @@ const CodeExamples = () => {
             name="Constructo"
             subtitle="Serialização Inteligente"
             description="Transforme dados em objetos tipados com validação automática. Classes que se serializam e se validam de forma elegante e eficiente."
-            features={["Serialização automática", "Validação integrada", "Type safety nativo"]}
+            features={[
+              {
+                title: "Serialização automática",
+                description:
+                  "Serialização avançada de objetos, permitindo a desconstrução de classes com objetos alinhados e realizando a tradução de tipos."
+              },
+              {
+                title: "Validação integrada",
+                description:
+                  "Junto com a serialização avançada e graças as tratativas internas, conseguimos realizar a validação de estruturas complexas por meio de processos encandeados com chains."
+              },
+              {
+                title: "Type safety nativo",
+                description:
+                  "Leva a tipagem da sua aplicação para outro nível!! Com o nosso sistema de tipagem, conseguimos ir além dos tipos nativos da linguagem, permitindo o uso de *attributes* personalizados, passando uma maior segurança e coesão na sua aplicação."
+              }
+            ]}
             icon={<Blocks className="w-6 h-6 text-constructo-foreground" />}
             gradientClass="bg-gradient-constructo"
             shadowClass="shadow-constructo"
